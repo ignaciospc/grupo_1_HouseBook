@@ -58,7 +58,8 @@ header{
     display: none;
 }
 
-.cabezera-desktop-1{
+.contenedor-cabezera-1, 
+.contenedor-cabezera-3{
     display: none;
 }
 
@@ -138,7 +139,7 @@ a{
 
 @media(min-width: 1024px){
 
-     .cabezera-desktop-1{
+     .contenedor-cabezera-1{
       background-color: rgb(97, 55, 102);
       
       display: block;
@@ -189,5 +190,28 @@ a{
 
     .search{
         flex-grow: 1;
+    }
+
+    .contenedor-cabezera-3{
+        display: flex;
+       
+        
+    }
+    .redes-sociales{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .iconos-redes{
+        columns: 1;
+        padding: 0px 0px 0px 10px;
+    }
+    .nav-center ul{
+        list-style: none;
+        display: flex;
+    }
+    .nav-center ul li{
+        justify-content: space-around;
+        padding: 0px 38px;
+        
     }
 }
