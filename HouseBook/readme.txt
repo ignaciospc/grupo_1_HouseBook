@@ -20,9 +20,9 @@ que van desde Comics, hasta enciclopedias, pasando incluso por Ciencia Ficcion, 
 La tienda esta ideada con la finalidad de lograr que nuestro cliente tenga una experiencia visualmente agradable, y que su compra sea los mas amena y eficiente posible.
 Nuestro negocio no esta dirigido a una audiencia en particular puesto que el mundo de la lectura le abre sus puertas indistintamente a todo aquel que desee formar parte de el.
 
-info Integrantes del Gpo.
+info Integrantes del Grupo.
 
-Ignacio Nicola Soria - 22 años, Trabajo en el area de telecomunicaciones y estoy incursionanado en la programacion.	 
+Ignacio Nicola Soria - 22 años, Trabajo en el area de telecomunicaciones y estoy incursionando en la programacion.	 
 
 
 
