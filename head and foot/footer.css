@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    background-color: rgb(119, 63, 125);
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+ul{
+    list-style: none;
+}
+
+ul li{
+    text-align: justify;
+    padding: 6px 0px;
+    border-bottom: 1px solid white;
+    color:rgb(217,217,217);;
+}
+.pagos{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(217,217,217);
+    margin-bottom: 15px;
+}
+img{
+    padding: 10px 0px;
+}
+p{
+    font-size: 10px;
+    color: white;
+    border-top: 1px solid white;
+    padding-top: 5px;
+}
+
+section{
+    margin-top: 200px;
+}
