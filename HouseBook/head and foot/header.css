@@ -1,0 +1,82 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+header{
+    box-sizing: border-box;
+    background-color: rgb(119, 63, 125);
+}
+.logo{
+    width: 70px;
+}
+.logo img{
+    width: 100%;
+}
+.cabezera-1{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+}
+#busqueda{
+    width: 99%;
+    height: 30px;
+}
+.menu {
+    color: rgb(217,217,217);
+}
+.carrito{
+    color:  rgb(217,217,217);
+}
+
+.search{
+    padding: 0 5px 10px;
+    position: relative;
+}
+.lupa{
+    border-radius: 8px;
+    font-size: 20px;
+    border: 1px solid rgb(83,174,175);
+    background-color: rgb(83,174,175);
+    padding: 3px 10px;
+    position: absolute;
+    right: 9px;
+    top: 2px;
+    color: white;
+}
+.button-search{
+    display: none;
+}
+
+@media(min-width: 768px){
+    .lupa{
+        display: none;
+    }
+    .search{
+        display: flex;
+        justify-content: space-between;
+    }
+    .barra-busqueda{
+        flex-grow: 1;
+        margin-top: 1px;
+    }
+    .button-search{
+        display: block;
+        align-self: center;
+        width: 15%;
+        text-align: center;
+    }
+    .button-search button{
+        background-color: rgb(83,174,175);
+        border-style: none;
+        padding: 10px 20%;
+        border-radius: 8px;
+        text-transform: uppercase;
+    }
+
+    
+
+
+
+}
