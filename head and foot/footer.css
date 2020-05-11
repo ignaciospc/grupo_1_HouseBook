@@ -33,7 +33,49 @@ p{
     border-top: 1px solid white;
     padding-top: 5px;
 }
+.pagos-tablet{
+    display: none;
+}
 
 section{
     margin-top: 200px;
+}
+.redes-sociales{
+    display: none;
+}
+
+@media(min-width:768px){
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .pagos, .copyright{
+        display: none;
+    }
+    .redes-sociales{
+        display: block;
+        margin-left: 40px;
+    }
+    .redes-sociales li{
+        border-bottom: none;
+    }
+    .redes-sociales i{
+        font-size: 45px;
+        color:rgb(217,217,217) ;
+
+    }
+    .redes-sociales span{
+        margin-left: 15px;
+        font-size: 25px;
+    }
+    .pagos-tablet{
+        display: block;
+        text-align: center;
+    }
+    .pagos-tablet img{
+        width: 65%;
+    }
+
+
 }
