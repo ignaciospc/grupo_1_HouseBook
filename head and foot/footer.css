@@ -79,3 +79,19 @@ section{
 
 
 }
+
+@media(min-width:1024px){
+    footer{
+        display: flex;
+    }
+
+    .pagos-tablet, .redes-sociales{
+        display: none;
+    }
+    ul li{
+        
+        border-bottom: none;
+        border-right: 1px solid white;
+    }
+    
+}
