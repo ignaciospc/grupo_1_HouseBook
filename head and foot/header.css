@@ -156,6 +156,10 @@ a{
     .nav-left, .nav-right{
         display: flex;
     }
+    .nav-right{
+        width: 20%;
+        justify-content: space-around;
+    }
     .feedback, .logo-login{
         padding: 10px;
         border-right: 1px solid rgb(119, 63, 125); 
@@ -193,7 +197,7 @@ a{
     }
 
     .contenedor-cabezera-3{
-        display: flex;
+        display: block;
         background-color: white;
        
         
@@ -203,6 +207,7 @@ a{
         display: flex;        
         max-width: 1440px;
         margin: 0 auto;
+        justify-content: space-between;
         
     }
     .redes-sociales{
@@ -216,13 +221,20 @@ a{
         columns: 1;
         padding: 0px 0px 0px 10px;
     }
+    .nav-center{
+        width: 60%;        
+    }
     .nav-center ul{
         list-style: none;
         display: flex;
+        justify-content: space-around;
     }
     .nav-center ul li{
         justify-content: space-around;
         padding: 0px 30px;
+        border: 1px solid rgba(83, 173, 175, 0.205);
+        border-radius: 5px;
+        background-color: rgba(83, 173, 175, 0.205);
     }
     .nav-center ul li a{
         font-size: 13px;
@@ -231,9 +243,14 @@ a{
     .info-compra{
         box-sizing: border-box;
         padding: 0px 5px;
+        
+
     }
-    .nav-right{
-        justify-content: flex-end;
+    .info-compra span{
+        border: 1px solid rgba(83, 173, 175, 0.205);
+        border-radius: 5px;
+        background-color: rgba(83, 173, 175, 0.205);
+        
     }
 
 }
