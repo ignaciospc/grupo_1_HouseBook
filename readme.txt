@@ -22,7 +22,15 @@ Nuestro negocio no esta dirigido a una audiencia en particular puesto que el mun
 
 info Integrantes del Grupo.
 
-Ignacio Nicola Soria - 22 años, Trabajo en el area de telecomunicaciones y estoy incursionando en la programacion.	 
+Ignacio Nicola Soria - 22 años, Trabajo en el area de telecomunicaciones y estoy incursionando en la programacion.
+
+
+
+Link Trello = https://trello.com/b/3sCv6UcL/house-book	
+
+
+
+ 
 
 
 
