@@ -24,6 +24,7 @@ info Integrantes del Grupo.
 
 Ignacio Nicola Soria - 22 años, Trabajo en el area de telecomunicaciones y estoy incursionando en la programacion.
 Indira Belen Callahuara -26 años, Estudiante de Cs Ambientales, Escalada.
+Thomas Gabela - falta descripcion
 
 
 
