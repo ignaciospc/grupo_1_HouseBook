@@ -194,12 +194,23 @@ a{
 
     .contenedor-cabezera-3{
         display: flex;
+        background-color: white;
        
+        
+    }
+    .contenedor-nav{
+        background-color: white;
+        display: flex;        
+        max-width: 1440px;
+        margin: 0 auto;
         
     }
     .redes-sociales{
         display: grid;
         grid-template-columns: repeat(4,1fr);
+    }
+    .redes-sociales i{
+        color: black;
     }
     .iconos-redes{
         columns: 1;
@@ -211,7 +222,18 @@ a{
     }
     .nav-center ul li{
         justify-content: space-around;
-        padding: 0px 38px;
-        
+        padding: 0px 30px;
     }
+    .nav-center ul li a{
+        font-size: 13px;
+        color: black;
+    }
+    .info-compra{
+        box-sizing: border-box;
+        padding: 0px 5px;
+    }
+    .nav-right{
+        justify-content: flex-end;
+    }
+
 }
