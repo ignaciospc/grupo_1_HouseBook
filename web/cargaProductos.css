@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 1440px;
+    margin: 0px auto;
+}
+.contenedor-carga-productos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 5px;
+}
+.datos{
+    grid-column: 1/4;
+}
+.preview{
+    grid-column: 4/6;
+    background-color: gray;
+    border: 1px solid black;
+}
+.columnas{
+    display: flex;
+}
+
+.imagen-libro img{
+    width: 90%;
+}
+.selector-datos{
+    display: inline-block;
+}
+.selector-datos .pdf,
+.fisico, .stock, .envio{
+    padding: 10px 8px;
+    border: 1px solid black;
+}
