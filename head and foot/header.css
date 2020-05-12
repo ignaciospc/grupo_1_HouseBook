@@ -156,8 +156,7 @@ a{
     .nav-left, .nav-right{
         display: flex;
     }
-    .nav-right{
-        width: 20%;
+    .nav-right{        
         justify-content: space-around;
     }
     .feedback, .logo-login{
@@ -199,7 +198,7 @@ a{
     .contenedor-cabezera-3{
         display: block;
         background-color: white;
-       
+       max-width: 1444px;
         
     }
     .contenedor-nav{
