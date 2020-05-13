@@ -16,7 +16,6 @@ section{
 .primera-columna,
 .segunda-columna{
     box-sizing: border-box;
-    border: 1px solid black;
     padding: 5px;
     margin: 5px 0px;
 }
@@ -32,14 +31,24 @@ section{
     padding: 8px 6px;
     
 }
+.pdf, .fisico{
+    height: 8vh;
+}
+
 .pdf label,
 .fisico label{
     width: 15%;
 }
 .pdf input,
 .fisico input{
+    margin-top: 5px;
     width: 16px;
     height: 18px;
+}
+.pdf textarea,
+.fisico textarea{
+    width: 30%;
+    height: 4VH;
 }
 
 .precio{
