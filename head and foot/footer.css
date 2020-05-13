@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 footer{
@@ -43,25 +44,54 @@ section{
 .redes-sociales{
     display: none;
 }
+.caja-links ul li a{
+    color: rgb(217,217,217);
+}
+
+.caja-links h3{
+    display: none;
+}
+.info{
+    display: none;
+}
 
 @media(min-width:768px){
     footer{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 30% 30% auto;
 
+    }
+    .links{
+       
+        box-sizing: border-box;
+    }
+    .caja-links h3{
+        display: block;
+        margin-bottom: 5px;
+        color: rgb(217,217,217);
+        
     }
     .pagos, .copyright{
         display: none;
     }
     .redes-sociales{
-        display: block;
-        margin-left: 40px;
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgb(217,217,217,0.5);
+
+    }
+    .redes-sociales ul{
+        display: flex;
+        justify-content: space-between;
+
     }
     .redes-sociales li{
         border-bottom: none;
+       
     }
     .redes-sociales i{
-        font-size: 45px;
+        font-size: 40px;
         color:rgb(217,217,217) ;
 
     }
@@ -69,13 +99,43 @@ section{
         margin-left: 15px;
         font-size: 25px;
     }
+    .redes-sociales h3{
+        box-sizing: border-box;
+        padding-top: 10px;
+        color: rgb(217,217,217);
+        text-align: center;
+        }
     .pagos-tablet{
         display: block;
         text-align: center;
+
     }
     .pagos-tablet img{
         width: 65%;
     }
+    .links ul li{
+        border: none;
+        padding: 10px 0px;
+    }
+    .links a{
+        list-style: none;
+        text-decoration: none;
+        font-size: 15px;
+        color:rgb(217,217,217);
+    }
+    .info{
+        display: block;
+    }
+    .info h3{
+        color: rgb(217,217,217);
+        padding-bottom: 10px;
+    }
+    .info span{
+        box-sizing: border-box;
+        line-height : 25px;
+        color: rgb(217,217,217)
+    };
+    
 
 
 }
