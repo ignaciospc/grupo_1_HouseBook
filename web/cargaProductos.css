@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 section{
     background-color: #F0F0F0;
     
@@ -31,13 +32,11 @@ section{
     padding: 8px 6px;
     
 }
-.pdf, .fisico{
-    height: 8vh;
-}
+
 
 .pdf label,
 .fisico label{
-    width: 15%;
+    width: 20%;
 }
 .pdf input,
 .fisico input{
@@ -47,8 +46,7 @@ section{
 }
 .pdf textarea,
 .fisico textarea{
-    width: 30%;
-    height: 4VH;
+    padding-left: 5px;
 }
 
 .precio{
@@ -70,7 +68,7 @@ section{
 
 .segunda-columna div{
     margin: 5px 0px;
-    padding: 10px 5px;
+    padding: 5px 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -99,3 +97,57 @@ section{
     border-color: rgba(83, 173, 175, 0.9);
 }
 
+@media(min-width:768px){
+    .columnas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .primera-columna div{
+        border-radius: 10px;
+        
+    }
+    .selector-datos{
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 1px solid;
+    }
+    .segunda-columna{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .segunda-columna div{
+        padding-top: 3px;
+        border-radius: 10px;
+        border: 1px solid;
+    }
+}
+@media(min-width:1024px){
+
+    
+    section{
+        margin: 10px;
+        max-width: 1024px;
+        margin: 0px auto;
+        
+    }
+    .selector-datos{
+        margin-top: 38px;
+    }
+    .columnas{
+        display: grid;
+        grid-template-columns: 30% 30% auto   
+    }
+  
+    .preview{
+        display: block;
+        border: 1px solid black;
+        background-color: grey;
+        margin: 10px 0px;
+        border-radius: 10px;
+    }
+    .buttons{
+        margin: 0px;
+    }
+}
