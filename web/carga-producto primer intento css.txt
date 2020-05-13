@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 1440px;
+    margin: 0px auto;
+    background-color: #F0F0F0;
+}
+.contenedor-carga-productos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 1rem;
+}
+.datos{
+    grid-column: 1/4;
+}
+.preview{
+    grid-column: 4/6;
+    background-color: gray;
+    border: 1px solid black;
+}
+.columnas{
+    display: flex;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.primera-columna{
+    background-color: white;
+    border: 1px solid black;
+    
+}
+
+.imagen-libro img{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+.selector-datos{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 10px;
+    
+}
+.selector-datos div{
+    margin: 5px 0px;
+    display: flex;
+   
+}
+.selector-datos span, label{
+    text-transform: uppercase;
+}
+.selector-datos .pdf,
+.fisico, .stock, .envio{
+    padding: 10px 8px;
+    border: 1px solid black;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttons button{
+    margin: 0px 0px 0px 5px;
+}
+
+
+.segunda-columna{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0px 5px;
+}
+
+.titulo, .autor, .descripcion, 
+.tags, .detalle-libro{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.segunda-columna label{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.segunda-columna div{
+    border: 1px solid;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: white;
+    margin: 5px;
+}
+
+
+
+
+
