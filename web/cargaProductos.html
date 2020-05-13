@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    
 
 
     <section class="contenedor-carga-productos">
@@ -25,24 +26,26 @@
                     <div class="selector-datos">
         
                         <div class="pdf">
-                              <span>PDF</span><input type="checkbox" name="formato" value="Pdf">
-                              <label for="precio-pdf">Precio</label>
-                              <textarea name="precio-pdf" id="precio-pdf" cols="7" rows="1"></textarea>
+                              <label for="pdf">Pdf:</label>
+                              <input type="checkbox" name="formato" value="Pdf">
+                              <label for="precio-pdf">Precio :</label>
+                              
                         </div>
         
                         <div class="fisico">
-                              <span>Fisico</span><input type="checkbox" name="formato" value="Fisico">
-                              <label for="precio-fisico">Precio</label>
+                              <label for="fisico">Fisico:</label>
+                              <input type="checkbox" name="formato" value="Fisico">
+                              <label for="precio-fisico">Precio :</label>
                               <textarea name="precio-fisico" id="precio-fisico" cols="7" rows="1"></textarea>
                         </div>
         
                         <div class="stock">
-                            <label for="stock">Stock</label> 
+                            <label for="stock">Stock :</label> 
                             <input type="number" id="stock" placeholder="cantidad">
                         </div>
         
                         <div class="envio">
-                            <span>Envio</span> 
+                            <label for="envio">envio</label>
                             <select name="envio" id="envio">
                                 <option value="si">si</option>
                                 <option value="no">no</option>
@@ -79,18 +82,22 @@
         
                     <div class="tags">
                         <label for="tags">TAGS</label>
-                        <textarea name="tags" id="tags" cols="50" rows="1"></textarea>
+                        <textarea name="tags" id="tags" cols="50" rows="2"></textarea>
                     </div>
         
                     <div class="detalle-libro">
                         <label for="detalle-libro">Detall del Libro</label>
                         <textarea name="detall-libro" id="detalle-libro" cols="30" rows="5"  placeholder="ACA VA EL DETALLE DEL LIBRO( formato / dimesiones / fecha de Publicacion / Idioma / Edicion / Ranking / ISBN  / Editorial / Autor"></textarea>
                     </div>
-        
+
+                    <div class="buttons">
+                        
                     <button class="button-eliminar">DELETE</button>
                     <button class="button-guardar">SAVE</button>
                     <button class="button-preview">PREVIEW</button>
     
+                    </div>
+        
                 </div>
 
 
