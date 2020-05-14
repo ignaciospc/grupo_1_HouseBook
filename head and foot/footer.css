@@ -65,14 +65,28 @@ section{
        
         box-sizing: border-box;
     }
+    .caja-links{
+        border-right: 1px solid rgb(217,217,217,0.5);
+        margin: 10px 30px;
+    }
     .caja-links h3{
         display: block;
         margin-bottom: 5px;
         color: rgb(217,217,217);
         
     }
-    .pagos, .copyright{
+    .pagos{
         display: none;
+    }
+    .copyright{
+        display: block;
+        grid-column: span 4;
+        margin-top: 10px;
+    
+    }
+    .copyright p{
+        color: rgb(217,217,217);
+        border-top: 1px solid rgb(217,217,217,0.5)
     }
     .redes-sociales{
         grid-column: span 4;
@@ -108,10 +122,15 @@ section{
     .pagos-tablet{
         display: block;
         text-align: center;
+        grid-column: span 2;
 
     }
     .pagos-tablet img{
-        width: 65%;
+        width: 80%;
+        margin-top: 10px;
+    }
+    .pagos-tablet h3{
+        color: rgb(217,217,217);
     }
     .links ul li{
         border: none;
@@ -125,6 +144,8 @@ section{
     }
     .info{
         display: block;
+        border-right: 1px solid rgb(217,217,217,0.5);
+        margin: 10px 0px;
     }
     .info h3{
         color: rgb(217,217,217);
@@ -141,17 +162,14 @@ section{
 }
 
 @media(min-width:1024px){
+
     footer{
         display: flex;
     }
 
-    .pagos-tablet, .redes-sociales{
+    .pagos-tablet, .redes-sociales, .info{
         display: none;
     }
-    ul li{
-        
-        border-bottom: none;
-        border-right: 1px solid white;
-    }
+    
     
 }
