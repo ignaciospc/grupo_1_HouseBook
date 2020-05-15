@@ -54,6 +54,9 @@ section{
 .info{
     display: none;
 }
+.logo{
+    display: none;
+}
 
 @media(min-width:768px){
     footer{
@@ -131,10 +134,11 @@ section{
     }
     .pagos-tablet h3{
         color: rgb(217,217,217);
+        margin-top: 10px;
     }
     .links ul li{
         border: none;
-        padding: 10px 0px;
+        padding: 5px 0px;
     }
     .links a{
         list-style: none;
@@ -155,8 +159,9 @@ section{
         box-sizing: border-box;
         line-height : 25px;
         color: rgb(217,217,217)
-    };
+    }
     
+   
 
 
 }
@@ -164,12 +169,59 @@ section{
 @media(min-width:1024px){
 
     footer{
-        display: flex;
+        display: grid;
+        grid-template-rows: 30% 50% 20%;
+        max-width: 1024px;
+        margin: 0 auto;
     }
 
     .pagos-tablet, .redes-sociales, .info{
         display: none;
     }
+    .caja-links h3{
+        display: none;
+    }
+    .logo{
+        display: block;
+        text-align: center;
+        display: block;
+        grid-column: span 4;
+        grid-row: 2;
+    
+    }
+    .logo img{
+        width: 10%;
+    }
+    .caja-links{
+        grid-column: span 4;
+        grid-row: span 1;
+        border: none;
+    }
+
+    .links ul{
+        display: flex;
+        justify-content: center;
+    }
+    .links ul li{
+        margin: 10px 10px;
+        border-right: 1px solid rgb(217,217,217,0.5);
+        padding: 0px 10px;
+    }
+    .copyright{
+        margin: 0px;
+        padding-top: 0px;
+        text-align: end;
+      
+    }
+    .copyright p{
+        margin: 0;
+        padding: 10px 0 0 0;
+        
+
+    }
+
+
+
     
     
 }
