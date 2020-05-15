@@ -8,6 +8,8 @@ header{
 }
 .logo{
     width: 100px;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 .logo img{
     width: 100%;
@@ -18,6 +20,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0px 5px;
+    padding-top: 10px;
+    
 }
 #busqueda{
     width: 99%;
@@ -38,6 +42,7 @@ header{
 .search{
     padding: 0 5px 10px;
     position: relative;
+    margin-top: 10px;
 }
 .lupa{
     border-radius: 8px;
@@ -124,14 +129,19 @@ a{
     .bolsita{
        display: inline-block;
        font-size: 200%;    
-       padding-left: 10px;  
+       margin-top: 10px;
     }
     .bolsita i{
-       margin-top: 10px;
+        padding: 0px 5px;
+      
     }
 
     .carrito{
        font-size: 100%;
+    }
+    .logo{
+        box-sizing: border-box;
+        margin-top: 10px;
     }
 
 }
@@ -146,11 +156,20 @@ a{
     }
     .nav{
         display: flex;        
-        max-width: 1440px;
+        max-width: 1024px;
         margin: 0 auto;
         justify-content: space-between;
         
         
+    }
+    .cabezera-1 .logo{
+        width: 10%;
+        text-align: center;
+        margin: 0px 20px;
+        padding: 0px 6px;
+    }
+    .logo img{
+        width: 100%;
     }
     
     .nav-left, .nav-right{
@@ -171,7 +190,7 @@ a{
         background-color:  rgb(119, 63, 125);
     }
     .cabezera-1{
-        max-width: 1440px;
+        max-width: 1024px;
         margin: 0 auto;
         justify-content: flex-start;
     }
@@ -193,6 +212,7 @@ a{
 
     .search{
         flex-grow: 1;
+        padding: 0px;
     }
 
     .contenedor-cabezera-3{
@@ -204,7 +224,7 @@ a{
     .contenedor-nav{
         background-color: white;
         display: flex;        
-        max-width: 1440px;
+        max-width: 1024px;
         margin: 0 auto;
         justify-content: space-between;
         
