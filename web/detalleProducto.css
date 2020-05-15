@@ -2,4 +2,116 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color:  black;
+    font-family: 'Roboto', sans-serif;
 }
+.contenedor{
+   background-color: #F0F0F0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+/*formato estandar para los div contenedores*/
+.contenedor-principal,
+.contenedor-precio,
+.descripcion-libro,
+.contenedor-detalle-producto{
+    border-radius:5px;
+    box-sizing: border-box;
+    width: 95%;
+    padding: 10px 10px;
+    background-color: white;
+    margin: 3px 0px;
+}
+
+
+.titulo{
+    font-size: 30px;
+    text-align: center;
+}
+.info-1{
+    padding-left: 10px;
+}
+.info-1 ul{
+    list-style: none;
+
+}
+.info-1 ul li{
+    box-sizing: border-box;
+    padding: 3px;
+    margin: 5px 0px;
+}
+.redes{
+    display: flex;
+    justify-content: space-between;
+}
+.img-libro{
+    width: 100%;
+   
+}
+.img-libro img{
+    width: 100%;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.buttons h3{
+    display: none;
+}
+.precio{
+    text-align: center;
+}
+.precio span{
+    font-family: cursive;
+    font-size: 40px;
+    color: rgb(254, 47, 47);
+}
+.buttons{
+    display: block;
+    text-align: center;
+}
+
+.contenedor-precio .buttons button{
+    border-style: none;
+    padding: 10px 5px;
+    margin: 5px 0px;
+    border-radius: 8px;
+    background-color: rgb(83,174,175);
+    width: 70%;
+    
+}
+
+
+
+.descripcion-libro h3{
+    text-align: center;
+    border-bottom: 3px solid #F0F0F0;
+    padding-bottom: 5px;
+}
+.descripcion-libro span{
+    line-height: 2;
+    
+}
+.contenedor-detalle-producto h3{
+    text-align: center;
+    border-bottom: 3px solid #F0F0F0;
+    padding-bottom: 5px;
+}
+
+.contenedor-detalle-producto{
+    line-height: 2;
+    font-size: 15px;
+}
+.contenedor-detalle-producto ul{
+    list-style: none;
+}
+.contenedor-detalle-producto ul li label{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+
+
+
