@@ -9,6 +9,7 @@ footer{
     box-sizing: border-box;
     padding: 0px 15px;
 }
+
 ul{
     list-style: none;
 }
@@ -60,9 +61,13 @@ section{
 
 @media(min-width:768px){
     footer{
+        
+
+    }
+    .contenedor-footer{
         display: grid;
         grid-template-columns: 30% 30% auto;
-
+        
     }
     .links{
        
@@ -169,12 +174,16 @@ section{
 @media(min-width:1024px){
 
     footer{
+        
+    }
+    .contenedor-footer{
         display: grid;
         grid-template-rows: 30% 50% 20%;
         max-width: 1024px;
         margin: 0 auto;
+        box-sizing: border-box;
+        background-color:  rgb(119, 63, 125);;
     }
-
     .pagos-tablet, .redes-sociales, .info{
         display: none;
     }
