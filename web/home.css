@@ -20,13 +20,16 @@
         box-sizing: border-box;
     }
     .carousel-main{
-        width: 100%;
-        text-align: center;
+        width: 100%;        
         border: 5px solid black;
         display: block;
         box-sizing: border-box;
         background: white;
         margin-bottom: 5px;
+    }
+    .carousel-main .block-title{
+        text-align: center;
+        font-size: 150%;
     }
     .content-wrap{
         display: flex;
@@ -65,10 +68,12 @@
     }
     .block-item{
         border: 1px solid black;
-        width: 240px;
+        width: 230px;
         height: 320px;
         margin: 0 10px;
         padding: 5px 10px;
+        box-sizing: border-box;
+
     }
 
     ul li{
@@ -106,7 +111,7 @@
     }
 
     .price{
-        height: 45px;
+        height: 35px;
         font-size: 17px;
         color: rgb(223, 132, 147);
         margin-top: 5px;
@@ -114,7 +119,7 @@
     .item-action{
         box-sizing: border-box;
         height: 35px;
-        width: 100%;
+        width: 90%;
         text-align: center;
         line-height: 30px;
         
@@ -125,8 +130,12 @@
         color:  white;       
         text-decoration: none;
         width: 100%;
-        padding: 7px 60px;
+        padding: 7px 30px;
         
     }
-
+    .block-carousel{
+        height: 100%;
+        padding-bottom: 15px;
+        margin-bottom: 5px;
+    }
 }
