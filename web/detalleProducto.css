@@ -5,6 +5,10 @@
     color:  black;
     font-family: 'Roboto', sans-serif;
 }
+body{
+    background-color: #F0F0F0;
+    box-sizing: border-box;
+}
 
 .contenedor{
    background-color: #F0F0F0;
@@ -148,9 +152,7 @@
 
 
 @media(min-width:768px){
-    section{
-       
-    }
+    
     .categoria{
         display: block;
         grid-column: span 3;
@@ -177,10 +179,7 @@
     .contenedor-principal{
         grid-column: span 2;
         display: flex;
-        flex-wrap: wrap;
         height: 99%;
-        border-right: 4px solid #F0F0F0;
-        border-left: 4px solid #F0F0F0;
     }
     .info-envio, .metodos-pago{
         display: block;
@@ -238,25 +237,38 @@
     }
     .info-envio i{
         position: absolute;
+        font-size: 25px;
+        color:rgb(83,174,175);
     }
     .info-envio label{
-        text-align: center;
-        margin: 2px;
+        font-size: 20px;
+    margin-bottom: 10px;
+    }
+    .img-libro{
+        width: 50%;
+    }
+    .img-libro img{
+        width: 90%;
+        margin-top: 88px;
     }
    
   
 }
 
 @media(min-width: 1024px){
-    section{
-        max-width: 1024px;
-        margin: 0 auto;
-    }
+    
+    
     .contenedor{
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
         column-gap: 0px;
         gap: 5px;
+        background-color:#F0F0F0;
+        
+    }
+    section{
+        max-width: 1024px;
+        margin: 0 auto;
     }
     .categoria{
         grid-column: span 4;
@@ -322,6 +334,14 @@
     }
     .contenedor-precio .precio span{
         font-size: 34px;
+    }
+    .info-precio label{
+        margin-bottom: 0px;
+    }
+    .info-envio i{
+        position: absolute;
+        bottom: 37px;
+        left: 90px;
     }
 }
 
