@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
@@ -13,24 +14,29 @@
                 <div class="titulo">
                     <h2>Iniciar sesion</h2>
                 </div>
-                <div class="block-form">
-                    <!--Falta form-->
-    
-                    <input type="text" name="usuario" id="usuario" placeholder="Email / Usuario">
-                    <input type="password" name="password" id="password" placeholder="Password">
-                </div>
                 <div class="forget">
                     <a href="#">Recuperar contraseña</a>
                 </div>
+                <div class="block-form">
+                    <!--Falta form-->                   
+                    <input type="text" name="usuario" id="usuario" placeholder="Email / Usuario">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                
     
                 <!--Posible ul-->
                 <div class="casilla">
-                    <input type="checkbox" class="casilla" name="view" id="view">
-                    <label for=""> Mostrar Contraseña </label>
+                    <label for="view">
+                        <input type="checkbox" class="casilla" name="view" id="view">
+                        <span> Mostrar Contraseña </span>
+                    </label>
+                    
                 </div>
                 <div class="casilla">
+                    <label for="remember">
                     <input type="checkbox" class="casilla" name="remember" id="remember">
-                    <label for=""> Recuerdame </label>
+                    <span for=""> Recuerdame </span>
+                </label>
                 </div>
                 <button type="submit">Inciar sesion</button>
             </div>
@@ -41,7 +47,7 @@
             <div class="titulo">
                 <h2>Registrarse</h2>
     
-                <div class="block-form">
+                <div class="block-form block-register">
                     <!--Falta form-->
                     <form action="">
                         <input type="text" name="usuario" id="usuario" placeholder="Usuario" name="usuario">
@@ -52,8 +58,10 @@
     
                 <!--Posible ul-->
                 <div class="casilla">
-                    <input type="checkbox" name="view" id="view">
-                    <label for="">Mostrar Contraseña</label>
+                    <label for="view-register">
+                        <input type="checkbox" name="view-register" id="view-register">
+                        <span>Mostrar Contraseña</span>
+                    </label>
                 </div>
                 <button type="submit">Crear</button>
                 </form>
