@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+footer{
+    background-color: rgb(119, 63, 125);
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    text-align: justify;
+    padding: 6px 0px;
+    border-bottom: 1px solid white;
+    color:rgb(217,217,217);;
+}
+.pagos{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(217,217,217);
+    margin-bottom: 15px;
+}
+img{
+    padding: 10px 0px;
+}
+p{
+    font-size: 10px;
+    color: white;
+    border-top: 1px solid white;
+    padding-top: 5px;
+}
+.pagos-tablet{
+    display: none;
+}
+
+section{
+    margin-top: 200px;
+}
+.redes-sociales{
+    display: none;
+}
+.caja-links ul li a{
+    color: rgb(217,217,217);
+}
+
+.caja-links h3{
+    display: none;
+}
+.info{
+    display: none;
+}
+.logo{
+    display: none;
+}
+
+@media(min-width:768px){
+    footer{
+        
+
+    }
+    .contenedor-footer{
+        display: grid;
+        grid-template-columns: 30% 30% auto;
+        
+    }
+    .links{
+       
+        box-sizing: border-box;
+    }
+    .caja-links{
+        border-right: 1px solid rgb(217,217,217,0.5);
+        margin: 10px 30px;
+    }
+    .caja-links h3{
+        display: block;
+        margin-bottom: 5px;
+        color: rgb(217,217,217);
+        
+    }
+    .pagos{
+        display: none;
+    }
+    .copyright{
+        display: block;
+        grid-column: span 4;
+        margin-top: 10px;
+    
+    }
+    .copyright p{
+        color: rgb(217,217,217);
+        border-top: 1px solid rgb(217,217,217,0.5)
+    }
+    .redes-sociales{
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgb(217,217,217,0.5);
+
+    }
+    .redes-sociales ul{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .redes-sociales li{
+        border-bottom: none;
+       
+    }
+    .redes-sociales i{
+        font-size: 40px;
+        color:rgb(217,217,217) ;
+
+    }
+    .redes-sociales span{
+        margin-left: 15px;
+        font-size: 25px;
+    }
+    .redes-sociales h3{
+        box-sizing: border-box;
+        padding-top: 10px;
+        color: rgb(217,217,217);
+        text-align: center;
+        }
+    .pagos-tablet{
+        display: block;
+        text-align: center;
+        grid-column: span 2;
+
+    }
+    .pagos-tablet img{
+        width: 80%;
+        margin-top: 10px;
+    }
+    .pagos-tablet h3{
+        color: rgb(217,217,217);
+        margin-top: 10px;
+    }
+    .links ul li{
+        border: none;
+        padding: 5px 0px;
+    }
+    .links a{
+        list-style: none;
+        text-decoration: none;
+        font-size: 15px;
+        color:rgb(217,217,217);
+    }
+    .info{
+        display: block;
+        border-right: 1px solid rgb(217,217,217,0.5);
+        margin: 10px 0px;
+    }
+    .info h3{
+        color: rgb(217,217,217);
+        padding-bottom: 10px;
+    }
+    .info span{
+        box-sizing: border-box;
+        line-height : 25px;
+        color: rgb(217,217,217)
+    }
+    
+   
+
+
+}
+
+@media(min-width:1024px){
+
+    footer{
+        
+    }
+    .contenedor-footer{
+        display: grid;
+        grid-template-rows: 30% 50% 20%;
+        max-width: 1024px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-color:  rgb(119, 63, 125);;
+    }
+    .pagos-tablet, .redes-sociales, .info{
+        display: none;
+    }
+    .caja-links h3{
+        display: none;
+    }
+    .logo{
+        display: block;
+        text-align: center;
+        display: block;
+        grid-column: span 4;
+        grid-row: 2;
+    
+    }
+    .logo img{
+        width: 10%;
+    }
+    .caja-links{
+        grid-column: span 4;
+        grid-row: span 1;
+        border: none;
+    }
+
+    .links ul{
+        display: flex;
+        justify-content: center;
+    }
+    .links ul li{
+        margin: 10px 10px;
+        border-right: 1px solid rgb(217,217,217,0.5);
+        padding: 0px 10px;
+    }
+    .copyright{
+        margin: 0px;
+        padding-top: 0px;
+        text-align: end;
+      
+    }
+    .copyright p{
+        margin: 0;
+        padding: 10px 0 0 0;
+        
+
+    }
+
+
+
+    
+    
+}

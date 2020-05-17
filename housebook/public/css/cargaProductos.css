@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    background-color: #F0F0F0; 
+}
+.columnas{
+    display:  grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.imagen-libro img{
+    width: 100%;
+}
+.primera-columna,
+.segunda-columna{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px 0px;
+}
+.selector-datos{
+    background-color: white;
+}
+.selector-datos  div{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 2px 0px;
+    display: flex;
+    border-bottom: 5px solid #F0F0F0;
+    padding: 8px 6px;
+    
+}
+
+
+.pdf label,
+.fisico label{
+    width: 25%;
+}
+.pdf input,
+.fisico input{
+    margin-top: 5px;
+    width: 16px;
+    height: 18px;
+}
+.pdf textarea,
+.fisico textarea{
+    padding-left: 5px;
+}
+.selector-datos div .precio-producto{
+    width: 25%;
+}
+
+.precio{
+    padding-left: 5px;
+    margin-left: 15px;
+    border-left: 3px solid #f0f0f0;
+}
+.stock input{
+    margin-left: 15px;
+    width: 15%;
+}
+.envio select{
+    margin-left: 13px;
+    
+}
+.preview{
+    display: none;
+}
+
+.segunda-columna div{
+    margin: 5px 0px;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+}
+.segunda-columna label{
+    margin-bottom: 5px;
+    border: 1px solid rgba(83, 173, 175, 0.9);
+    background-color: rgba(83, 173, 175, 0.205);
+    border-radius: 5px;
+}
+.segunda-columna label:hover{
+    background-color: rgba(83, 173, 175, 1);
+}
+
+.segunda-columna .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.buttons button{
+    color: #212529;
+    background-color: rgba(83, 173, 175, 0.205);
+    border-color: rgba(83, 173, 175, 0.9);
+}
+
+@media(min-width:768px){
+    .columnas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .primera-columna div{
+        border-radius: 5px;
+    }
+    .selector-datos{
+        margin-top: 5px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .selector-datos div{
+        padding: 20px 6px;
+    }
+
+    .segunda-columna{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .segunda-columna div{
+        padding: 15px;
+        border-radius: 5px;
+    }
+}
+@media(min-width:1024px){
+
+    
+    section{
+        margin: 10px;
+        max-width: 1024px;
+        margin: 0px auto;
+        
+    }
+    .selector-datos{
+        box-sizing: border-box;
+        margin-top: 52px;
+    }
+    .selector-datos div{
+        
+    }
+    .selector-datos div label{
+        
+    }
+
+    .columnas{
+        display: grid;
+        grid-template-columns: 30% 30% auto   
+    }
+  
+    .preview{
+        display: block;
+        border: 1px solid black;
+        background-color: grey;
+        margin: 10px 0px;
+        border-radius: 10px;
+    }
+    .buttons{
+        margin: 0px;
+    }
+}
