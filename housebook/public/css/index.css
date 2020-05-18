@@ -23,7 +23,7 @@
 
 .block-title{
     width: 100%;
-    border: 1px solid rgba(128, 128, 128, 0.514);
+    border-bottom: 3px solid rgb(217 217 217);
     padding: 5px 0;
 }
 .tab{
@@ -107,7 +107,7 @@
     }
     .carousel-main{
         width: 100%;        
-        border: 5px solid black;
+       
         display: block;
         box-sizing: border-box;
         background: white;
@@ -124,7 +124,7 @@
     .nav-left{     
         width: 20%;
         text-align: center;
-        border: 5px solid black;
+        
         display: flex;
         flex-direction: column;
         background: white;
@@ -133,7 +133,7 @@
     .body-main{        
         margin-left: 5px;
         width: 100%;
-        border: 5px solid black;
+        
         height: 100%;        
         display: flex;
         flex-direction: column;
@@ -158,8 +158,9 @@
         width: 100%;       
     }
     .block-nav{
-        border: 4px solid black;
-        margin-bottom: 20px;
+        border-bottom: 3px solid rgb(217 217 217);
+        
+        padding-bottom: 15px;
     }
 
     .block-nav h2{
