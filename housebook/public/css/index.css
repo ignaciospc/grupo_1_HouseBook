@@ -17,7 +17,7 @@
     margin-bottom: 10px;
     background: white;
 }
-.nav-left{
+.left{
     display: none;
 }
 
@@ -121,7 +121,7 @@
         display: flex;
         justify-content: space-between;
     }
-    .nav-left{     
+    .left{     
         width: 20%;
         text-align: center;
         
