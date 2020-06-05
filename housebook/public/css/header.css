@@ -27,10 +27,15 @@ header{
     width: 99%;
     height: 30px;
 }
-.menu-header {
+.menu-header i {
     color: rgb(217,217,217);
     padding-left: 15px;
     font-size: 200%;
+}
+.bolsita i{
+    color: rgb(217,217,217);
+    padding-left: 15px;
+    font-size: 100%;
 }
 .carrito{
     color:  rgb(217,217,217);
@@ -52,8 +57,11 @@ header{
     padding: 3px 10px;
     position: absolute;
     right: 9px;
-    top: 2px;
+    top: 1px;
     color: white;
+}
+.lupa i{
+    color: white
 }
 .button-search{
     display: none;
@@ -189,6 +197,9 @@ header{
         font-family: 'Roboto', sans-serif;
         
     }
+    .logo-login i {
+        color:  rgb(217,217,217);
+    }
     a, .logo-login {color: rgb(217,217,217);}
 
     .contenedor-cabezera-2{
@@ -264,7 +275,7 @@ header{
         background-color: rgba(83, 173, 175, 0.205);
     }
     .nav-center-header ul li a{
-        font-size: 13px;
+        font-size: 12px;
         color: black;
     }
     .info-compra-header{

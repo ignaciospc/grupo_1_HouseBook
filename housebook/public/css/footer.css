@@ -26,6 +26,9 @@ footer{
     color: rgb(217,217,217);
     margin-bottom: 15px;
 }
+.pagos-footer h4{
+    color: rgb(217,217,217);
+}
 .pagos-footer img{
     padding: 10px 0px;
 }
@@ -39,10 +42,6 @@ footer{
     display: none;
 }
 
-
-section{
-    margin-top: 200px;
-}
 .redes-sociales-footer{
     display: none;
 }
@@ -116,9 +115,11 @@ section{
         color:rgb(217,217,217) ;
 
     }
+
     .redes-sociales-footer span{
         margin-left: 15px;
         font-size: 25px;
+        color: rgb(217,217,217);
     }
     .redes-sociales-footer h3{
         box-sizing: border-box;

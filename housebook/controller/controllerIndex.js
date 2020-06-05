@@ -13,6 +13,11 @@ const controller = {
         res.render('housebook/register')
 
     },
+    productDetail : (req, res) => {
+
+        res.render('housebook/productDetail')
+
+    },
 }
 
 module.exports = controller;
