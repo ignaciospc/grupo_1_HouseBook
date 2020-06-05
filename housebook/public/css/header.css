@@ -6,12 +6,12 @@ header{
     box-sizing: border-box;
     background-color: rgb(119, 63, 125);
 }
-.logo{
+.logo-header{
     width: 100px;
     box-sizing: border-box;
     margin-top: 10px;
 }
-.logo img{
+.logo-header img{
     width: 100%;
 }
 .cabezera-1{
@@ -27,7 +27,7 @@ header{
     width: 99%;
     height: 30px;
 }
-.menu {
+.menu-header {
     color: rgb(217,217,217);
     padding-left: 15px;
     font-size: 200%;
@@ -68,7 +68,7 @@ header{
     display: none;
 }
 
-a{
+.contenedor-cabezera-2 a{
     text-decoration: none;
     color: black;
 }
@@ -139,7 +139,7 @@ a{
     .carrito{
        font-size: 100%;
     }
-    .logo{
+    .logo-header{
         box-sizing: border-box;
         margin-top: 10px;
     }
@@ -154,7 +154,7 @@ a{
       
       display: block;
     }
-    .nav{
+    .nav-header{
         display: flex;        
         max-width: 1024px;
         margin: 0 auto;
@@ -168,15 +168,20 @@ a{
         margin: 0px 20px;
         padding: 0px 6px;
     }
-    .logo img{
+    .logo-header{
+        width: 8%;
+        margin-right:5px ;
+    }
+    .logo-header img{
         width: 100%;
     }
     
-    .nav-left, .nav-right{
+    .nav-left-header, .nav-right-header{
         display: flex;
     }
-    .nav-right{        
+    .nav-right-header{        
         justify-content: space-around;
+        padding-top: 0px;
     }
     .feedback, .logo-login{
         padding: 10px;
@@ -191,10 +196,12 @@ a{
     }
     .cabezera-1{
         max-width: 1024px;
+        max-height: 67px;
         margin: 0 auto;
         justify-content: flex-start;
+        padding: 0;
     }
-    .menu, .price-login{
+    .menu-header, .price-login{
         display: none;
     }
 
@@ -218,10 +225,11 @@ a{
     .contenedor-cabezera-3{
         display: block;
         background-color: white;
+        border-bottom: 1px solid;
       
         
     }
-    .contenedor-nav{
+    .contenedor-nav-header{
         background-color: white;
         display: flex;        
         max-width: 1024px;
@@ -229,43 +237,43 @@ a{
         justify-content: space-between;
         
     }
-    .redes-sociales{
+    .redes-sociales-header{
         display: grid;
         grid-template-columns: repeat(4,1fr);
     }
-    .redes-sociales i{
+    .redes-sociales-header i{
         color: black;
     }
-    .iconos-redes{
+    .iconos-redes-header{
         columns: 1;
-        padding: 0px 0px 0px 10px;
+        padding: 3px 0px 0px 7px;
     }
-    .nav-center{
+    .nav-center-header{
         width: 60%;        
     }
-    .nav-center ul{
+    .nav-center-header ul{
         list-style: none;
         display: flex;
         justify-content: space-around;
     }
-    .nav-center ul li{
+    .nav-center-header ul li{
         justify-content: space-around;
         padding: 0px 30px;
         border: 1px solid rgba(83, 173, 175, 0.205);
         border-radius: 5px;
         background-color: rgba(83, 173, 175, 0.205);
     }
-    .nav-center ul li a{
+    .nav-center-header ul li a{
         font-size: 13px;
         color: black;
     }
-    .info-compra{
+    .info-compra-header{
         box-sizing: border-box;
         padding: 0px 5px;
         
 
     }
-    .info-compra span{
+    .info-compra-header span{
         border: 1px solid rgba(83, 173, 175, 0.205);
         border-radius: 5px;
         background-color: rgba(83, 173, 175, 0.205);
