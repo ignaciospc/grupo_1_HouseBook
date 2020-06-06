@@ -18,6 +18,16 @@ const controller = {
         res.render('housebook/productDetail')
 
     },
+    productAdd : (req, res) => {
+
+        res.render('housebook/productAdd');
+
+    },
+    productCart : (req, res) => {
+
+        res.render('housebook/productCart');
+
+    },
 }
 
 module.exports = controller;

@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HouseBook | Carga de Productos</title>
-    <link rel="stylesheet" href="../../public/css/productAdd.css">
+    <link rel="stylesheet" href="/css/productAdd.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <!--boostrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
+
+<%- include("../partials/header") %> 
+
 <body style="background-color: #F0f0f0;">
 
     <section class="contenedor-carga-productos">
@@ -20,7 +23,7 @@
                 <div class="primera-columna">
         
                     <div class="imagen-libro">
-                        <img src="../../public/images/libros/libro-prueba.jpg" alt="">
+                        <img src="/images/libros/libro-prueba.jpg" alt="">
                     </div>
         
                     <div class="selector-datos">
@@ -132,4 +135,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
 </body>
+
+<%- include("../partials/footer") %>
+
 </html>
