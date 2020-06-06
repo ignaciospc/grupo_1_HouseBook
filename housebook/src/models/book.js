@@ -9,6 +9,11 @@ let productData = {
         let json = fs.readFileSync(fileData, "utf8")
         let product = json.length == 0? [] : JSON.parse(json)
         return product
+    },
+    findOne: (imputId) => {
+        let product = productData.findAll().find(x => x.id == imputId);        
+        return product
+
     }
 }
 

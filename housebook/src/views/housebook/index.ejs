@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
     <title>Home | House Book</title>
+<body>
+    
 
     <%- include('../partials/header') %>
 
@@ -13,7 +16,8 @@
         <div class="main">
             <div class="carousel-main">
                 <div class="block-title">
-                <h2>Lo Mas Vendidos</h2></div>
+                    <h2>Lo Mas Vendidos</h2> <a href="/products">ver mas</a>
+                </div> 
                 <div class="block">
                     <div class="carousel">
                         <div class="tab">
@@ -21,9 +25,9 @@
                             for (const book of product) { 
                                 if (book.categories == "Best-sellers") { %>
                                     <div class="block-item block-carousel">
-                                <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
+                                        <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
                                 <div class="item-info">
-                                    <h3 class="item-title"><%=book.name%></h3>
+                                    <a href="/products/<%=book.id%>"></a><h3 class="item-title"><%=book.name%></h3></a>
                                     <p class="autor"><%=book.author%></p>
                                     <div class="rating">
                                         <i class="fas fa-star"></i>
@@ -90,90 +94,36 @@
 
                     <div class="block-wrap">
                         <div class="block-title">
-                            <h2>Ofertas</h2>
+                            <h2>Ofertas</h2> <a href="/products">ver mas</a>
                         </div>
                         <div class="block">
                             <div class="carousel">
                                 <div class="tab">
-                                    <div class="block-item">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
+                                    <%
+                                    for (const book of product) { 
+                                        if (book.categories == "sales") { %>
+                                            <div class="block-item block-carousel">
+                                                <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
                                         <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
+                                            <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.name%></h3></a>
+                                            <p class="autor"><%=book.author%></p>
                                             <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
                                             </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
-                                    <div class="block-item">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
-                                    <div class="block-item not-phone">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
-                                    <div class="block-item not-phone">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
-                                   
+                                            <div class="price"><b>ARS$ <%=book.price%></b></div>
                                     
-                                  
+                                        </div>
+                                        <div class="item-action">
+                                            <a href="#" class="btn">Añadir al Carrito</a>
+                                        </div>
+                                    </div>                                    
+                                        <% count++; if (count == 8){break;}
+                                        }
+                                    }%>
                                 </div>
                             </div>
                         </div>
@@ -181,158 +131,71 @@
                 
                     <div class="block-wrap">
                         <div class="block-title">
-                            <h2>Libros en Español</h2>
+                            <h2>Libros en Español</h2> <a href="/products">ver mas</a>
                         </div>
                         <div class="block">
                             <div class="carousel">
                                 <div class="tab">
-                                    <div class="block-item">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
+                                    <%
+                            for (const book of product) { 
+                                if (book.categories == "spanish") { %>
+                                    <div class="block-item block-carousel">
+                                        <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
+                                <div class="item-info">
+                                    <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.name%></h3></a>
+                                    <p class="autor"><%=book.author%></p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
                                     </div>
-                                    <div class="block-item">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
-                                    <div class="block-item not-phone">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
-                                    <div class="block-item not-phone">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>                                    
-                                  
+                                    <div class="price"><b>ARS$ <%=book.price%></b></div>
+                            
                                 </div>
+                                <div class="item-action">
+                                    <a href="#" class="btn">Añadir al Carrito</a>
+                                </div>
+                            </div>                                    
+                                <% count++; if (count == 12){break;}
+                                }
+                            }%></div>
                             </div>
                         </div>
                     </div>                   
                 
                     <div class="block-wrap">
                         <div class="block-title">
-                            <h2>Novedades</h2>
+                            <h2>Novedades</h2> <a href="/products">ver mas</a>
                         </div>
                         <div class="block">
                             <div class="carousel">
-                                <div class="tab">
-                                    <div class="block-item">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
+                                <div class="tab"><% let count4 = 0;
+                            for (const book of product) { 
+                                if (book.categories == "new-release") { %>
+                                    <div class="block-item block-carousel">
+                                <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
+                                <div class="item-info">
+                                    <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.name%></h3></a>
+                                    <p class="autor"><%=book.author%></p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
                                     </div>
-                                    <div class="block-item">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
-                                    <div class="block-item not-phone">
-                                        <div class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></div>
-                                        <div class="item-info">
-                                            <h3 class="item-title">Empezar</h3>
-                                            <p class="autor">Mona Kasten</p>
-                                            <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="price"><b>ARS$ 2165,45</b></div>
-
-                                        </div>
-                                        <div class="item-action">
-                                            <a href="#" class="btn">Añadir al Carrito</a>
-                                        </div>
-                                    </div>
+                                    <div class="price"><b>ARS$ <%=book.price%></b></div>
+                            
                                 </div>
+                                <div class="item-action">
+                                    <a href="#" class="btn">Añadir al Carrito</a>
+                                </div>
+                            </div>                                    
+                                <% count++; if (count == 16){break;}
+                                }
+                            }%></div>
                             </div>
                         </div>
                     </div>   
@@ -348,4 +211,7 @@
     </div>
 
     <%- include("../partials/footer") %>
-    
+
+
+</body>
+</html>

@@ -21,7 +21,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', indexRouter);
-//app.use('/account', accountRouter);
+app.use('/account', accountRouter)
+
 
 
 //app.use('/product', usersRouter);
