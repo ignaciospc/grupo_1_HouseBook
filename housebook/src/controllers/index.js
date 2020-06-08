@@ -20,22 +20,32 @@ module.exports ={
 
         res.render("housebook/productCart")
     },
-    create : (req, res) => {
+    create:(req,res) =>{
+
+        res.render("housebook/productAdd")
+
+    },
+    createBook : (req, res) => {
+
+        console.log(hola);
+        
 
         let infoLibro = {
             titulo:req.body.titulo,
             autor:req.body.autores,
             valoracion:req.body.valoracion,
             descripcion:req.body.descripcion,
-            tags:req.body.tags,
-            detalle:req.body.detalle-libro,
+            categoria:req.body.tags,
+            detalle:req.body.detalle,
             //portada:req.file[0].filename
             //ver checkbox de fisico-pdf-envio
         }
 
+        models.create(infoLibro)
+
         
 
-        res.redirect("housebook/productAdd")
+        res.redirect("/")
 
     },
 

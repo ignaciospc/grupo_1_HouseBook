@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const fileData = path.join(__dirname, '../data/mockDataBase.json')
+const fileData = path.join(__dirname, '../data/librosDataBase.json')
 
 let productData = {
     findAll: () => {

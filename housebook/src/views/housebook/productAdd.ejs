@@ -18,7 +18,7 @@
 
         <div class="datos">
         
-            <form action="products/create" method="POST" enctype="multipart/form-data" name="formulrio">
+            <form action="/products" method="POST"  name="formulrio">
         
                 <div class="columnas">
         
@@ -60,14 +60,14 @@
                             placeholder="Descripcion Libro"></textarea>
                     </div>
         
-                    <div class="tags">
-                        <label for="tags">TAGS</label>
-                        <textarea name="tags" id="tags" cols="50" rows="2"></textarea>
+                    <div class="categoria">
+                        <label for="categoria">Catergoria</label>
+                        <textarea name="categoria" id="categoria" cols="50" rows="2"></textarea><!--pasar a select-->
                     </div>
         
                     <div class="detalle-libro">
-                        <label for="detalle-libro">Detall del Libro</label>
-                        <textarea name="detalle-libro" id="detalle-libro" cols="30" rows="5"
+                        <label for="detalle">Detalle del Compra</label>
+                        <textarea name="detalle" id="detalle" cols="30" rows="5"
                             placeholder="ACA VA EL DETALLE DEL LIBRO( formato / dimesiones / fecha de Publicacion / Idioma / Edicion / Ranking / ISBN  / Editorial / Autor"></textarea>
                     </div>
         
@@ -81,20 +81,22 @@
                         <input type="file" name="portada" id="portada">
                     </div>
         
-                    <div class="pdf">
+              <!--      <div class="pdf">
                         <label for="pdf">Pdf:</label>
                         <input type="checkbox" name="formato" value="Pdf">
                         <label class="precio" for="precio-pdf">Precio :</label>
                         <input class="precio-producto" type="text">
         
-                    </div>
+                    </div>   -->
         
         
-                    <div class="fisico">
-                        <label for="fisico">Fisico:</label>
-                        <input type="checkbox" name="formato" value="Fisico">
+                  <div class="fisico">
+               <!--     <label for="fisico">Fisico:</label>
+                        <input type="checkbox" name="formato" value="Fisico"> -->
                         <label class="precio" for="precio-fisico">Precio :</label>
                         <input class="precio-producto" type="text">
+                        <label class= "precio" for="descuento">Descuento :</label>
+                        <input class="precio-producto" name="descuento" type="number" id="descuento" min="0" max="100">
                     </div>
         
                     <div class="stock">
@@ -114,8 +116,8 @@
         
                 <div class="buttons">
         
-                    <button type="button" class="btn btn-success">next </button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-success">Crear Post </button>
+                    <button type="delete" class="btn btn-danger">Delete</button>
                 </div>
         
             </form>

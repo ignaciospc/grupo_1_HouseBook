@@ -7,8 +7,10 @@ const controllerIndex = require("../controllers/index")
 router.get('/', controllerIndex.home);
 
 //rotuer.get Productos
-router.get("/products", controllerIndex.products) //aca creo que van todos los productos
+router.get("/products", controllerIndex.products) 
+
 router.get("/products/create",controllerIndex.create)
+router.post("/products",controllerIndex.createBook)
 router.get("/products/:id", controllerIndex.details)
 
 router.get("/cart", controllerIndex.cart)
