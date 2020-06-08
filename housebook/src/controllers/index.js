@@ -13,11 +13,6 @@ module.exports ={
     details: (req, res) => {
         
         let product = models.findOne(req.params.id)
-<<<<<<< HEAD
-        if (!product) {res.send("producto no encontrado ameo"); return}
-        res.render("housebook/productDetail", {product})
-    }
-=======
         if (!product) {res.send("producto no encontrado ameo"); return} //ACTIVA POR SI NO ENCUENTRA EL ID
         res.render("housebook/productDetail", {product})
     },
@@ -53,6 +48,5 @@ module.exports ={
         res.redirect("/")
 
     },
->>>>>>> pruebasIS
 
 }

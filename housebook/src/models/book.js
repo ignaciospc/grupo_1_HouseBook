@@ -1,11 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-const fileData = path.join(__dirname, '../data/mockDataBase.json')
-=======
 const fileData = path.join(__dirname, '../data/librosDataBase.json')
->>>>>>> pruebasIS
 
 let productData = {
     findAll: () => {
@@ -17,10 +13,6 @@ let productData = {
     findOne: (imputId) => {
         let product = productData.findAll().find(x => x.id == imputId);        
         return product
-<<<<<<< HEAD
-
-    }
-=======
     },
 
     //create Book
@@ -58,7 +50,6 @@ let productData = {
     }
 
     
->>>>>>> pruebasIS
 }
 
 module.exports = productData
