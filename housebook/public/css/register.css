@@ -69,6 +69,10 @@
     padding-bottom: 5px;
     font-size: 130%;
 }
+.casilla-register input{
+    display: inline;
+    width: 10%;
+}
 .forget-password{
     padding: 0 10px 10px;
 }
@@ -121,6 +125,7 @@ a{
         max-width: 1024px;
         margin: 70px auto;
         box-shadow: 7px 13px 35px #000;
+        width: 1000px;
     }
     
 }

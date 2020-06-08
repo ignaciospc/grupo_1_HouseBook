@@ -25,7 +25,7 @@ header{
 }
 #busqueda{
     width: 99%;
-    height: 30px;
+    height: 40px;
 }
 .menu-header i {
     color: rgb(217,217,217);
@@ -262,12 +262,12 @@ header{
     .nav-center-header{
         width: 60%;        
     }
-    .nav-center-header ul{
+    .nav-center-header-ul{
         list-style: none;
         display: flex;
         justify-content: space-around;
     }
-    .nav-center-header ul li{
+    .nav-center-header-li{
         justify-content: space-around;
         padding: 0px 30px;
         border: 1px solid rgba(83, 173, 175, 0.205);
@@ -275,7 +275,7 @@ header{
         background-color: rgba(83, 173, 175, 0.205);
     }
     .nav-center-header ul li a{
-        font-size: 12px;
+        font-size: 11px;
         color: black;
     }
     .info-compra-header{
