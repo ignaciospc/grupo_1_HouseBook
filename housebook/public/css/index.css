@@ -84,7 +84,9 @@
     background: rgb(83,174,175);
     
 }
-
+.item-info a h3{
+    overflow: hidden;
+}
 @media(min-width: 768px)
 {
     .main{

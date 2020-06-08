@@ -52,16 +52,14 @@ let productData = {
     actualizar: (product) => {
         let readJson = productData.findAll();
 
-        readJson = readJson.filter(x => x.id != product.id );
-        //pusheo la que me lelgo por parametro
-        readJson.push(product);
-        console.log(readJson)
-        /*
-        //convertir a json ese array con la peli nueva
+        readJson = readJson.filter(x => x.id != product.id );        
+        readJson.push(product);       
+       
+        
         let jsonData = JSON.stringify(readJson, null, " ");
         //escribo
         fs.writeFileSync(fileData, jsonData);
-        */
+        
     }
     
 }

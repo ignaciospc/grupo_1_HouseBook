@@ -26,6 +26,11 @@ module.exports ={
 
     },
     createBook : (req, res, next) => {
+        let portada = ""
+        if (req.file) {
+            //le saco la palabra public para que sea a partir de /img/...
+            portada = req.file.path.replace('public/', '/');
+        }
 
         let infoLibro = {
             titulo:req.body.titulo,
@@ -36,7 +41,7 @@ module.exports ={
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
-            portada: req.files[0].filename
+            portada: req.body.portada
             //ver checkbox de fisico-pdf-envio
         }
 
@@ -54,9 +59,16 @@ module.exports ={
         res.render("housebook/productEdit", {product})
     },
     edit: (req,res, next) => {
-        
+        console.log(req.body)
+
+        let portada = ""
+        if (req.file) {
+            //le saco la palabra public para que sea a partir de /img/...
+            portada = req.file.path.replace('public/', '/');
+        }
+
         let infoLibro = {
-            titulo : req.body.titulo,
+            titulo:req.body.titulo,
             autor:req.body.autores,
             valoracion:req.body.valoracion,
             descripcion:req.body.descripcion,
@@ -64,10 +76,10 @@ module.exports ={
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
-            portada: req.files[0].filename
+            portada: portada
             //ver checkbox de fisico-pdf-envio
         }
-        console.log(infoLibro)
+       // console.log(infoLibro)
         models.actualizar(infoLibro)
         res.redirect("/")
     }

@@ -33,19 +33,19 @@
       
           
           <div class="info-libro">
-            <h3 class="titulo"> <a href=""><%= libro.titulo %></a> </h3>
+            <h3 class="titulo"> <a href="/products/<%=libro.id%>"><%= libro.titulo %></a> </h3>
 
             <div class="valoracion-libro">
               <i class="fas fa-star"></i>  <%= libro.valoracion %>
             </div>
 
             <div class="img">
-              <a href=" ">
+              <a href="/products/<%=libro.id%>">
                 <img src="/images/libros/<%= libro.portada %>" alt="imagen de libro">
               </a>
             </div>
 
-            <a class="autor" href=""> <%= libro.autor %> </a>
+            <a class="autor" href="/products/<%=libro.id%>"> <%= libro.autor %> </a>
 
             <span class="precio">$ <%= libro.precio %> </span>
           </div>
