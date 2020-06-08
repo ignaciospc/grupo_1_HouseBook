@@ -53,12 +53,10 @@ module.exports ={
         if (!product) {res.send("producto no encontrado ameo"); return} //ACTIVA POR SI NO ENCUENTRA EL ID
         res.render("housebook/productEdit", {product})
     },
-    edit: (req,res) => {
-        
-        console.log(req.body)
+    edit: (req,res, next) => {
         
         let infoLibro = {
-            titulo:req.body.titulo,
+            titulo : req.body.titulo,
             autor:req.body.autores,
             valoracion:req.body.valoracion,
             descripcion:req.body.descripcion,
