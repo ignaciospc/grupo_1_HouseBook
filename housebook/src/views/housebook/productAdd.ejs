@@ -18,7 +18,7 @@
 
         <div class="datos">
         
-            <form action="/products" method="POST"  name="formulrio">
+            <form action="/products" method="POST" enctype="multipart/form-data"  name="formulrio">
         
                 <div class="columnas">
         
@@ -51,7 +51,7 @@
 
                     <div class="valoracion">
                         <label for="valoraicon">valoracion del Libro</label>
-                        <input type="number" name="valoracion">
+                        <input type="number" name="valoracion" min="0" max="5">
                     </div>
         
                     <div class="descripcion">
@@ -94,7 +94,7 @@
                <!--     <label for="fisico">Fisico:</label>
                         <input type="checkbox" name="formato" value="Fisico"> -->
                         <label class="precio" for="precio-fisico">Precio :</label>
-                        <input class="precio-producto" type="text">
+                        <input class="precio-producto"  name="precio" type="text">
                         <label class= "precio" for="descuento">Descuento :</label>
                         <input class="precio-producto" name="descuento" type="number" id="descuento" min="0" max="100">
                     </div>

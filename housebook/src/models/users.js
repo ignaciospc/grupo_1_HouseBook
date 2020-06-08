@@ -24,9 +24,9 @@ let userData = {
 
         readJson.push(infoUser);       
 
-        let writeJson = JSON.stringify(readJson);
+        let writeJson = JSON.stringify(readJson, null, " ");
 
-        fs.writeFileSync(dataUsers, writeJson, null, " ");
+        fs.writeFileSync(dataUsers, writeJson);
 
     },
     createId : ()=> {

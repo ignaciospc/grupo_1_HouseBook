@@ -25,10 +25,7 @@ module.exports ={
         res.render("housebook/productAdd")
 
     },
-    createBook : (req, res) => {
-
-        console.log(hola);
-        
+    createBook : (req, res, next) => {
 
         let infoLibro = {
             titulo:req.body.titulo,
@@ -37,7 +34,9 @@ module.exports ={
             descripcion:req.body.descripcion,
             categoria:req.body.tags,
             detalle:req.body.detalle,
-            //portada:req.file[0].filename
+            precio:req.body.precio,
+            descuento:req.body.descuento,
+            portada: req.files[0].filename
             //ver checkbox de fisico-pdf-envio
         }
 
