@@ -4,57 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HouseBook | Carga de Productos</title>
-    <link rel="stylesheet" href="../../public/css/productAdd.css">
+    <link rel="stylesheet" href="/css/productAdd.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <!--boostrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
+
+<%- include("../partials/header") %> 
+
 <body style="background-color: #F0f0f0;">
 
     <section class="contenedor-carga-productos">
 
         <div class="datos">
         
-            <div class="columnas">
+            <form action="/products" method="POST"  name="formulrio">
         
-                <div class="primera-columna">
+                <div class="columnas">
         
-                    <div class="imagen-libro">
-                        <img src="../../public/images/libros/libro-prueba.jpg" alt="">
-                    </div>
-        
-                    <div class="selector-datos">
-        
-                        <div class="pdf">
-                            <label for="pdf">Pdf:</label>
-                            <input type="checkbox" name="formato" value="Pdf">
-                            <label class="precio" for="precio-pdf">Precio :</label>
-                            <input class="precio-producto" type="text">
-        
-                        </div>
-        
-        
-                        <div class="fisico">
-                            <label for="fisico">Fisico:</label>
-                            <input type="checkbox" name="formato" value="Fisico">
-                            <label class="precio" for="precio-fisico">Precio :</label>
-                            <input class="precio-producto" type="text">
-                        </div>
-        
-                        <div class="stock">
-                            <label for="stock">Stock :</label>
-                            <input type="number" id="stock" placeholder="cantidad">
-                        </div>
-        
-                        <div class="envio">
-                            <label for="envio">Envio :</label>
-                            <select name="envio" id="envio">
-                                <option value="si">si</option>
-                                <option value="no">no</option>
-                            </select>
-                        </div>
-        
-                    </div>
+                    <!-- <div class="primera-columna">
+                
+                            <div class="imagen-libro">
+                                <img src="/images/libros/libro-prueba.jpg" alt="">
+                            </div> -->
         
                 </div>
         
@@ -76,6 +48,11 @@
                         </select>
         
                     </div>
+
+                    <div class="valoracion">
+                        <label for="valoraicon">valoracion del Libro</label>
+                        <input type="number" name="valoracion">
+                    </div>
         
                     <div class="descripcion">
                         <label for="descripcion">Descripcion del Libro</label>
@@ -83,36 +60,69 @@
                             placeholder="Descripcion Libro"></textarea>
                     </div>
         
-                    <div class="tags">
-                        <label for="tags">TAGS</label>
-                        <textarea name="tags" id="tags" cols="50" rows="2"></textarea>
+                    <div class="categoria">
+                        <label for="categoria">Catergoria</label>
+                        <textarea name="categoria" id="categoria" cols="50" rows="2"></textarea><!--pasar a select-->
                     </div>
         
                     <div class="detalle-libro">
-                        <label for="detalle-libro">Detall del Libro</label>
-                        <textarea name="detall-libro" id="detalle-libro" cols="30" rows="5"
+                        <label for="detalle">Detalle del Compra</label>
+                        <textarea name="detalle" id="detalle" cols="30" rows="5"
                             placeholder="ACA VA EL DETALLE DEL LIBRO( formato / dimesiones / fecha de Publicacion / Idioma / Edicion / Ranking / ISBN  / Editorial / Autor"></textarea>
                     </div>
         
-                    <div class="buttons">
         
-                        <button type="button" class="btn btn-primary">preview</button>
-                        <button type="button" class="btn btn-success">Save</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+        
+                <div class="selector-datos">
+        
+                    <div class="carga-imagen">
+                        <label for="portada">Subir Portada</label>
+                        <input type="file" name="portada" id="portada">
+                    </div>
+        
+              <!--      <div class="pdf">
+                        <label for="pdf">Pdf:</label>
+                        <input type="checkbox" name="formato" value="Pdf">
+                        <label class="precio" for="precio-pdf">Precio :</label>
+                        <input class="precio-producto" type="text">
+        
+                    </div>   -->
         
         
+                  <div class="fisico">
+               <!--     <label for="fisico">Fisico:</label>
+                        <input type="checkbox" name="formato" value="Fisico"> -->
+                        <label class="precio" for="precio-fisico">Precio :</label>
+                        <input class="precio-producto" type="text">
+                        <label class= "precio" for="descuento">Descuento :</label>
+                        <input class="precio-producto" name="descuento" type="number" id="descuento" min="0" max="100">
+                    </div>
         
+                    <div class="stock">
+                        <label for="stock">Stock :</label>
+                        <input name="stock" type="number" id="stock">
+                    </div>
         
+                    <div class="envio">
+                        <label for="envio">Envio :</label>
+                        <select name="envio" id="envio">
+                            <option value="si">si</option>
+                            <option value="no">no</option>
+                        </select>
                     </div>
         
                 </div>
-
-                <div class="preview">
-
-                </div>    
         
+                <div class="buttons">
         
-            </div>
+                    <button type="submit" class="btn btn-success">Crear Post </button>
+                    <button type="delete" class="btn btn-danger">Delete</button>
+                </div>
+        
+            </form>
+        
+        </div>
         
         
         
@@ -132,4 +142,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
 </body>
+
+<%- include("../partials/footer") %>
+
 </html>

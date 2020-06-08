@@ -268,7 +268,7 @@ body{
     }
     section{
         max-width: 1024px;
-        margin: 0 auto;
+        margin: 10px auto;
     }
     .categoria{
         grid-column: span 4;

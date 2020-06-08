@@ -3,19 +3,21 @@
     margin: 0;
 }
 
-.todo{
+.body{
     background: #F0F0F0;
 }
-.container{
+.container-sesion-register{
     max-width: 425px;
     padding: 15px;
     font-family: 'Roboto', sans-serif;
+    
+    
 }
 
-.block-form{
+.block-form-sesion{
     margin-bottom: 5px;
 }
-.block-form input{
+.block-form-sesion input{
     display: block;
     width: 90%;
     font-size: 110%;    
@@ -26,31 +28,52 @@
 .forget{
     text-align: right;    
 }
-button{
-    font-size: 200%;
-    width: 90%;
+
+/*buttons registro/iniciarSesion */
+.iniciar-sesion,  .register{
+    font-size: 30px;
+    width: 95%;
+    align-self: center;
+    padding: 5px;
     background:  rgba(83, 173, 175, 0.705);
-    margin-top: 10px;
+    margin-top: 15px;
+    border: none;
+    
+}
+.iniciar-sesion:hover, .register:hover{
+    background-color: rgba(83, 173, 175, 1);
 }
 
-.register, .login{
+.box-register, .box-login{
     margin-bottom: 20px;
     background: white;
     padding: 20px;    
 }
-.titulo h2{
+.titulo-sesion h2{
     font-size: 200%; 
     margin-bottom: 10px;   
 }
-.casilla{
+.titulo-register h2{
+    font-size: 200%; 
+    margin-bottom: 10px;   
+}
+.casilla-sesion{
     padding-bottom: 5px;
     font-size: 130%;
 }
-.casilla label{
+.casilla-sesion label{
     display: block;
     padding: 3px 0;
 }
-.forget{
+.casilla-register{
+    padding-bottom: 5px;
+    font-size: 130%;
+}
+.casilla-register input{
+    display: inline;
+    width: 10%;
+}
+.forget-password{
     padding: 0 10px 10px;
 }
 .block-register form input{
@@ -61,12 +84,13 @@ a{
     color: black;
 }
 
+
+
 @media(min-width: 768px){
 
-    .container{
+    .container-sesion-register{
         max-width: 768px;
         margin: 0 3%;
-        
         box-sizing: border-box;
         display: flex;     
         justify-content: space-between;          
@@ -74,29 +98,34 @@ a{
         box-sizing: border-box;     
     }
   
-    .login{
+    .box-login{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 48%;        
     }
-    .register{        
+    .box-register{        
         width: 48%;
     }
-    button{
+    /*buttons registro/iniciarSesion */
+    .iniciar-sesion,  .register{
         width: 95%;
         margin: 0;
     }
-    .casilla, .forget{
+    .casilla-register, 
+    .casilla-sesion, 
+    .forget-password{
         padding: 0;
     }
     
-
 }
 
 @media(min-width: 1024px){
-    .container{
-        max-width: 1444px;
+    .container-sesion-register{
+        max-width: 1024px;
+        margin: 70px auto;
+        box-shadow: 7px 13px 35px #000;
+        width: 1000px;
     }
     
 }
