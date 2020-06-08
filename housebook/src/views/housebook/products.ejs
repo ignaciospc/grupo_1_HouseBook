@@ -3,12 +3,15 @@
   <head>
     <title>home</title>
     <link rel="stylesheet" href="/css/products.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
    
   </head>
 
   <%- include("../partials/header") %> 
   
   <body>
+
+   
 
     <div class="contenedor">
 
@@ -26,26 +29,28 @@
 
       <section class="libros">
 
+        <% for (const libro of product) { %>
+      
           
           <div class="info-libro">
-            <h3 class="titulo">NOSE</h3>
+            <h3 class="titulo"> <a href=""><%= libro.titulo %></a> </h3>
 
             <div class="valoracion-libro">
-                *3
+              <i class="fas fa-star"></i>  <%= libro.valoracion %>
             </div>
 
             <div class="img">
               <a href=" ">
-                <img src="/images/libros/ejemplo.jpg" alt="imagen de libro">
+                <img src="/images/libros/<%= libro.portada %>" alt="imagen de libro">
               </a>
             </div>
 
-            <a class="autor" href=""> yo </a>
+            <a class="autor" href=""> <%= libro.autor %> </a>
 
-            <span class="precio">$ 4000 </span>
+            <span class="precio">$ <%= libro.precio %> </span>
           </div>
 
-
+          <% }  %> 
        
       </section>
 

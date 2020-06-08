@@ -32,7 +32,7 @@ module.exports ={
             autor:req.body.autores,
             valoracion:req.body.valoracion,
             descripcion:req.body.descripcion,
-            categoria:req.body.tags,
+            categoria:req.body.categoria,
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
