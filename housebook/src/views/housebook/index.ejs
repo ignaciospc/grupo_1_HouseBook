@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta titulo="viewport" content="width=device-width, initial-scale=1.0">
     
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
@@ -23,12 +23,12 @@
                         <div class="tab">
                             <% let count = 0;
                             for (const book of product) { 
-                                if (book.categories == "Best-sellers") { %>
+                                if (book.categoria == "mas-vendidos") { %>
                                     <div class="block-item block-carousel">
                                         <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
                                 <div class="item-info">
-                                    <a href="/products/<%=book.id%>"></a><h3 class="item-title"><%=book.name%></h3></a>
-                                    <p class="autor"><%=book.author%></p>
+                                    <a href="/products/<%=book.id%>"></a><h3 class="item-title"><%=book.titulo%></h3></a>
+                                    <p class="autor"><%=book.autor%></p>
                                     <div class="rating">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -36,7 +36,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                     </div>
-                                    <div class="price"><b>ARS$ <%=book.price%></b></div>
+                                    <div class="precio"><b>ARS$ <%=book.precio%></b></div>
                             
                                 </div>
                                 <div class="item-action">
@@ -101,12 +101,12 @@
                                 <div class="tab">
                                     <%
                                     for (const book of product) { 
-                                        if (book.categories == "sales") { %>
+                                        if (book.categoria == "ofertas") { %>
                                             <div class="block-item block-carousel">
                                                 <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
                                         <div class="item-info">
-                                            <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.name%></h3></a>
-                                            <p class="autor"><%=book.author%></p>
+                                            <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.titulo%></h3></a>
+                                            <p class="autor"><%=book.autor%></p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -114,7 +114,7 @@
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                             </div>
-                                            <div class="price"><b>ARS$ <%=book.price%></b></div>
+                                            <div class="precio"><b>ARS$ <%=book.precio%></b></div>
                                     
                                         </div>
                                         <div class="item-action">
@@ -138,12 +138,12 @@
                                 <div class="tab">
                                     <%
                             for (const book of product) { 
-                                if (book.categories == "spanish") { %>
+                                if (book.categoria == "español") { %>
                                     <div class="block-item block-carousel">
                                         <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
                                 <div class="item-info">
-                                    <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.name%></h3></a>
-                                    <p class="autor"><%=book.author%></p>
+                                    <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.titulo%></h3></a>
+                                    <p class="autor"><%=book.autor%></p>
                                     <div class="rating">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -151,7 +151,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                     </div>
-                                    <div class="price"><b>ARS$ <%=book.price%></b></div>
+                                    <div class="precio"><b>ARS$ <%=book.precio%></b></div>
                             
                                 </div>
                                 <div class="item-action">
@@ -173,12 +173,12 @@
                             <div class="carousel">
                                 <div class="tab"><% let count4 = 0;
                             for (const book of product) { 
-                                if (book.categories == "new-release") { %>
+                                if (book.categoria == "nuevos-lanzamientos") { %>
                                     <div class="block-item block-carousel">
                                 <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
                                 <div class="item-info">
-                                    <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.name%></h3></a>
-                                    <p class="autor"><%=book.author%></p>
+                                    <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.titulo%></h3></a>
+                                    <p class="autor"><%=book.autor%></p>
                                     <div class="rating">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -186,7 +186,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                     </div>
-                                    <div class="price"><b>ARS$ <%=book.price%></b></div>
+                                    <div class="precio"><b>ARS$ <%=book.precio%></b></div>
                             
                                 </div>
                                 <div class="item-action">

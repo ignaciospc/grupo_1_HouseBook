@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    background-color: #F0F0F0; 
+}
+.columnas{
+    display: flex;
+    flex-direction: column;
+}
+.imagen-libro img{
+    width: 100%;
+}
+.primera-columna,
+.segunda-columna{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px 0px;
+}
+.selector-datos{
+    background-color: white;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+}
+.selector-datos  div{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 2px 0px;
+    display: flex;
+    border-bottom: 5px solid #F0F0F0;
+    padding: 8px 6px;
+    
+}
+
+
+.pdf label,
+.fisico label{
+    width: 25%;
+}
+.pdf input,
+.fisico input{
+    margin-top: 5px;
+    width: 16px;
+    height: 18px;
+}
+.pdf textarea,
+.fisico textarea{
+    padding-left: 5px;
+}
+.selector-datos div .precio-producto{
+    width: 25%;
+}
+
+.precio{
+    padding-left: 5px;
+    margin-left: 15px;
+    border-left: 3px solid #f0f0f0;
+}
+.stock input{
+    margin-left: 15px;
+    width: 15%;
+}
+.envio select{
+    margin-left: 13px;
+    
+}
+
+
+.segunda-columna div{
+    margin: 5px 0px;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+}
+.segunda-columna label{
+    margin-bottom: 5px;
+    border: 1px solid rgba(83, 173, 175, 0.9);
+    background-color: rgba(83, 173, 175, 0.205);
+    border-radius: 5px;
+}
+.segunda-columna label:hover{
+    background-color: rgba(83, 173, 175, 1);
+}
+
+.segunda-columna .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.buttons .next{
+    width: 49%;
+    color: #212529;
+    background-color: rgba(83, 173, 175, 0.205);
+    border-color: rgba(83, 173, 175, 0.9);
+    margin-bottom: 20px;
+}
+
+@media(min-width:768px){
+    .columnas{
+        display: grid;
+    }
+    .primera-columna div{
+        border-radius: 5px;
+    }
+    .selector-datos{
+        margin-top: 5px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .selector-datos div{
+      padding: 5px;
+      margin: 0;
+    }
+
+    .segunda-columna{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .segunda-columna div{
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .selector-datos div .precio-producto{
+        height: 30px;
+    }
+    .selector-datos div label{
+        width: 20%;
+    }
+}
+@media(min-width:1024px){
+
+    .contenedor-carga-productos{
+      width: 720px;
+    }
+
+    
+    section{
+        margin: 10px;
+        max-width: 1024px;
+        margin: 0px auto;
+        
+    }
+    .selector-datos{
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    .columnas{
+        display: grid;
+        grid-template-columns: 30% 30% auto   
+    }
+  
+    .buttons{
+        margin: 0px;
+    }
+}

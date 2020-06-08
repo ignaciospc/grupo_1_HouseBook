@@ -32,7 +32,7 @@ module.exports ={
             autor:req.body.autores,
             valoracion:req.body.valoracion,
             descripcion:req.body.descripcion,
-            categoria:req.body.tags,
+            categoria:req.body.categoria,
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
@@ -47,5 +47,31 @@ module.exports ={
         res.redirect("/")
 
     },
+
+    editForm: (req,res) => {
+        let product = models.findOne(req.params.id)
+        if (!product) {res.send("producto no encontrado ameo"); return} //ACTIVA POR SI NO ENCUENTRA EL ID
+        res.render("housebook/productEdit", {product})
+    },
+    edit: (req,res) => {
+        
+        console.log(req.body)
+        
+        let infoLibro = {
+            titulo:req.body.titulo,
+            autor:req.body.autores,
+            valoracion:req.body.valoracion,
+            descripcion:req.body.descripcion,
+            categoria:req.body.categoria,
+            detalle:req.body.detalle,
+            precio:req.body.precio,
+            descuento:req.body.descuento,
+            portada: req.files[0].filename
+            //ver checkbox de fisico-pdf-envio
+        }
+        console.log(infoLibro)
+        models.actualizar(infoLibro)
+        res.redirect("/")
+    }
 
 }

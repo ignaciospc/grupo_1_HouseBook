@@ -29,7 +29,12 @@ router.get("/products", controllerIndex.products);
 
 router.get("/products/create",controllerIndex.create);
 router.post("/products", upload.any(), controllerIndex.createBook);
+
+
 router.get("/products/:id", controllerIndex.details);
+
+router.get("/products/:id/edit", controllerIndex.editForm)
+router.put("/products/:id", controllerIndex.edit)
 
 router.get("/cart", controllerIndex.cart);
 
