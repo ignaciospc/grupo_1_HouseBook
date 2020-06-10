@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const methodOverride = require('method-override');
+
 
 const indexRouter = require('./routes/index');
 const accountRouter = require('./routes/account')
@@ -20,6 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
+//use los method put y delete en las rutas y el formulario
+app.use(methodOverride('_method'));
+
 app.use('/', indexRouter);
 app.use('/account', accountRouter)
 
@@ -27,7 +32,7 @@ app.use('/account', accountRouter)
 
 //app.use('/product', usersRouter);
 
-/*
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -43,5 +48,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-*/
+
 module.exports = app;

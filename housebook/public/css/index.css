@@ -65,6 +65,7 @@
 }
 
 .item-title{
+    overflow: hidden;
     height: 45px;
     padding-top: 10px;
 }
@@ -84,7 +85,10 @@
     background: rgb(83,174,175);
     
 }
-
+.item-info a h3{
+    overflow: hidden;
+    color: black;
+}
 @media(min-width: 768px)
 {
     .main{

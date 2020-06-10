@@ -133,6 +133,8 @@ body{
     text-transform: uppercase;
     font-weight: bolder;
 }
+
+
 .categoria{
     display: none;
 }
@@ -148,6 +150,37 @@ body{
 .redes-desktop{
     display: none;
 }
+
+ /*buttons delete y edit */
+
+ .buttons-edit-delete{
+    margin-top: 10px;
+}
+
+.button-edit{
+    width: 48%;
+    padding: 5px;
+    border: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: rgb(83,174,175);
+    border-radius: 5px;
+}
+
+.button-delete{
+    width: 48%;
+    padding: 5px;
+    border: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: rgb(83,174,175);
+    border-radius: 5px;
+}
+.form-button{
+    display: contents;
+}
+
+
 
 
 
@@ -167,7 +200,7 @@ body{
     }
     .contenedor{
         display: grid;
-        grid-template-columns: 30% 30% 38%;
+        grid-template-columns: 33% 35% 30%;
         column-gap: 5px;
     }
     .contenedor-principal,
@@ -223,7 +256,7 @@ body{
     }
     .img-libro{
         order: -1;
-        width: 56%;
+        width: 140%;
     }
     .info-1 ul li{
         margin-bottom: 25px;
@@ -237,19 +270,22 @@ body{
     }
     .info-envio i{
         position: absolute;
-        font-size: 25px;
+        font-size: 20px;
         color:rgb(83,174,175);
     }
     .info-envio label{
-        font-size: 20px;
+        font-size: 16px;
     margin-bottom: 10px;
-    }
-    .img-libro{
-        width: 50%;
+    margin-left: 15px;
     }
     .img-libro img{
         width: 90%;
-        margin-top: 88px;
+        margin-top: 30px;
+    }
+    .button-edit,
+    .button-delete{
+        width: 45%;
+        font-size: 20px;
     }
    
   
@@ -303,6 +339,9 @@ body{
         margin: 0 auto;
         width: 99%;
     }
+    .contenedor-detalle-producto ul{
+        columns: 2;
+    }
     .contenedor-precio{
         margin: 0 auto;
         width: 96%;
@@ -324,7 +363,6 @@ body{
     }
     .img-libro img{
         width: 100%;
-    margin-top: 65px;
     }
     .redes-desktop a{ 
         margin: 0px 10px;
@@ -343,6 +381,22 @@ body{
         bottom: 37px;
         left: 90px;
     }
+    .button-edit,
+    .button-delete{
+        width: 48%;
+    }
+    .button-edit:hover{
+        background-color: rgba(224, 129, 51, 0.966);
+        color: white;
+        font-weight: bold;
+    }
+    .button-delete:hover{
+        background-color: rgb(254, 47, 47);
+        color: white;
+        font-weight: bold
+    }
+
+   
 }
 
 

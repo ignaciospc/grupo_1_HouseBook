@@ -47,8 +47,20 @@ let productData = {
 
         return nroId + 1
 
-    }
+    },
 
+    actualizar: (product) => {
+        let readJson = productData.findAll();
+
+        readJson = readJson.filter(x => x.id != product.id );        
+        readJson.push(product);       
+       
+        
+        let jsonData = JSON.stringify(readJson, null, " ");
+        //escribo
+        fs.writeFileSync(fileData, jsonData);
+        
+    }
     
 }
 
