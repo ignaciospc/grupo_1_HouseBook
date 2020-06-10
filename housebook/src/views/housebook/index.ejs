@@ -25,7 +25,7 @@
                             for (const book of product) { 
                                 if (book.categoria == "mas-vendidos") { %>
                                     <div class="block-item block-carousel">
-                                        <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
+                                        <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/<%=book.portada%>" alt="Ejemplo0"></a>
                                 <div class="item-info">
                                     <a href="/products/<%=book.id%>"></a><h3 class="item-title"><%=book.titulo%></h3></a>
                                     <p class="autor"><%=book.autor%></p>
@@ -103,7 +103,7 @@
                                     for (const book of product) { 
                                         if (book.categoria == "ofertas") { %>
                                             <div class="block-item block-carousel">
-                                                <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
+                                                <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/<%=book.portada%>" alt="Ejemplo0"></a>
                                         <div class="item-info">
                                             <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.titulo%></h3></a>
                                             <p class="autor"><%=book.autor%></p>
@@ -140,7 +140,7 @@
                             for (const book of product) { 
                                 if (book.categoria == "español") { %>
                                     <div class="block-item block-carousel">
-                                        <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/Ejemplo.jpg" alt="Ejemplo0"></a>
+                                        <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/<%=book.portada%>" alt="Ejemplo0"></a>
                                 <div class="item-info">
                                     <a href="/products/<%=book.id%>"><h3 class="item-title"><%=book.titulo%></h3></a>
                                     <p class="autor"><%=book.autor%></p>

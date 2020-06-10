@@ -27,6 +27,8 @@
         <div class="contenedor-principal">
 
             
+
+            
             
             <div class="info-1">
 
@@ -67,8 +69,21 @@
 
             <div class="img-libro">
                 <img src="/images/libros/<%=product.portada%>" alt="imagenLibro">
+
+                <div class="buttons-edit-delete">
+                    <form class="form-button" method="POST" action="/products/:id?_method=PUT">
+                        <button type="submit" class="button-edit">edit</button>
+                    </form>
+                    <form class="form-button" method="POST" action="">
+                        <button type="submit" href="" class="button-delete">delete</button>
+                    </form>
+                    
+                    
+                </div>
+    
             </div>
 
+            
             
 
 
