@@ -28,9 +28,9 @@ router.post("/products", upload.any(), controllerIndex.createBook);
 
 
 router.get("/products/:id", controllerIndex.details);
-
 router.get("/products/:id/edit", controllerIndex.editForm)
-router.put("/products/:id/", upload.any(), controllerIndex.edit)
+router.put("/products/:id", controllerIndex.edit)
+router.delete("/products/:id/delete", controllerIndex.delete)
 
 
 
