@@ -14,19 +14,29 @@
    
 
     <div class="contenedor">
-
-      <nav class="filtros">
-        <h3>Filtros</h3>
-        <ul>
-          <li class="lista-filtros"><a href="" >categoria</a></li>
-          <li class="lista-filtros"><a href="" >nuevos</a></li>
-          <li class="lista-filtros"><a href="" >puntuacion</a></li>
-          <li class="lista-filtros"><a href="" >mas vendidos</a></li>
-          <li class="lista-filtros"><a href="" >otros</a></li>
-        </ul>
-
-      </nav>
-
+      
+      
+         
+        <nav class="filtros">
+          
+          <div class="admin">
+            <div class="crear">
+              <a href="/products/create">Crear nuevo producto</a>
+            </div>
+            <div class="espacio-blanco"></div>
+          </div>
+          
+        
+          <h3>Filtros</h3>
+          <ul>
+            <li class="lista-filtros"><a href="">categoria</a></li>
+            <li class="lista-filtros"><a href="">nuevos</a></li>
+            <li class="lista-filtros"><a href="">puntuacion</a></li>
+            <li class="lista-filtros"><a href="">mas vendidos</a></li>
+            <li class="lista-filtros"><a href="">otros</a></li>
+          </ul>
+        
+        </nav>
       <section class="libros">
 
         <% for (const libro of product) { %>

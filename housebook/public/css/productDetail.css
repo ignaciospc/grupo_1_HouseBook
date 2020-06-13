@@ -154,6 +154,8 @@ body{
  /*buttons delete y edit */
 
  .buttons-edit-delete{
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -383,7 +385,8 @@ body{
     }
     .button-edit,
     .button-delete{
-        width: 48%;
+        width: 35%;
+        text-align: center;
     }
     .button-edit:hover{
         background-color: rgba(224, 129, 51, 0.966);

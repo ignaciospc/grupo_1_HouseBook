@@ -53,7 +53,9 @@
     
 }
 
-
+.autor{
+    margin: 5px 0;
+}
 .img{
     width: 140px;
     height: 140px;
@@ -61,14 +63,15 @@
 }
 
 .img img{
-    height: 100%;
+    width: 100%;
 }
 
 .item-title{
     overflow: hidden;
-    height: 45px;
+    height: 44px;
     padding-top: 10px;
 }
+
 
 .item-action a{
     color:  white;       
@@ -104,6 +107,11 @@
     .item-title, .img{
         text-align: center;
     }
+    .item-title:hover{
+        overflow: auto;
+        height: auto;
+    }
+    
     .main{
         max-width: 1024px;
         margin: 0 auto;
@@ -172,7 +180,7 @@
     }
 
 
-    .price{
+    .precio{
         height: 35px;
         font-size: 140%;
         color: rgb(223, 132, 147);
@@ -181,8 +189,8 @@
     }
     
    
-    
-    
+        
+  
 
    
     .block-carousel{

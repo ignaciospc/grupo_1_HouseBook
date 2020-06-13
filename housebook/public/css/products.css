@@ -11,6 +11,23 @@
     display: flex;
     flex-wrap: wrap;
 }
+/*crear libro*/
+.crear{
+    padding: 5px 0;    
+    text-align: center;
+    background:  blue;
+    
+}
+.crear:hover{
+    background-color: rgba(224, 129, 51, 0.966);
+    color: white;
+    font-weight: bold;
+}
+/* division entre crear y filtros */
+.espacio-blanco{
+    padding: 5px 0;
+    background: white;
+}
 /*filtros*/
 .filtros{
     background-color: rgba(122, 122, 122, 0.4);
@@ -61,7 +78,7 @@ section{
     flex-direction: column;
     text-align: center;
 }
-.info-libro h3{
+.info-libro .titulo{
     display: block;
     width: 100%;
     text-align: center;
@@ -69,7 +86,10 @@ section{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.info-libro h3 a{
+.info-libro .titulo:hover{
+    white-space: normal;
+}
+.info-libro .titulo a{
     color: black;
 }
 .info-libro .img{

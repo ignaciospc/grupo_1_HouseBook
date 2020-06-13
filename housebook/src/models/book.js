@@ -60,7 +60,20 @@ let productData = {
         //escribo
         fs.writeFileSync(fileData, jsonData);
         
+    },
+
+    eliminar: (product) => {
+        let readJson = productData.findAll();
+
+        readJson = readJson.filter(x => x.id != product.id ); //filtro todo menos el libro
+
+        let jsonData = JSON.stringify(readJson, null, " ");
+        //escribo
+        fs.writeFileSync(fileData, jsonData);
+
     }
+
+    
     
 }
 
