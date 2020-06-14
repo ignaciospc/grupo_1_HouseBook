@@ -71,11 +71,11 @@
                 <img src="/images/libros/<%=product.portada%>" alt="imagenLibro">
 
                 <div class="buttons-edit-delete">
-                    <form class="form-button" method="POST" action="/products/<%=product.id%>?_method=PUT">
-                        <button type="submit" class="button-edit">edit</button>
-                    </form>
-                    <form class="form-button" method="POST" action="/products/<%=product.id%>/delete?_method=DELETE">
-                        <button type="submit" href="" class="button-delete">delete</button>
+                    <div class="form-button">
+                        <a href="/products/<%=product.id%>/edit" class="button-edit">edit</a>
+                    </div>
+                    <form class="form-button" method="POST" action="/products/<%=product.id%>?_method=DELETE">
+                        <button type="submit" class="button-delete">delete</button>
                     </form>
                     
                     

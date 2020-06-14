@@ -1,0 +1,21 @@
+<div class="block-item block-carousel">
+    <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/<%=book.portada%>" alt="Ejemplo0"></a>
+    <div class="item-info">
+        <a href="/products/<%=book.id%>">
+            <h3 class="item-title"><%=book.titulo%></h3>
+        </a>
+        <p class="autor"><%=book.autor%></p>
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="precio"><b>ARS$ <%=book.precio%></b></div>
+
+    </div>
+    <div class="item-action">
+        <a href="#" class="btn">Añadir al Carrito</a>
+    </div>
+</div>

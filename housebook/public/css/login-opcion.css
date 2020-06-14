@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: #F0F0F0;
+}
+.container-sesion-register{
+    max-width: 425px;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+
+.block-form-sesion{
+    margin-bottom: 5px;
+}
+.block-form-sesion input{
+    display: block;
+    width: 90%;
+    font-size: 110%;    
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1px;
+}
+.forget{
+    text-align: right;    
+}
+
+/*buttons registro/iniciarSesion */
+.iniciar-sesion{
+    font-size: 30px;
+    width: 95%;
+    align-self: center;
+    padding: 5px;
+    background:  rgba(83, 173, 175, 0.705);
+    margin-top: 15px;
+    border: none;
+    
+}
+.iniciar-sesion:hover{
+    background-color: rgba(83, 173, 175, 1);
+}
+
+.box-login{
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;    
+}
+.titulo-sesion h2{
+    font-size: 200%; 
+    margin-bottom: 10px;   
+}
+.casilla-sesion{
+    padding-bottom: 5px;
+    font-size: 130%;
+}
+.casilla-sesion label{
+    display: block;
+    padding: 3px 0;
+}
+
+.forget-password{
+    padding: 0 10px 10px;
+}
+.block-register form input{
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@media(min-width: 768px){
+
+    .container-sesion-register{
+        max-width: 768px;
+        margin: 0 3%;
+        box-sizing: border-box;
+        display: flex;     
+        justify-content: space-between;          
+        margin: 40px auto;
+        box-sizing: border-box;     
+        width: 500px;
+        box-shadow: 7px 13px 35px #000;
+    }
+  
+    .box-login{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;        
+    }
+
+    /*buttons registro/iniciarSesion */
+    .iniciar-sesion{
+        width: 95%;
+        margin: 0;
+    }
+    .casilla-sesion, 
+    .forget-password{
+        padding: 0;
+    }
+    
+}
+
+@media(min-width: 1024px){
+    .container-sesion-register{
+        max-width: 1024px;
+        margin: 70px auto;
+        box-shadow: 7px 13px 35px #000;
+        width: 500px;
+    }
+    
+}

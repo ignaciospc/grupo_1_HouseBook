@@ -10,11 +10,11 @@ var storage = multer.diskStorage({
     cb(null, '../public/images/libros');
 },
 filename : (req, file, cb) => {
-    return cb(null, req.body.portada + '-' + Date.now() + path.extname(file.originalname));
+    cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname));
 }, 
 });
    
-  var upload = multer({ storage: storage })
+var upload = multer({ storage: storage })
 
 
 /* GET home page. */
@@ -28,9 +28,10 @@ router.post("/products", upload.any(), controllerIndex.createBook);
 
 
 router.get("/products/:id", controllerIndex.details);
+
 router.get("/products/:id/edit", controllerIndex.editForm)
-router.put("/products/:id", controllerIndex.edit)
-router.delete("/products/:id/delete", controllerIndex.delete)
+router.put("/products/:id/", upload.any(), controllerIndex.edit)
+router.delete("/products/:id", controllerIndex.delete)
 
 
 

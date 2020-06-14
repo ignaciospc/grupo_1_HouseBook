@@ -154,6 +154,8 @@ body{
  /*buttons delete y edit */
 
  .buttons-edit-delete{
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -355,6 +357,11 @@ body{
         width: 100%;
         font-size: 15px;
         padding: 1px 1px;
+        height: 280px;
+        overflow: hidden;
+    }
+    .descripcion-libro-escritorio:hover{
+        height:100%;
     }
 
     .img-libro{
@@ -383,7 +390,8 @@ body{
     }
     .button-edit,
     .button-delete{
-        width: 48%;
+        width: 35%;
+        text-align: center;
     }
     .button-edit:hover{
         background-color: rgba(224, 129, 51, 0.966);

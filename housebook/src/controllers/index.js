@@ -26,7 +26,8 @@ module.exports ={
 
     },
     createBook : (req, res, next) => {
-        let portada = ""
+        let portada = "";
+        console.log(req.body)
         if (req.file) {
             //le saco la palabra public para que sea a partir de /img/...
             portada = req.file.path.replace('public/', '/');
@@ -41,7 +42,7 @@ module.exports ={
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
-            portada: req.body.portada
+            portada: req.files[0].filename,
             //ver checkbox de fisico-pdf-envio
         }
 
@@ -59,11 +60,33 @@ module.exports ={
         res.render("housebook/productEdit", {product})
     },
     edit: (req,res, next) => {
+        console.log(req.body)
 
-    
+        let portada = ""
+        if (req.file) {
+            //le saco la palabra public para que sea a partir de /img/...
+            portada = req.file.path.replace('public/', '/');
+        }
+
+        let infoLibro = {
+            titulo:req.body.titulo,
+            autor:req.body.autores,
+            valoracion:req.body.valoracion,
+            descripcion:req.body.descripcion,
+            categoria:req.body.categoria,
+            detalle:req.body.detalle,
+            precio:req.body.precio,
+            descuento:req.body.descuento,
+            portada: req.files[0].filename,
+            //ver checkbox de fisico-pdf-envio
+        }
+       // console.log(infoLibro)
+        models.actualizar(infoLibro)
+        res.redirect("/")
     },
-    delete: (req, res) => {
-        res.send("me borran")
+    delete: (req, res, next) => {
+        let product = models.findOne(req.params.id)
+        res.send(product)
     }
 
 }
