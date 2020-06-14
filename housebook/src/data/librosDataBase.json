@@ -70,5 +70,17 @@
   "descuento": "5",
   "portada": "undefined-1592092004160.jpg",
   "id": 6
+ },
+ {
+  "id": "7",
+  "titulo": "aaaaaaaa",
+  "autor": "a1",
+  "valoracion": "5",
+  "descripcion": "   a\r\n                         \r\n                         \r\n                         ",
+  "categoria": "aa",
+  "detalle": "                                                                        aaa\r\n                        \r\n                        \r\n                        ",
+  "precio": "2000",
+  "descuento": "3",
+  "portada": "portada-1592122549036.JPG"
  }
 ]
