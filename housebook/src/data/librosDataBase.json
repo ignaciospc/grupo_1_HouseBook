@@ -58,6 +58,30 @@
   "descuento": "5",
   "portada": "portada-1591649952460.jpg",
   "id": 5
+ },
+ {
+  "titulo": "Sapiens",
+  "autor": "a1",
+  "valoracion": "4",
+  "descripcion": "El libro de no ficción del AÑO\r\n\r\nUn best seller internacional con más de un millón de ejemplares vendidos.\r\n\r\nLúcido e iluminador: la historia de la humanidad en un solo volumen.\r\n\r\nEste es el fascinante relato de nuestra extraordinaria historia: de simios sin importancia a amos del mundo.\r\n\r\n¿Cómo logró nuestra especie imponerse en la lucha por la existencia? ¿Por qué nuestros ancestros recolectores se unieron para crear ciudades y reinos? ¿Cómo llegamos a creer en dioses, en naciones o en los derechos humanos; a confiar en el dinero, en los libros o en las leyes? ¿Cómo acabamos sometidos a la burocracia, a los horarios y al consumismo? ¿Y cómo será el mundo en los milenios venideros? En Sapiens. De animales a dioses, Yuval Noah Harari traza una breve historia de la humanidad, desde los primeros humanos que caminaron sobre la Tierra hasta los radicales y a veces devastadores avances de las tres grandes revoluciones que nuestra especie ha protagonizado: la cognitiva, la agrícola y la científica. A partir de hallazgos de disciplinas tan diversas como la biología, la antropología, la paleontología o la economía, Harari explora cómo las grandes corrientes de la historia han modelado nuestra sociedad, los animales y las plantas que nos rodean e incluso nuestras personalidades. ¿Hemos ganado en felicidad a medida que ha avanzado la historia? ¿Seremos capaces de liberar alguna vez nuestra conducta de la herencia del pasado? ¿Podemos hacer algo para influir en los siglos futuros? Audaz, ambicioso y provocador, este libro cuestiona todo lo que creíamos saber sobre el ser humano: nuestros orígenes, nuestras ideas, nuestras acciones, nuestro poder... y nuestro futuro. - El fuego nos dio poder.",
+  "categoria": "Antropologia",
+  "detalle": "parece flashero",
+  "precio": "2000",
+  "descuento": "5",
+  "portada": "undefined-1592092004160.jpg",
+  "id": 6
+ },
+ {
+  "id": "7",
+  "titulo": "aaaaaaaa",
+  "autor": "a1",
+  "valoracion": "5",
+  "descripcion": "   a\r\n                         \r\n                         \r\n                         ",
+  "categoria": "aa",
+  "detalle": "                                                                        aaa\r\n                        \r\n                        \r\n                        ",
+  "precio": "2000",
+  "descuento": "3",
+  "portada": "portada-1592122549036.JPG"
  }
 
 ]

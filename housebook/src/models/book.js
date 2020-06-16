@@ -62,7 +62,7 @@ let productData = {
         
     },
 
-    eliminar: (product) => {
+    delete: (product) => {
         let readJson = productData.findAll();
 
         readJson = readJson.filter(x => x.id != product.id ); //filtro todo menos el libro

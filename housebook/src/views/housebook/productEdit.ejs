@@ -18,7 +18,7 @@
 
         <div class="datos">
         
-            <form action="/products/<%=product.id%>?_method=PUT" method="POST">
+            <form action="/products/<%=product.id%>?_method=PUT" method="POST"  enctype="multipart/form-data">
         
                 <div class="columnas">
         
@@ -63,7 +63,7 @@
         
                     <div class="categoria">
                         <label for="categoria">Categoria</label>
-                        <textarea name="categoria" id="categoria" cols="50" rows="2"></textarea><!--pasar a select-->
+                        <textarea name="categoria" id="categoria" cols="50" rows="2"><%=product.categoria%></textarea><!--pasar a select-->
                     </div>
         
                     <div class="detalle-libro">
