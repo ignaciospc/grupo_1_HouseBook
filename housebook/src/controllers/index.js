@@ -88,9 +88,10 @@ module.exports ={
     delete: (req, res, next) => {
 
         let product = models.findOne(req.params.id)
+        models.delete(product);
         
 
-        res.redirect("/")
+        res.redirect("/products")
     }
 
 }
