@@ -4,6 +4,7 @@ const controllerIndex = require("../controllers/index");
 const multer = require("multer");
 const path = require("path");
 
+
 //*******************variable para Subir Imagenes*******************/
 var storage = multer.diskStorage({
   destination : (req, file, cb) => {
@@ -23,7 +24,7 @@ router.get('/', controllerIndex.home);
 //rotuer.get Productos
 router.get("/products", controllerIndex.products);
 
-router.get("/products/create",controllerIndex.create);
+router.get("/products/create", controllerIndex.create);
 router.post("/products", upload.any(), controllerIndex.createBook);
 
 

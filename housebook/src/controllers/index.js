@@ -1,6 +1,7 @@
 const path = require('path')
 const models = require(path.join(__dirname, "../models/book.js"))
 
+
 module.exports ={
     home: (req, res) => {
         let product = models.findAll()        
@@ -26,6 +27,7 @@ module.exports ={
 
     },
     createBook : (req, res, next) => {
+     
         let portada = "";
         console.log(req.body)
         if (req.file) {
@@ -60,7 +62,7 @@ module.exports ={
         res.render("housebook/productEdit", {product})
     },
     edit: (req,res, next) => {
-        console.log(req.body)
+        console.log(req.file)
 
         let portada = ""
         if (req.file) {
