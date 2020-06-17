@@ -1,5 +1,6 @@
 const path = require('path')
 const models = require(path.join(__dirname, "../models/book.js"))
+const {validationResult} = require('express-validator')
 
 module.exports ={
     home: (req, res) => {
@@ -33,6 +34,7 @@ module.exports ={
             portada = req.file.path.replace('public/', '/');
         }*/
 
+        //console.log(req.body.precio.isNumeric())
         let infoLibro = {
             titulo:req.body.titulo,
             autor:req.body.autores,
@@ -46,13 +48,43 @@ module.exports ={
             //ver checkbox de fisico-pdf-envio
         }
 
-        models.create(infoLibro)
+        const validation = validationResult(req)       
+         
 
+        if(!validation.isEmpty()) 
+        {
+            let errores = {
+                titulo : [],
+                autor : [],
+                valoracion : [],
+                categoria : [],
+                precio : [],
+                descuento : []
+            }
+            let validacion = validation.errors
+            
+            for (let error of validacion){
+                switch(error.param){
+                    case ('titulo') :      errores.titulo.push(error.msg); break;
+                    case ('autor') :       errores.autor.push(error.msg); break;
+                    case ('valoracion') :  errores.valoracion.push(error.msg); break;
+                    case ('categoria') :   errores.categoria.push(error.msg); break;
+                    case ('precio') :      errores.precio.push(error.msg); break;
+                    case ('descuento') :   errores.descuento.push(error.msg); break;
+                    default : console.log(validacion); res.send('ERROR EN LA LISTA DE ERRORES. DUH'); break;
+                }
+            }            
+            console.log(errores);
+            console.log(infoLibro);
+            
+            
+            res.render('housebook/productAdd', {errores, infoLibro})
+        }
         
-
-        res.redirect("/")
-
-    },
+        else {
+        
+        models.create(infoLibro)
+        }},
 
     editForm: (req,res) => {
         let product = models.findOne(req.params.id)
@@ -60,7 +92,7 @@ module.exports ={
         res.render("housebook/productEdit", {product})
     },
     edit: (req,res, next) => {
-        console.log(req.body)
+        
 
        /* let portada = ""
         if (req.file) {
