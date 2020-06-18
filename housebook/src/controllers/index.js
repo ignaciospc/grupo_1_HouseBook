@@ -1,6 +1,8 @@
 const path = require('path')
-const models = require(path.join(__dirname, "../models/book.js"))
+const models = require(path.join(__dirname, '..', 'models' , 'book'))
 const {validationResult} = require('express-validator')
+const { dirname } = require('path')
+const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
 module.exports ={
     home: (req, res) => {
@@ -46,36 +48,13 @@ module.exports ={
             descuento:req.body.descuento,
             portada: req.files[0].filename,
             //ver checkbox de fisico-pdf-envio
-        }
-
-        const validation = validationResult(req)       
+        }          
          
 
-        if(!validation.isEmpty()) 
+        if(!validationResult(req).isEmpty())     
         {
-            let errores = {
-                titulo : [],
-                autor : [],
-                valoracion : [],
-                categoria : [],
-                precio : [],
-                descuento : []
-            }
-            let validacion = validation.errors
-            
-            for (let error of validacion){
-                switch(error.param){
-                    case ('titulo') :      errores.titulo.push(error.msg); break;
-                    case ('autor') :       errores.autor.push(error.msg); break;
-                    case ('valoracion') :  errores.valoracion.push(error.msg); break;
-                    case ('categoria') :   errores.categoria.push(error.msg); break;
-                    case ('precio') :      errores.precio.push(error.msg); break;
-                    case ('descuento') :   errores.descuento.push(error.msg); break;
-                    default : console.log(validacion); res.send('ERROR EN LA LISTA DE ERRORES. DUH'); break;
-                }
-            }            
-            console.log(errores);
-            console.log(infoLibro);
+                
+            let errores = error.create(validationResult(req))
             
             
             res.render('housebook/productAdd', {errores, infoLibro})
@@ -84,8 +63,9 @@ module.exports ={
         else {
         
         models.create(infoLibro)
-        }},
-
+        res.redirect("/products")
+        }
+    },
     editForm: (req,res) => {
         let product = models.findOne(req.params.id)
         if (!product) {res.send("producto no encontrado ameo"); return} //ACTIVA POR SI NO ENCUENTRA EL ID
@@ -113,9 +93,18 @@ module.exports ={
             portada: req.files[0].filename,
             //ver checkbox de fisico-pdf-envio
         }
+       
+        if(!validationResult(req).isEmpty()){
+
+            let errores = error.create(validationResult(req))
+
+            res.render("housebook/productEdit", {product : infoLibro, errores})
+        }
+        else{
        // console.log(infoLibro)
         models.actualizar(infoLibro)
         res.redirect("/")
+        }
     },
     delete: (req, res, next) => {
 
@@ -125,5 +114,4 @@ module.exports ={
 
         res.redirect("/products")
     }
-
 }

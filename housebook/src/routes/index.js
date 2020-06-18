@@ -26,7 +26,7 @@ router.post("/products", upload.any(), middlewareProductCreate, controllerIndex.
 router.get("/products/:id", controllerIndex.details);
 
 router.get("/products/:id/edit", controllerIndex.editForm)
-router.put("/products/:id/", upload.single('portada'), controllerIndex.edit)
+router.put("/products/:id/", upload.any(), middlewareProductCreate, controllerIndex.edit)
 router.delete("/products/:id", controllerIndex.delete)
 
 

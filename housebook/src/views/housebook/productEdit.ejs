@@ -29,11 +29,26 @@
                             </div> -->
         
                 </div>
-        
+                <% let validacion = 0;
+                    if(typeof errores !== 'undefined') {validacion = 1;} 
+                    //de existir errores validacion pasa a ser 1, de no ser asi es 0
+                %>
+
                 <div class="segunda-columna">
         
                     <div class="titulo">
                         <label for="titulo">Titulo</label>
+                        <div class="error" style = "padding:0;"> 
+                            <%if(validacion == 1 && errores.titulo.length !== 0)
+                            {
+                                    // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
+                                for (let error of errores.titulo) 
+                                { 
+                                    %><span><%=error%></span><%                        
+                                }
+                            }
+                            %>
+                        </div>
                         <input type="text" name="titulo" id="titulo" placeholder="titulo del libro" value="<%=product.titulo%>">
                     </div>
         
@@ -51,6 +66,17 @@
 
                     <div class="valoracion">
                         <label for="valoraicon">valoracion del Libro</label>
+                        <div class="error" style = "padding:0;"> 
+                    <%if(validacion == 1 && errores.valoracion.length !== 0)
+                    {
+                            // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
+                        for (let error of errores.valoracion) 
+                        { 
+                            %><span><%=error%></span><%                        
+                        }
+                    }
+                    %>
+                        </div>
                         <input type="number" name="valoracion" min="0" max="5" value="<%=product.valoracion%>">
                     </div>
         
@@ -63,6 +89,17 @@
         
                     <div class="categoria">
                         <label for="categoria">Categoria</label>
+                        <div class="error" style = "padding:0;"> 
+                    <%if(validacion == 1 && errores.categoria.length !== 0)
+                    {
+                            // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
+                        for (let error of errores.categoria) 
+                        { 
+                            %><span><%=error%></span><%                        
+                        }
+                    }
+                    %>
+                        </div>
                         <textarea name="categoria" id="categoria" cols="50" rows="2"><%=product.categoria%></textarea><!--pasar a select-->
                     </div>
         
