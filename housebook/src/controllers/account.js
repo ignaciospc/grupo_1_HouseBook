@@ -1,14 +1,16 @@
 const modelUsers = require("../models/users")
 const bcrypt = require("bcrypt");
-
+const {validationResult} = require('express-validator')
+const path = require('path')
+const error = require(path.join(__dirname , '..' , 'models', 'validation.js'))
 
 module.exports = {
     
-    login: (req, res) => {
+    loginForm: (req, res) => {
         res.render("housebook/register")
     },
 
-    loginUser : (req, res) => {
+    register : (req, res) => {
 
         let user = {
             usuario : req.body.usuario,
@@ -16,10 +18,24 @@ module.exports = {
             password : bcrypt.hashSync(req.body.password, 10),
         }
 
+        if(!validationResult(req).isEmpty()){
+            let errores = error.register(validationResult(req))
+
+            res.send(errores)
+        }
+
         modelUsers.createUsers(user);
 
         res.redirect("/")
-    }
+    },
 
+    login: (req, res) => {
+        let usuario = modelUsers.findOne(req.body.email)
+
+       let validacion =  bcrypt.compareSync(req.body.password, usuario.password);
+        
+       //validacion = true
+
+    }
 
 }

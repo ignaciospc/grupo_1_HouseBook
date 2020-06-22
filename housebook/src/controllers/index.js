@@ -1,7 +1,7 @@
 const path = require('path')
 const models = require(path.join(__dirname, '..', 'models' , 'book'))
 const {validationResult} = require('express-validator')
-const { dirname } = require('path')
+
 const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
 module.exports ={
@@ -46,24 +46,23 @@ module.exports ={
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
-            portada: req.files[0].filename,
             //ver checkbox de fisico-pdf-envio
-        }          
-         
+        }
 
         if(!validationResult(req).isEmpty())     
         {
                 
-            let errores = error.create(validationResult(req))
+            let errores = error.createBook(validationResult(req))
             
             
             res.render('housebook/productAdd', {errores, infoLibro})
         }
         
         else {
-        
+        infoLibro.portada = req.files[0].filename,
         models.create(infoLibro)
         res.redirect("/products")
+            
         }
     },
     editForm: (req,res) => {

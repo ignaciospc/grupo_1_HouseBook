@@ -1,7 +1,7 @@
 const {validation} = require('express-validator')
 
 module.exports= {
-    create : (validation) => {
+    createBook : (validation) => {
         
         let errores = {
             titulo : [],
@@ -26,5 +26,12 @@ module.exports= {
         }     
         
         return errores;
-    }
+    },
+
+    register: (validacion) => {
+        let errores = {
+            
+        }
+
+    },
 }

@@ -21,12 +21,12 @@ router.get("/products", controllerIndex.products);
 router.get("/products/create",controllerIndex.create);
 
 
-router.post("/products", upload.any(), middlewareProductCreate, controllerIndex.createBook);
+router.post("/products", upload.single('portada'), middlewareProductCreate, controllerIndex.createBook);
 
 router.get("/products/:id", controllerIndex.details);
 
 router.get("/products/:id/edit", controllerIndex.editForm)
-router.put("/products/:id/", upload.any(), middlewareProductCreate, controllerIndex.edit)
+router.put("/products/:id/", upload.single('portada'), middlewareProductCreate, controllerIndex.edit)
 router.delete("/products/:id", controllerIndex.delete)
 
 
