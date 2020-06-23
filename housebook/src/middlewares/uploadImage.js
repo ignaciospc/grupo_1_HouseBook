@@ -9,7 +9,19 @@ var storage = multer.diskStorage({
       cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
   }, 
   });
+  
+  const upload = multer({
+	storage: storageDisk,
+	// Validate image
+	fileFilter: (req, file, cb) => {
+	   const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+	   const ext = path.extname(file.originalname);
+	   if (!acceptedExtensions.includes(ext)){
+			 req.file = file;
+	   }
+	   cb(null, acceptedExtensions.includes(ext));
+	} });
 
-  var upload = multer({ storage: storage })
+
 
   module.exports = upload

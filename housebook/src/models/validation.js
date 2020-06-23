@@ -9,7 +9,8 @@ module.exports= {
             valoracion : [],
             categoria : [],
             precio : [],
-            descuento : []
+            descuento : [],
+            portada: []
         }
         let validacion = validation.errors
         
@@ -21,6 +22,7 @@ module.exports= {
                 case ('categoria') :   errores.categoria.push(error.msg); break;
                 case ('precio') :      errores.precio.push(error.msg); break;
                 case ('descuento') :   errores.descuento.push(error.msg); break;
+                case ('portada') :     errores.portada.push(error.msg); break;
                 default : console.log(validacion); res.send('ERROR EN LA LISTA DE ERRORES. DUH'); break;
             }
         }     
@@ -28,10 +30,21 @@ module.exports= {
         return errores;
     },
 
-    register: (validacion) => {
+    registerUser: (validation) => {
         let errores = {
-            
+            usuario : [],
+            email : [],
+            password : []
         }
 
+        for (let error of validation.error){
+            switch (error.param){
+                case ('usuario') : errores.usuario.push(error.msg); break;
+                case ('email') : errores.email.push(error.msg); break;
+                case ('password') : errores.password.push(error.msg); break;
+                default : console.log(validation); res.send('error en la lista de errores.'); break;
+            }
+        }
+        return errores;
     },
 }

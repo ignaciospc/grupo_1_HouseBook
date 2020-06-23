@@ -19,9 +19,9 @@ module.exports = {
         }
 
         if(!validationResult(req).isEmpty()){
-            let errores = error.register(validationResult(req))
+            let errores = error.registerUser(validationResult(req))
 
-            res.send(errores)
+            res.send(errores) //Mandar e imprimir errores
         }
 
         modelUsers.createUsers(user);
@@ -30,11 +30,17 @@ module.exports = {
     },
 
     login: (req, res) => {
+        let error = {
+            usuario: [],
+            password: [],
+        };
         let usuario = modelUsers.findOne(req.body.email)
-
-       let validacion =  bcrypt.compareSync(req.body.password, usuario.password);
-        
-       //validacion = true
+        if(usuario.length == 0){error.usuario = "usuario no encontrado"; 
+        res.send (error)}
+        let validacion =  bcrypt.compareSync(req.body.password, usuario.password); //true or false
+        if (!validacion) { error.password = "contraseña incorrecta";
+        res.send(error)}
+       
 
     }
 

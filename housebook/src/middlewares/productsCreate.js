@@ -34,6 +34,15 @@ module.exports =
     .isNumeric().withMessage('el campo debe ser un numero unicamente')    
     .isLength({min: 0, max: 100}).withMessage('el descuento debe estar entre 0 y 100')
 
+    ,body('portada').custom((value, {req} )=> {
+      if(req.file !== undefined){
+        const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+        const ext = path.extname(req.file.originalname)
+        return acceptedExtensions.includes(ext);
+      }
+      return true
+    }).withMessage('La imagen debe tener los siguientes formatos: JPG, JPEG, PNG')
+    
     ]
 
 

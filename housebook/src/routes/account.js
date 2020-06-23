@@ -4,7 +4,7 @@ const path = require('path')
 const controllerAccount = require('../controllers/account')
 
 //middlewares
-const middleUserRegister = require(path.join(__dirname , '..', 'middlewares', 'auth', 'register.js' ))
+const middleUserRegister = require(path.join(__dirname , '..', 'middlewares', 'register.js' ))
 
 router.get("/", controllerAccount.loginForm) 
 router.post('/register', middleUserRegister, controllerAccount.register)

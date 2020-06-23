@@ -8,8 +8,7 @@ module.exports = [
     .not().isEmpty().withMessage('este campo no debe estar vacio')
     .isEmail().withMessage('este campo debe ser un email')
 
-    ,check('password')
-    .not().isEmpty().withMessage('este campo no debe estar vacio')
+    ,check('password')    
     .isLength({min: 5}).withMessage('minimo 5 caracteres en éste campo')
     .custom( (value , {req}) => { 
         if(value !== req.body.re-password) {
