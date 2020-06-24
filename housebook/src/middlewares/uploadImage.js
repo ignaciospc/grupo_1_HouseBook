@@ -11,7 +11,7 @@ var storage = multer.diskStorage({
   });
   
   const upload = multer({
-	storage: storageDisk,
+	storage: storage,
 	// Validate image
 	fileFilter: (req, file, cb) => {
 	   const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
