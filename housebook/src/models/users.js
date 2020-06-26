@@ -46,7 +46,16 @@ let userData = {
 
         return nroId + 1
 
+    },
+
+    findOne: (email) =>{
+        let all = userData.findAll()
+        let usuario = all.find(x => (x.email == email))
+
+        console.log(usuario)
+        return usuario;
     }
+
 
     
 

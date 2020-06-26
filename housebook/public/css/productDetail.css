@@ -360,9 +360,7 @@ body{
         height: 280px;
         overflow: hidden;
     }
-    .descripcion-libro-escritorio:hover{
-        height:100%;
-    }
+    
 
     .img-libro{
         height: fit-content;
