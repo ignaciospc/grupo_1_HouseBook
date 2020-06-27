@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="/css/succesUser.css">
+</head>
+
+<%- include("../partials/header") %> 
+
+<body>
+
+    <div class="contenedor-mensaje">
+
+       <h5>Bienvenido <strong> <%= users.nombre %>  </strong>, ya te has registrado</h5>
+
+       <div class="tick">
+           <img src="/images/vectores/tick.png" alt="">
+       </div>
+ 
+       <span class="inicio"> hacer click <a href="/">Aca</a></span>
+
+    </div>
+
+    
+    
+
+</body>
+
+<%- include("../partials/footer") %> 
+
+</html>

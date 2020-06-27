@@ -4,7 +4,6 @@ const {validationResult} = require('express-validator')
 
 const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
-
 module.exports ={
     home: (req, res) => {
         let product = models.findAll()        
@@ -73,7 +72,7 @@ module.exports ={
         res.render("housebook/productEdit", {product})
     },
     edit: (req,res, next) => {
-        console.log(req.file)
+        
 
        /* let portada = ""
         if (req.file) {

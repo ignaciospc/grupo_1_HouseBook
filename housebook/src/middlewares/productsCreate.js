@@ -1,5 +1,5 @@
-const {body,check} = require('express-validator')
-const path = require('path')
+const {body,check} = require('express-validator');
+const path = require('path');
 module.exports = 
     
 [
@@ -33,7 +33,7 @@ module.exports =
     ,check('descuento')
     .not().isEmpty().withMessage('el campo no debe estar vacio')
     .isNumeric().withMessage('el campo debe ser un numero unicamente')    
-    .isLength({min: 0, max: 100}).withMessage('el descuento debe estar entre 0 y 100')
+    .isLength({min: 0, max: 2}).withMessage('el descuento debe estar entre 0 y 99')
 
     ,body('portada').custom((value, {req} )=> {
       if(req.file !== undefined){

@@ -1,5 +1,6 @@
 const multer = require("multer");
-const path = require('path')
+const path = require('path');
+const { createVerify } = require("crypto");
 
 var storage = multer.diskStorage({
     destination : (req, file, cb) => {
@@ -10,6 +11,7 @@ var storage = multer.diskStorage({
   }, 
   });
   
+  
   const upload = multer({
 	storage: storage,
 	// Validate image
@@ -18,10 +20,13 @@ var storage = multer.diskStorage({
 	   const ext = path.extname(file.originalname);
 	   if (!acceptedExtensions.includes(ext)){
 			 req.file = file;
-			 cb(null, false)
-	   }else{
-	   cb(null, true);}
+			cb(null,false)
+	   }
+	   cb(null, true);
+
 	} });
+
+	
 
 
 
