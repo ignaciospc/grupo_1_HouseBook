@@ -4,6 +4,7 @@ const {validationResult} = require('express-validator')
 
 const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
+
 module.exports ={
     home: (req, res) => {
         let product = models.findAll()        
@@ -29,12 +30,13 @@ module.exports ={
 
     },
     createBook : (req, res, next) => {
-        /*let portada = "";
+     
+        let portada = "";
         console.log(req.body)
         if (req.file) {
             //le saco la palabra public para que sea a partir de /img/...
             portada = req.file.path.replace('public/', '/');
-        }*/
+        }
 
         //console.log(req.body.precio.isNumeric())
         let infoLibro = {
@@ -71,7 +73,7 @@ module.exports ={
         res.render("housebook/productEdit", {product})
     },
     edit: (req,res, next) => {
-        
+        console.log(req.file)
 
        /* let portada = ""
         if (req.file) {

@@ -4,11 +4,15 @@ const controllerIndex = require("../controllers/index");
 const multer = require("multer");
 const path = require("path");
 
+<<<<<<< HEAD
 const {check, body} = require("express-validator")
 
 //middlewares
 const middlewareProductCreate = require(path.join(__dirname, '..', 'middlewares', 'productsCreate'))
 const upload = require(path.join(__dirname, '..' , 'middlewares' , 'uploadImage'))
+=======
+
+>>>>>>> pruebasIS
 //*******************variable para Subir Imagenes*******************/
 
 
@@ -18,7 +22,12 @@ router.get('/', controllerIndex.home);
 //rotuer.get Productos
 router.get("/products", controllerIndex.products);
 
+<<<<<<< HEAD
 router.get("/products/create",controllerIndex.create);
+=======
+router.get("/products/create", controllerIndex.create);
+router.post("/products", upload.any(), controllerIndex.createBook);
+>>>>>>> pruebasIS
 
 
 router.post("/products", upload.any(), middlewareProductCreate, controllerIndex.createBook);
