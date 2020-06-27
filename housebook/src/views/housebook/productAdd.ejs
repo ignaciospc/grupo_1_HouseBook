@@ -115,7 +115,18 @@
                 </div>
         
                 <div class="selector-datos">
-        
+                    <div class="error" style = "padding:0;"> 
+                    <%if(validacion == 1 && errores.portada.length !== 0)
+                    {
+                            // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
+                        for (let error of errores.portada) 
+                        { 
+                            %><span><%=error%></span><%                        
+                        }
+                    }
+                    %>
+                        </div> -->
+
                     <div class="carga-imagen">
                         <label for="portada">Subir Portada</label>
                         <input type="file" name="portada" id="portada">

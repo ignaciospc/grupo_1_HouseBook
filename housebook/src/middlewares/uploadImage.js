@@ -18,8 +18,9 @@ var storage = multer.diskStorage({
 	   const ext = path.extname(file.originalname);
 	   if (!acceptedExtensions.includes(ext)){
 			 req.file = file;
-	   }
-	   cb(null, acceptedExtensions.includes(ext));
+			 cb(null, false)
+	   }else{
+	   cb(null, true);}
 	} });
 
 

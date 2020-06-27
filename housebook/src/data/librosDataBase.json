@@ -58,5 +58,17 @@
   "descuento": "5",
   "portada": "portada-1591649952460.jpg",
   "id": 5
+ },
+ {
+  "titulo": "Titulo",
+  "autor": "a1",
+  "valoracion": "4",
+  "descripcion": "asd",
+  "categoria": "dsa",
+  "detalle": "asd",
+  "precio": "123",
+  "descuento": "21",
+  "portada": "portada-1593041569749.png",
+  "id": 6
  }
 ]
