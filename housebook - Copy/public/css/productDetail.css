@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color:  black;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #F0F0F0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+   background-color: #F0F0F0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+/*formato estandar para los div contenedores*/
+.contenedor-principal,
+.contenedor-precio,
+.descripcion-libro,
+.contenedor-detalle-producto,
+.categoria{
+   
+    box-sizing: border-box;
+    width: 100%;
+    margin: 3px 3px 3px 3px;
+    padding: 10px 10px;
+    border-radius:5px;
+    background-color: white;
+    
+}
+.contenedor-principal h3{
+    margin: 10px 0px;
+}
+
+
+.titulo{
+    font-size: 29px;
+    padding: 5px;
+}
+.info-1{
+    padding:5px;
+}
+.info-1 ul{
+    list-style: none;
+
+}
+.info-1 ul li{
+    box-sizing: border-box;
+    padding: 3px;
+    margin: 5px 0px;
+}
+.info-1 ul li label{
+    font-weight: bold;
+}
+
+.valoracion a i{
+    color: rgb(97, 55, 102);
+}
+.redes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.redes a i{
+    font-size: 40px;
+    color: rgb(97, 55, 102);
+}
+.img-libro{
+    width: 100%;
+   
+}
+.img-libro img{
+    width: 100%;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.buttons h3{
+    display: none;
+}
+.precio{
+    text-align: center;
+}
+.precio span{
+    font-family: cursive;
+    font-size: 40px;
+    color: rgb(254, 47, 47);
+}
+.buttons{
+    display: block;
+    text-align: center;
+}
+
+.contenedor-precio .buttons button{
+    border-style: none;
+    padding: 10px 5px;
+    margin: 5px 0px;
+    border-radius: 8px;
+    background-color: rgb(83,174,175);
+    width: 70%;
+    
+}
+
+
+
+.descripcion-libro h3{
+    text-align: center;
+    border-bottom: 3px solid #F0F0F0;
+    padding-bottom: 5px;
+}
+.descripcion-libro span{
+    line-height: 2;
+    
+}
+.contenedor-detalle-producto h3{
+    text-align: center;
+    border-bottom: 3px solid #F0F0F0;
+    padding-bottom: 5px;
+}
+
+.contenedor-detalle-producto{
+    line-height: 2;
+    font-size: 15px;
+}
+.contenedor-detalle-producto ul{
+    list-style: none;
+}
+.contenedor-detalle-producto ul li label{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+.categoria{
+    display: none;
+}
+.info-envio{
+    display: none;
+}
+.metodos-pago{
+    display: none;
+}
+.descripcion-libro-escritorio{
+    display: none;
+}
+.redes-desktop{
+    display: none;
+}
+
+ /*buttons delete y edit */
+
+ .buttons-edit-delete{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button-edit{
+    width: 48%;
+    padding: 5px;
+    border: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: rgb(83,174,175);
+    border-radius: 5px;
+}
+
+.button-delete{
+    width: 48%;
+    padding: 5px;
+    border: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: rgb(83,174,175);
+    border-radius: 5px;
+}
+.form-button{
+    display: contents;
+}
+
+
+
+
+
+@media(min-width:768px){
+    
+    .categoria{
+        display: block;
+        grid-column: span 3;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px 0px;
+    }
+    .categoria span{
+        padding: 0px 5px;
+        border-right: 2px solid #F0F0F0;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: 33% 35% 30%;
+        column-gap: 5px;
+    }
+    .contenedor-principal,
+    .contenedor-precio,
+    .descripcion-libro,
+    .contenedor-detalle-producto{
+        width: 100%;
+    }
+    .contenedor-principal{
+        grid-column: span 2;
+        display: flex;
+        height: 99%;
+    }
+    .info-envio, .metodos-pago{
+        display: block;
+    }
+    .contenedor-precio{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 99%;
+    }
+    .descripcion-libro{
+        grid-column: span 3;
+    }
+    .contenedor-detalle-producto{
+        grid-column: span 3;
+    }
+    .contenedor-precio div{
+        box-sizing: border-box;
+        margin: 10px 0px;
+        text-align: center;
+        padding: 5px 5px;
+    }
+    .precio, 
+    .info-envio, 
+    .metodos-pago{
+        border-bottom: 3px solid #F0F0F0;
+    }
+    .metodos-pago img{
+        width: 70%;
+    }
+    .contenedor-precio .buttons button{
+        width: 100%;
+    }
+    .contenedor-principal h3{
+        flex-grow: 1;
+        order: -2;
+    }
+    .info-1{
+        flex-grow: 1;
+    }
+    .img-libro{
+        order: -1;
+        width: 140%;
+    }
+    .info-1 ul li{
+        margin-bottom: 25px;
+    }
+
+    .info-envio{
+        flex-direction: column;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+    .info-envio i{
+        position: absolute;
+        font-size: 20px;
+        color:rgb(83,174,175);
+    }
+    .info-envio label{
+        font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    }
+    .img-libro img{
+        width: 90%;
+        margin-top: 30px;
+    }
+    .button-edit,
+    .button-delete{
+        width: 45%;
+        font-size: 20px;
+    }
+   
+  
+}
+
+@media(min-width: 1024px){
+    
+    
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        column-gap: 0px;
+        gap: 5px;
+        background-color:#F0F0F0;
+        
+    }
+    section{
+        max-width: 1024px;
+        margin: 10px auto;
+    }
+    .categoria{
+        grid-column: span 4;
+        margin: 0 auto;
+        width: 99%;
+    }
+    .contenedor-principal{
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: 35% 65%;
+        height: auto;
+    }
+    .info-1{
+        width: 100%;
+        padding: 0px;
+    }
+    .info-1 .titulo{
+        margin-bottom:25px;
+        margin-top: 0px;
+    }
+    .info-1 ul{
+        margin-bottom: 16px;
+    }
+    .info-1 ul li{
+        margin-bottom: 8px;
+    }
+    .descripcion-libro{
+        display: none;
+    }
+    .contenedor-detalle-producto{
+        grid-column: span 4;
+        margin: 0 auto;
+        width: 99%;
+    }
+    .contenedor-detalle-producto ul{
+        columns: 2;
+    }
+    .contenedor-precio{
+        margin: 0 auto;
+        width: 96%;
+    }
+    .redes{
+        display: none;
+    }
+    .descripcion-libro-escritorio{
+        display: block;
+        border-top: 1px solid #F0F0F0;
+        width: 100%;
+        font-size: 15px;
+        padding: 1px 1px;
+        height: 280px;
+        overflow: hidden;
+    }
+    
+
+    .img-libro{
+        height: fit-content;
+        width: 90%;
+    }
+    .img-libro img{
+        width: 100%;
+    }
+    .redes-desktop a{ 
+        margin: 0px 10px;
+    }
+    .redes-desktop a i{
+        color: rgb(97, 55, 102);
+    }
+    .contenedor-precio .precio span{
+        font-size: 34px;
+    }
+    .info-precio label{
+        margin-bottom: 0px;
+    }
+    .info-envio i{
+        position: absolute;
+        bottom: 37px;
+        left: 90px;
+    }
+    .button-edit,
+    .button-delete{
+        width: 35%;
+        text-align: center;
+    }
+    .button-edit:hover{
+        background-color: rgba(224, 129, 51, 0.966);
+        color: white;
+        font-weight: bold;
+    }
+    .button-delete:hover{
+        background-color: rgb(254, 47, 47);
+        color: white;
+        font-weight: bold
+    }
+
+   
+}
+
+
+
+
+

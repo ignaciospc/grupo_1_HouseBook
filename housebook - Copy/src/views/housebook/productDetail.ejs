@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail | HouseBook</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<%- include("../partials/header") %> 
+
+<body>
+
+<section>
+
+    <div class="contenedor">
+
+
+        <div class="categoria">
+            <label for="">Catergoria: </label> <span>Bienestar</span> <span>salud</span>
+        </div>
+
+
+
+        <div class="contenedor-principal">
+
+            
+
+            
+            
+            <div class="info-1">
+
+
+                <h3 class="titulo"><strong><%=product.titulo%></strong></h3>
+
+
+
+                <ul>
+                    <li class="valoracion"> <label for="">Valoracion :</label>  <a  href=""><i class="fas fa-star"></i></a> <%=product.valoracion%> </li>
+                    
+                    <li><label for="">Autor:</label> <a href=""><%=product.autor%></a></li>
+
+                    <li class="redes-desktop">
+                        <label for="">compartir :</label>
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+
+                    <li class="redes">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                </ul>
+
+                <div class="descripcion-libro-escritorio">
+                    <h3>Descripcion</h3>
+                <span>
+                    <%=product.descripcion%>
+                </span>
+    
+                </div>
+            </div>
+
+            <div class="img-libro">
+                <img src="/images/libros/<%=product.portada%>" alt="imagenLibro">
+
+                <div class="buttons-edit-delete">
+                    <div class="form-button">
+                        <a href="/products/<%=product.id%>/edit" class="button-edit">edit</a>
+                    </div>
+                    <form class="form-button" method="POST" action="/products/<%=product.id%>?_method=DELETE">
+                        <button type="submit" class="button-delete">delete</button>
+                    </form>
+                    
+                    
+                </div>
+    
+            </div>
+
+            
+            
+
+
+            
+        </div>
+
+        <div class="contenedor-precio">
+
+            <div class="precio">
+                <span>$<%=product.precio%></span>
+            </div>
+
+            <div class="info-envio">
+                <i class="fas fa-shipping-fast"></i>
+                <label for="">Envios a todo el Pais</label>
+            </div>
+            
+            <div class="metodos-pago">
+                <img src="/images/logos/medios-de-pago.png" alt="">
+            </div>
+
+            <div class="buttons">
+                <h3>Precio Final</h3>
+
+                <button type="submit">COMPRAR</button>
+                <button type="submit">Añadir a la cesta</button>
+                <button type="submit">Añadir a deseados</button>
+            </div>
+
+            
+            
+        </div>
+
+        <!--esta clase es solo para viewport de celular, en los otros va a estar en "contenedor-principal"-->
+        <div class="descripcion-libro">
+            <h3>Descripcion</h3>
+            <span>
+                Tu vida, tu videojuego te descubre los aprendizajes que ya has obtenido gracias a los videojuegos para usarlos en tu día a día y de esta manera potenciar y dirigir tu vida hacia la abundancia, el éxito y el bienestar. Ya seas jugador/a ocasional o todo jugón/a este libro te lleva a realizar un viaje de descubrimiento y crecimiento a través de analogías con distintos videojuegos.
+
+                Un libro para trabajar la mentalidad frente a la vida y tu profesión desde la perspectiva de los videojuegos.
+                
+                ¡Diversión, éxito y abundancia!
+            </span>
+           
+        </div>
+
+        
+
+        <div class="contenedor-detalle-producto">
+            <h3>Detalle Producto</h3>
+            <ul>
+                <li>
+                    <label for="">Formato :</label>
+                    <span>PDF / Fisico</span>
+                </li>
+                <li>
+                    <label for="">Dimenciones :</label>
+                    <span>13 × 1 × 17 cm</span>
+                </li>
+                <li>
+                    <label for="">Fecha de publicacion :</label>
+                    <span>1 de diciembre de 2018</span>
+                </li>
+                <li>
+                    <label for="">Idioma :</label>
+                    <span>Español</span>
+                </li>
+                <li>
+                    <label for="">Edicion :</label>
+                    <span>Héroes de Papel</span>
+                </li>
+                <li>
+                    <label for="">valoracion :</label>
+                    <span><i class="fas fa-star"></i></span>
+                </li>
+                <li>
+                    <label for="">ISBN :</label>
+                    <span>8417649050</span>
+                </li>
+                <li>
+                    <label for="">Editorial :</label>
+                    <span>Héroes de Papel</span>
+                </li>
+                <li>
+                    <label for="">Autor :</label>
+                    <span>Rodrigo Río – Lithany</span>
+                </li>
+            </ul>
+        </div>
+
+        
+
+    </div>
+
+</section>
+
+    
+</body>
+
+<%- include("../partials/footer") %> 
+
+</html>

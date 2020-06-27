@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-mensaje{
+    max-width: 1024px;
+    margin: 0px auto;
+    text-align: center;}
+.contenedor-mensaje h5{
+    font-size: 50px;
+    padding: 100px;
+}
+.contenedor-mensaje .inicio{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.contenedor-mensaje .inicio a{
+    color: black;
+}
+.contenedor-mensaje .inicio a:hover{
+    color: rgba(110, 3, 3 );
+}
+.tick{
+    width: 50%;
+    margin: 0 auto;
+}
+.tick img{
+    width: 20%;
+    margin: 25px 0px 50px 0px
+}

@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+body{
+    background-color: #F0F0F0;
+}
+/*recuadros de productos*/
+.contenedor-productos-info{
+    border: 1px solid;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: white;
+
+}
+.imagen-producto-carrito{
+    width: 17%;
+    margin: 10px 5px;
+}
+.imagen-producto-carrito img{
+    width: 100%;
+    
+}
+.informacion-libro{
+    width: 75%;
+    margin: 10px 5px;
+}
+.informacion-libro .titulo-libro,
+.formato-autor,
+.detalle-libro{
+    margin-bottom: 10px;
+}
+.informacion-libro .formato-autor{
+    font-size: 13px;
+}
+.informacion-libro h4 a{
+    color: rgb(52, 131, 250);
+}
+.informacion-libro .detalle-libro{
+    font-size: 13px;
+    display: inline;
+    
+}
+.informacion-libro .detalle-libro a{
+    color: rgb(52, 131, 250);
+}
+.eliminar-producto-carrito{
+    display: inline;
+    margin-left: 30px;
+}
+.eliminar-producto-carrito .button-eliminar{
+    border: none;
+    background-color:white;
+    color: rgb(52, 131, 250);
+    
+}
+/*hover hipervinculos*/
+.informacion-libro .detalle-libro a:hover,
+.eliminar-producto-carrito .button-eliminar:hover,
+.informacion-libro h4 a:hover{
+    color: crimson;
+}
+/*precio libro*/
+.precio-individual{
+    box-sizing: border-box;
+    text-align: end;
+}
+.precio-individual .precio-libro{
+    font-size: 25px;
+    color:rgb(254, 47, 47);
+    font-family:cursive ;
+}
+/*contenedor precio final*/ 
+.contenedor-precio-final{
+    border: 1px solid;
+    background-color: white;
+    margin: 100px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-precio-final .button-comprar{
+    margin: 5px 20px;
+}
+.contenedor-precio-final .resumen{
+    list-style: none;
+    text-align: end;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.contenedor-precio-final .resumen li{
+    font-weight: bold;
+    margin: 5px 0px;
+}
+.contenedor-precio-final .precio-final{
+    margin-top: 10px;
+    color: rgb(254, 47, 47);
+    font-family: cursive;
+}
+.contenedor-precio-final .precio-final span{
+    font-family: cursive;
+}
+.contenedor-precio-final .button-comprar .continuar-compra{
+    width: 100%;
+    border:  none;
+    background-color: rgba(83, 173, 175, 0.205);
+    padding: 10px;
+    border-radius: 5px;
+}
+.contenedor-precio-final .button-comprar .continuar-compra:hover{
+    background-color:rgba(83, 173, 175, 1); ;
+}
+.cantidad-libro{
+    display: none;
+}
+
+
+
+@media(min-width:425px){
+    .imagen-producto-carrito{
+        width: 20%;
+    }
+    .informacion-libro .titulo-libro{
+        font-size: 25px;
+    }
+    .informacion-libro .formato-autor{
+        font-size: 17px;
+    }
+    .informacion-libro .detalle-libro {
+        font-size: 13px;
+    }
+
+    .informacion-libro .eliminar-producto-carrito input{
+        font-size: 13px;
+        margin-left: 30px;
+    }
+}
+@media(min-width:768px){
+    .imagen-producto-carrito{
+        width: 20%;
+    }
+    .informacion-libro .titulo-libro{
+        font-size: 35px;
+    }
+    .informacion-libro .formato-autor{
+        font-size: 25px;
+    }
+    .informacion-libro .detalle-libro {
+        font-size: 20px;
+    }
+
+    .informacion-libro .eliminar-producto-carrito input{
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    .cantidad-libro{
+        display: block;
+        margin:20px 0px;
+        font-size: 20px;
+    }
+    .cantidad-libro input{
+        width: 10%;
+    }
+    .cantidad-libro label{
+        font-weight: bold;
+    }
+    .precio-individual .precio-libro{
+        font-size: 35px;
+    }
+}
+@media(min-width:1024px){
+    .contenedor-product-cart{
+        max-width: 1024px;
+        margin: 10px auto;
+    }
+    .cantidad-libro{
+        margin: 35px 0px;
+
+    }
+    .imagen-producto-carrito{
+        width: 14%;
+    }
+    .button-comprar{
+        text-align: end;
+    }
+    .contenedor-precio-final .button-comprar .continuar-compra{
+        font-size: 20px;
+        font-weight: 600;
+        width: 30%;
+    }
+}

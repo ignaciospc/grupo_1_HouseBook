@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home</title>
+    <link rel="stylesheet" href="/css/products.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+   
+  </head>
+
+  <%- include("../partials/header") %> 
+  
+  <body>
+
+   
+
+    <div class="contenedor">
+      
+      
+         
+        <nav class="filtros">
+          
+          <div class="admin">
+            <div class="crear">
+              <a href="/products/create">Crear nuevo producto</a>
+            </div>
+            <div class="espacio-blanco"></div>
+          </div>
+          
+        
+          <h3>Filtros</h3>
+          <ul>
+            <li class="lista-filtros"><a href="">categoria</a></li>
+            <li class="lista-filtros"><a href="">nuevos</a></li>
+            <li class="lista-filtros"><a href="">puntuacion</a></li>
+            <li class="lista-filtros"><a href="">mas vendidos</a></li>
+            <li class="lista-filtros"><a href="">otros</a></li>
+          </ul>
+        
+        </nav>
+      <section class="libros">
+
+        <% for (const libro of product) { %>
+      
+          
+          <div class="info-libro">
+            <h3 class="titulo"> <a href="/products/<%=libro.id%>"><%= libro.titulo %></a> </h3>
+
+            <div class="valoracion-libro">
+              <i class="fas fa-star"></i>  <%= libro.valoracion %>
+            </div>
+
+            <div class="img">
+              <a href="/products/<%=libro.id%>">
+                <img src="/images/libros/<%= libro.portada %>" alt="imagen de libro">
+              </a>
+            </div>
+
+            <a class="autor" href="/products/<%=libro.id%>"> <%= libro.autor %> </a>
+
+            <span class="precio">$ <%= libro.precio %> </span>
+          </div>
+
+          <% }  %> 
+       
+      </section>
+
+      
+    </div>
+
+  
+
+
+    
+   
+  </body>
+
+  <%- include("../partials/footer") %> 
+  
+</html>
