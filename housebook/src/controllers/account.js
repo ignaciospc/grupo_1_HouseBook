@@ -1,32 +1,44 @@
 const modelUsers = require("../models/users")
 const bcrypt = require("bcrypt");
-const {validationResult} = require('express-validator')
 const path = require('path')
-const error = require(path.join(__dirname , '..' , 'models', 'validation.js'))
+const {check, validationResult, body} = require("express-validator");
+
+const error = path.join("..","middlewares", "validation.js")
 
 module.exports = {
     
-    loginForm: (req, res) => {
+    registerForm: (req, res) => {
         res.render("housebook/register-opcion")
     },
 
     register : (req, res) => {
 
+        let sal = 10;
+        let validation = validationResult(req)       
+        
+        console.log(validation.mapped());
+        
+        if(!validation.isEmpty()){
+
+           return res.render("housebook/register-opcion",{ errors : validation.mapped()});
+
+        }       
+
         let user = {
             usuario : req.body.usuario,
             email : req.body.email,
-            password : bcrypt.hashSync(req.body.password, 10),
-        }
-
-        if(!validationResult(req).isEmpty()){
-            let errores = error.registerUser(validationResult(req))
-
-            res.send(errores) //Mandar e imprimir errores
+            password : bcrypt.hashSync(req.body.password, sal ),
         }
 
         modelUsers.createUsers(user);
 
         res.redirect("/")
+    },
+
+    loginForm: (req, res) => {
+
+        res.render ("housebook/login-opcion")
+
     },
 
     login: (req, res) => {

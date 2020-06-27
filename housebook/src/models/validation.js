@@ -31,14 +31,14 @@ module.exports= {
         return errores;
     },
 
-    registerUser: (validation) => {
+   /* registerUser: (validation) => {
         let errores = {
             usuario : [],
             email : [],
             password : [],
         }
 
-        for (let error of validation.error){
+        for (let error of validation.errors){
             switch (error.param){
                 case ('usuario') : errores.usuario.push(error.msg); break;
                 case ('email') : errores.email.push(error.msg); break;
@@ -47,5 +47,5 @@ module.exports= {
             }
         }
         return errores;
-    },
+    },*/
 }
