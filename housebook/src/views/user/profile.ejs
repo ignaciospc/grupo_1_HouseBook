@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<%- include('../partials/header') %>
+
+<body>
+
+    <div class="container-profile">
+
+        <div class="resumen-profile">
+
+            <div class="info-principal">
+
+            <div class="avatar-user">
+                <img src="/images/users/unnamed.png" alt="">
+            </div>
+
+            
+                <span class="fullname"><%= user.nombre %></span>
+                <span class="name-user"><%= user.usuario %> </span>
+                <span class="mail-user"><%= user.email %></span>
+            </div>
+
+            <div class="personal-info">
+                <ul class="info-list">
+                    <label class="title-info" for="">Datos Personales</label>
+                    <a href=""><li class="info-p">Nombre, correo Electronico y contraseña</li></a>
+                    <a href=""><li class="info-p">Direcciones</li></a> 
+                    <a href=""><li class="info-p">Lista de Favoritos</li></a>
+                </ul>
+            </div>
+
+            <div class="orders">
+                <label class="title-info" for="">Pedidos</label>
+                <ul class="info-list">
+                    <a href=""><li class="info-p">Historial de pedidos</li></a>
+                    <a href=""><li class="info-p">Mis pedidos</li></a> 
+                    <a href=""><li class="info-p">Adquirir libros</li></a> 
+                </ul>
+            </div>
+        </div>
+
+        
+
+    </div>
+    
+</body>
+
+<%- include("../partials/footer") %>
+
+</html>

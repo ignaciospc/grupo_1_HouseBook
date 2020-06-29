@@ -25,8 +25,16 @@
                     
                     <div class="nav-right-header">
                         <div class="logo-login" id="relleno"> <i class="fas fa-user"></i> </div>
-                        <div class="feedback"><a href="/account/register">Create an Account</a></div>
-                        <div class="feedback"><a href="/account/login">Login</a></div>
+                        <% if(locals.logueado) { %>                             
+                            <div class="feedback"><a href="/account/profile/<%=locals.id%>"> Hola! <%= locals.user %></a></div> 
+                        <% } 
+                        else { %> 
+                            <div class="feedback"><a href="/account/register">Create an Account</a></div>
+                            <div class="feedback"><a href="/account/login">Login</a></div> 
+                            <% }
+                        %>
+                        
+                        
                     </div>
 
                 </div>

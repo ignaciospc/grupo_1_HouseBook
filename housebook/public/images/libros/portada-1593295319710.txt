@@ -1,0 +1,33 @@
+int a; char b;
+b = (char)a; // otorga el caracter cuyo indice corresponde a A
+a = (int)b;  // otro el indice que corresponde al caracter B
+--------------------------------------------------------------------------------
+DateTime end;
+DateTime start = DateTime.Now;
+...
+...
+...
+End=DateTime.Now;
+Console.WriteLine(end-start); //Otorga la duracion del progreso.
+--------------------------------------------------------------------------------
+Console.WriteLine("### texto" + variable); // Output: Variable texto
+
+--------------------------------------------------------------------------------
+
+De int a string usar a.ToString(); es eficiente
+De string a Int usar a.ToInt32(); no es eficiente. El metodo correcto es el siguiente;
+
+
+for (int x = 0; x < NumberOfIterations; x++)
+{
+        y = 0;
+        for (int i = 0; i < s[x].Length; i++)
+               y = y * 10 + (s[x][i] - '0');
+        total += y;
+} // s[] string, x[] int con el mismo length que s[]
+// http://cc.davelozinski.com/c-sharp/fastest-way-to-convert-a-string-to-an-int
+
+
+
+
+BMjGVV reserva entreviosta DH

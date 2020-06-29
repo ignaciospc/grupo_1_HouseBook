@@ -19,7 +19,14 @@
     
                 <div class="links-footer">
                     <ul class="ul-footer">
-                        <li class="li-footer"><a href="/account/login">login</a></li>
+
+                        <% if(locals.logueado) { %>                             
+                            <li class="li-footer"><a href="/account/profile/<%=locals.id%>">Perfil</a></li>
+                        <% } 
+                        else { %> 
+                            <li class="li-footer"><a href="/account/login">Login</a></li>
+                            <% }
+                        %>       
                         <li class="li-footer"><a href="#">Contacto</a></li>
                         <li class="li-footer"><a href="#">Conocenos</a></li>
                         <li class="li-footer"><a href="#">Mis Pedidos</a></li>

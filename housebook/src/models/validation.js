@@ -26,8 +26,8 @@ module.exports= {
                 default : console.log(validacion); res.send('ERROR EN LA LISTA DE ERRORES. DUH'); break;
             }
         }     
-        
-        console.log(validation)
+
+
         return errores;
     },
 

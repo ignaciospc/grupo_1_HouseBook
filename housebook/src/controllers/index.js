@@ -6,7 +6,8 @@ const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
 module.exports ={
     home: (req, res) => {
-        let product = models.findAll()        
+
+        let product = models.findAll()
         res.render('housebook/index', {product})
     },
     products: (req, res) => {
@@ -29,8 +30,10 @@ module.exports ={
 
     },
     createBook : (req, res, next) => {
-        /*let portada = "";
-        console.log(req.body)
+     
+        let portada = "";
+        console.log(req.files)
+        /*
         if (req.file) {
             //le saco la palabra public para que sea a partir de /img/...
             portada = req.file.path.replace('public/', '/');
@@ -54,11 +57,13 @@ module.exports ={
                 
             let errores = error.createBook(validationResult(req))
             
-            
+            //falta imprimir errores de precio, descuento, portada
+            console.log(errores)
             res.render('housebook/productAdd', {errores, infoLibro})
         }
         
         else {
+
         infoLibro.portada = req.files[0].filename,
         models.create(infoLibro)
         res.redirect("/products")
@@ -89,20 +94,23 @@ module.exports ={
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
-            portada: req.files[0].filename,
+           
             //ver checkbox de fisico-pdf-envio
         }
        
         if(!validationResult(req).isEmpty()){
 
-            let errores = error.create(validationResult(req))
+            let errores = error.createBook(validationResult(req))
 
             res.render("housebook/productEdit", {product : infoLibro, errores})
         }
         else{
+        
+        infoLibro.portada =  req.files == undefined ?  models.findOne(req.params.id).portada : req.files[0].filename
+
        // console.log(infoLibro)
         models.actualizar(infoLibro)
-        res.redirect("/")
+        res.redirect("/products")
         }
     },
     delete: (req, res, next) => {

@@ -23,6 +23,17 @@
                        
                         
                         <form action="/account/register" method="POST">   
+                            <!-- nombre completo -->
+
+                            <div class="errores">
+                            <% if (typeof errors !== "undefined") { %>
+                                       <div class="error-msg">
+                                           <%= errors.nombre ? errors.nombre.msg : " " ;%> 
+                                       </div>
+                                <% } %> 
+                            </div>
+
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" name="nombre">
 
                             <!-- usuario -->
                             
@@ -56,7 +67,7 @@
                                 </div>
                             <input type="password" name="password" id="password" placeholder="Password">
 
-                            <!-- re_password -->
+                            <!-- c_password -->
                             <div class="errores">
                                 <% if (typeof errors !== "undefined") { %>
                                            <div class="error-msg">
@@ -65,7 +76,7 @@
                                     <% } %> 
                                 </div>
 
-                            <input type="password" name="c_password" id="c_password" placeholder="Password"> 
+                            <input type="password" name="c_password" id="c_password" placeholder="Confirmar Password"> 
 
                             <div class="casilla-register">
                                 <label for="view-register">

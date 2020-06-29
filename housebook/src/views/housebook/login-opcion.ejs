@@ -21,31 +21,32 @@
     <div class="forget-passwor">
         <a href="#">Recuperar contraseña</a>
     </div>
-    <div class="block-form-sesion">
-        <form action="/index" method="POST">
-         <input type="text" name="usuario" id="usuario" placeholder="Email / Usuario">
-         <input type="password" name="password" id="password" placeholder="Password">
-       </form>
-    </div>
+    <form action="/account/login" method="POST">
+        <div class="block-form-sesion">
+            
+            <input type="email" name="usuario" id="usuario" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+        
+        </div>
 
 
-    
-    <div class="casilla-sesion">
-        <label for="view-password">
-            <input type="checkbox"  name="view-password" id="view-password">
-            <span> Mostrar Contraseña </span>
-        </label>
+        
+        <div class="casilla-sesion">
+            <label for="view-password">
+                <input type="checkbox"  name="view_password" id="view-password">
+                <span> Mostrar Contraseña </span>
+            </label>
 
-    </div>
-    <div class="casilla-sesion">
-        <label for="remember-sesion">
-            <input type="checkbox"  name="remember-sesion" id="remember-sesion">
-            <span for=""> Recuerdame </span>
-        </label>
-    </div>
-    <button class="iniciar-sesion" type="submit">Inciar sesion</button>
+        </div>
+        <div class="casilla-sesion">
+            <label for="remember">
+                <input type="checkbox"  name="remember" id="remember">
+                <span for=""> Recuerdame </span>
+            </label>
+        </div>
+        <button class="iniciar-sesion" type="submit">Inciar sesion</button>
 
-    
+    </form>
 
 </div>
 

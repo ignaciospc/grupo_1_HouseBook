@@ -101,6 +101,11 @@ section{
     border-color: rgba(83, 173, 175, 0.9);
     margin-bottom: 20px;
 }
+.error{
+    color:  rgb(238, 49, 49);
+    font-weight: bold;
+    font-size: 15px;
+}
 
 @media(min-width:768px){
     .columnas{

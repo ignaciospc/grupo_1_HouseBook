@@ -1,6 +1,9 @@
 const {check, body} = require('express-validator');
 
 module.exports = [
+    check("nombre").notEmpty().withMessage("este campo es obligatorio").bail(),
+    check("nombre").isLength({min: 2},{max : 40}).withMessage("debe contener como minimo 2 caracteres"),
+
     check("usuario").notEmpty().withMessage("este campo es obligatorio").bail(),
     check("usuario").isLength({min: 2}).withMessage('debe tener como minimo 2 caracteres'),
 
