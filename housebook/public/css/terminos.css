@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.contenedor-terminos{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-terminos .title-terminos{
+    margin: 30px 0;
+    text-align: start;
+}
+.parrafos-terminos{
+    margin: 25px 10px;
+    line-height: 25px;
+}
+.title-info{
+    margin: 20px 0px;
+}
+@media(min-width: 768px){
+    .contenedor-terminos{
+        margin: 0px 20px;
+    }
+}
+@media(min-width: 1024px){
+    .contenedor-terminos{
+        max-width: 1024px;
+        margin: 0 auto;
+        
+    }
+}

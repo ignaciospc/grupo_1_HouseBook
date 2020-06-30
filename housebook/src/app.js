@@ -8,9 +8,9 @@ const session = require('express-session');
 
 
 const indexRouter = require('./routes/index');
-const accountRouter = require('./routes/account')
-//const productRouter = require('./routes/product');
-const sessionMDW = require('./middlewares/session')
+const accountRouter = require('./routes/account');
+const productRouter = require('./routes/products');
+const sessionMDW = require('./middlewares/session');
 
 const app = express();
 
@@ -35,7 +35,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/account', accountRouter)
+app.use('/account', accountRouter);
+app.use('/products', productRouter);
 
 
 

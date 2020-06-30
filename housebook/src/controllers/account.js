@@ -8,7 +8,7 @@ const error = path.join("..","middlewares", "validation.js")
 module.exports = {
     
     registerForm: (req, res) => {
-        res.render("housebook/register-opcion")
+        res.render("user/register-opcion")
     },
 
     register : (req, res) => {
@@ -20,7 +20,7 @@ module.exports = {
         
         if(!validation.isEmpty()){
 
-           res.render("housebook/register-opcion", { errors : validation.mapped()});
+           res.render("user/register-opcion", { errors : validation.mapped()});
 
         }       
 
@@ -52,7 +52,7 @@ module.exports = {
 
     loginForm: (req, res) => {
 
-        res.render ("housebook/login-opcion")
+        res.render ("user/login-opcion")
 
     },
 
