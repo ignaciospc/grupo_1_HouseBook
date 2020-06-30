@@ -4,11 +4,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 
 const indexRouter = require('./routes/index');
-const accountRouter = require('./routes/account')
-//const productRouter = require('./routes/product');
+const accountRouter = require('./routes/account');
+const productRouter = require('./routes/products');
+const sessionMDW = require('./middlewares/session');
 
 const app = express();
 
@@ -16,17 +18,25 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+// este es session
+app.use(session({secret: 'HouseBook', resave: false, saveUninitialized: true}));
+app.use(sessionMDW)
+
+
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 //use los method put y delete en las rutas y el formulario
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/account', accountRouter)
+app.use('/account', accountRouter);
+app.use('/products', productRouter);
 
 
 

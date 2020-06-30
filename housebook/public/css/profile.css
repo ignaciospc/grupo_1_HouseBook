@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.container-profile{
+    margin: 20px 0px;
+
+}
+.resumen.profile{
+    display: flex;
+    flex-direction: column;
+}
+
+/*informacion principal*/
+.info-principal{
+    margin: 10px auto;
+}
+.info-principal .avatar-user{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.avatar-user img{
+    width: 75%;
+    border-radius: 75%;
+}
+.info-principal span{
+    display: block;
+    text-align: center;
+}
+.fullname{
+    font-weight: bold;
+}
+
+/* datos personales*/
+
+.personal-info{
+    margin: 20px 5px;
+    border: 1px solid rgb(83,174,175);
+}
+.info-list{
+    display: flex;
+    flex-direction: column;
+}
+.personal-info .title-info{
+    box-sizing: border-box;
+    font-size: 25px;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+    background-color: rgb(83,174,175);
+    padding: 10px 20px;
+}
+.info-list a{
+    text-decoration: none;
+    color: black;
+    
+}
+.info-list a:hover{
+    color: rgb(83,174,175);;
+}
+.info-list .info-p{
+    padding: 15px 5px;
+    margin: -1px 5px;
+    border-bottom: 1px solid rgb(83,174,175);
+}
+
+/*orders*/
+.orders .title-info{
+    box-sizing: border-box;
+    font-size: 25px;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+    background-color: rgb(83,174,175);
+    padding: 10px 20px;
+}
+.orders{
+    border: 1px solid rgb(83,174,175);
+    margin: 20px 5px;
+}
+
+
+@media(min-width: 768px){
+
+    .resumen.profile{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .personal-info, .orders{
+        display: inline-table;
+        width: 48%;
+    }
+    .info-principal .avatar-user{
+        width: 35%;
+    }
+}
+@media(min-width: 1024px){
+    .container-profile{
+        max-width: 1024px;
+        margin: 50px auto;
+    }
+    .avatar-user img{
+        width: 45%;
+    }
+    
+}
+

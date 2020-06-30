@@ -269,7 +269,6 @@ header{
     }
     .nav-center-header-li{
         justify-content: space-around;
-        padding: 0px 30px;
         border: 1px solid rgba(83, 173, 175, 0.205);
         border-radius: 5px;
         background-color: rgba(83, 173, 175, 0.205);
@@ -277,6 +276,7 @@ header{
     .nav-center-header ul li a{
         font-size: 11px;
         color: black;
+        padding: 0px 30px;
     }
     .info-compra-header{
         box-sizing: border-box;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<%- include("../partials/header") %>
+
+<body>
+
+    <div class="contenedor-form">
+
+    <div class="container-contact">
+
+        <h1 class="title-center">Atencion al Cliente</h1>
+
+        <div class="texto-principal">
+            Comunicanos cualquier consulta que tengas, a la brevedad nos estaremos comunicando.
+            <span class="gracias"> Muchas Gracias!</span> 
+            <span class="numero-contacto"> <i class="fas fa-phone-square"></i>011-4586-8852</span>
+        </div>
+
+    </div>
+
+    <div class="container-form">
+
+        <form class="contact-form" action="">
+
+            <label for="name"> <span>*</span> Nombre</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email"> <span>*</span> Correo Electronico</label>
+            <input type="email" name="email" id="email">
+
+            <label for="Mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+
+        </form>
+
+    </div>
+
+</div>
+    
+</body>
+
+<%- include("../partials/footer") %>
+
+</html>

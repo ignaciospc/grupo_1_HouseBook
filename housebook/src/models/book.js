@@ -11,7 +11,7 @@ let productData = {
         return product
     },
     findOne: (imputId) => {
-        let product = productData.findAll().find(x => x.id == imputId);        
+        let product = productData.findAll().find(x => x.id == imputId);     
         return product
     },
 
@@ -62,7 +62,7 @@ let productData = {
         
     },
 
-    eliminar: (product) => {
+    delete: (product) => {
         let readJson = productData.findAll();
 
         readJson = readJson.filter(x => x.id != product.id ); //filtro todo menos el libro
@@ -71,6 +71,14 @@ let productData = {
         //escribo
         fs.writeFileSync(fileData, jsonData);
 
+    },
+
+    findOne: (idBook) => {
+        let readJson = productData.findAll();
+        readJson = readJson.find( x => x.id == idBook);
+        readJson ? "" : console.log("error en encontrar archivo")
+
+        return readJson;
     }
 
     

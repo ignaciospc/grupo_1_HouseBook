@@ -75,6 +75,32 @@ a{
     text-decoration: none;
     color: black;
 }
+.error-msg {
+    color:  rgb(238, 49, 49);
+    font-weight: bold;
+    font-size: 15px;
+}
+.terminos{
+    margin: 15px 0px;
+    font-weight: bolder;
+}
+.terminos a{
+    color:  rgb(52, 131, 250);
+}
+.terminos a:hover{
+    color: rgb(119, 63, 125);
+}
+.re-login{
+    text-align: center;
+    margin: 15px 0px;
+}
+.re-login a{
+    color:  rgb(52, 131, 250);
+    font-weight: bolder;
+}
+.re-login a:hover{
+    color: rgb(119, 63, 125);
+}
 
 
 

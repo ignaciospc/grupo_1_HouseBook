@@ -28,6 +28,8 @@ let userData = {
 
         fs.writeFileSync(dataUsers, writeJson);
 
+        return infoUser;
+
     },
     createId : ()=> {
 
@@ -46,7 +48,22 @@ let userData = {
 
         return nroId + 1
 
+    },
+
+    findOne: (email) =>{
+        let all = userData.findAll()
+        let usuario = all.find(x => (x.email == email))
+       
+        return usuario;
+    },
+    findId: (id) => {
+        let leerJson =userData.findAll();
+        let user = leerJson.find(x => x.id == id)
+
+        return user;
+
     }
+
 
     
 
