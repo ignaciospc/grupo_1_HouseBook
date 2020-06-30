@@ -39,9 +39,13 @@ module.exports = {
         //usuario en db 
         let usuario = modelUsers.createUsers(user); //comprobar que sea unico el email.
 
+        delete usuario.password
+        delete req.body.password
+        
         //lo logueo
         req.session.isLogged = true;
         req.session.idUser = usuario.id;
+        req.session.user = usuario.usuario;
         req.session.emailUser = usuario.email;
 
         console.log(res.locals.isLogged)

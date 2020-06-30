@@ -22,5 +22,17 @@
   "email": "algo1@email.com",
   "password": "$2b$10$IKD2nqiGDzMYB/4OpYcuEepJ7UnJ6e95SOYBqxdAKzNxB3srhnuyy",
   "id": 4
+ },
+ {
+  "usuario": "franco",
+  "email": "algo2@email.com",
+  "password": "$2b$10$97IeJBXfuEvORF9dcaNACu13XKT/MhLf4lEZSAp1fNV8Iral5TlAu",
+  "id": 5
+ },
+ {
+  "usuario": "PENE",
+  "email": "pene@maspene.com",
+  "password": "$2b$10$oTYfBnbrdwyoXkIcq8LFqu/0S5QqbBmD1PLUJXO1UPJ561kR1O.4S",
+  "id": 6
  }
 ]
