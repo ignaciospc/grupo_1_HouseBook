@@ -24,7 +24,6 @@ module.exports ={
     createBook : (req, res, next) => {
      
         let portada = "";
-        console.log(req.files)
         /*
         if (req.file) {
             //le saco la palabra public para que sea a partir de /img/...
@@ -97,7 +96,6 @@ module.exports ={
             res.render("products/productEdit", {product : infoLibro, errores})
         }
         else{
-        console.log(req.files)
         infoLibro.portada =  req.files.length == 0 ?  models.findOne(req.params.id).portada : req.files[0].filename
 
        // console.log(infoLibro)

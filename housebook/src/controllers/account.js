@@ -15,8 +15,7 @@ module.exports = {
 
         let sal = 10;
         let validation = validationResult(req)       
-        
-        console.log(validation.mapped());
+
         
         if(!validation.isEmpty()){
 
@@ -93,8 +92,10 @@ module.exports = {
     profileUser : (req, res) => {
 
         let usuario = modelUsers.findId(req.params.id)
+        delete usuario.password
 
-        res.render("user/profile",{user : usuario})
+
+        res.render("user/profile",{usuario})
 
     },
 
