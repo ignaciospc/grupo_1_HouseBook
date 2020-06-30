@@ -8,7 +8,7 @@ const error = path.join("..","middlewares", "validation.js")
 module.exports = {
     
     registerForm: (req, res) => {
-        res.render("housebook/register-opcion")
+        res.render("user/register-opcion")
     },
 
     register : (req, res) => {
@@ -20,11 +20,12 @@ module.exports = {
         
         if(!validation.isEmpty()){
 
-           res.render("housebook/register-opcion", { errors : validation.mapped()});
+           res.render("user/register-opcion", { errors : validation.mapped()});
 
         }       
 
         let user = {
+            nombre: req.body.nombre,
             usuario : req.body.usuario,
             email : req.body.email,
             password : bcrypt.hashSync(req.body.password, sal ),
@@ -39,13 +40,9 @@ module.exports = {
         //usuario en db 
         let usuario = modelUsers.createUsers(user); //comprobar que sea unico el email.
 
-        delete usuario.password
-        delete req.body.password
-        
         //lo logueo
         req.session.isLogged = true;
         req.session.idUser = usuario.id;
-        req.session.user = usuario.usuario;
         req.session.emailUser = usuario.email;
 
         console.log(res.locals.isLogged)
@@ -55,7 +52,7 @@ module.exports = {
 
     loginForm: (req, res) => {
 
-        res.render ("housebook/login-opcion")
+        res.render ("user/login-opcion")
 
     },
 
@@ -94,6 +91,15 @@ module.exports = {
         res.redirect("/")
         
 
-    }
+    },
+    profileUser : (req, res) => {
+
+        let usuario = modelUsers.findId(req.params.id)
+
+        res.render("user/profile",{user : usuario})
+
+    },
+
+    
 
 }

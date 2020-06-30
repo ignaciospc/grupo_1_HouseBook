@@ -23,6 +23,17 @@
                        
                         
                         <form action="/account/register" method="POST">   
+                            <!-- nombre completo -->
+
+                            <div class="errores">
+                            <% if (typeof errors !== "undefined") { %>
+                                       <div class="error-msg">
+                                           <%= errors.nombre ? errors.nombre.msg : " " ;%> 
+                                       </div>
+                                <% } %> 
+                            </div>
+
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" name="nombre">
 
                             <!-- usuario -->
                             

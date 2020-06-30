@@ -70,17 +70,5 @@
   "precio": "500",
   "descuento": "5",
   "portada": "portada-1591649952460.jpg"
- },
- {
-  "titulo": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-  "autor": "a1",
-  "valoracion": "4",
-  "descripcion": "ASD",
-  "categoria": "ASD",
-  "detalle": "ASD",
-  "precio": "4000",
-  "descuento": "40",
-  "portada": "portada-1593307447607.png",
-  "id": 7
  }
 ]

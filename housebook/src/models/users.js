@@ -55,6 +55,13 @@ let userData = {
         let usuario = all.find(x => (x.email == email))
        
         return usuario;
+    },
+    findId: (id) => {
+        let leerJson =userData.findAll();
+        let user = leerJson.find(x => x.id == id)
+
+        return user;
+
     }
 
 

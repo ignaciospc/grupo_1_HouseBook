@@ -11,7 +11,7 @@ let productData = {
         return product
     },
     findOne: (imputId) => {
-        let product = productData.findAll().find(x => x.id == imputId);        
+        let product = productData.findAll().find(x => x.id == imputId);     
         return product
     },
 

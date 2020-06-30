@@ -14,7 +14,7 @@ router.post('/register', middleUserRegister , controllerAccount.register)
 router.get('/login', hasNotLogged, controllerAccount.loginForm)
 router.post('/login', controllerAccount.login)
 
-router.get('/profile', hasLogged, (req, res) => res.send('soy una pagina en progreso'))
+router.get('/profile/:id', hasLogged, controllerAccount.profileUser)
 
 
 module.exports = router;
