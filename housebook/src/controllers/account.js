@@ -44,8 +44,8 @@ module.exports = {
         req.session.isLogged = true;
         req.session.idUser = usuario.id;
         req.session.emailUser = usuario.email;
+        req.session.user = usuario.usuario;
 
-        console.log(res.locals.isLogged)
 
         res.redirect("/")
     },
@@ -81,8 +81,6 @@ module.exports = {
         req.session.idUser = usuario.id;
         req.session.user = usuario.usuario;
         req.session.emailUser = usuario.email;
-        
-        console.log(res.locals.isLogged)
 
 
         if(req.body.remeber == 'on') 
