@@ -25,14 +25,9 @@ module.exports ={
      
         let portada = "";
         console.log(req.files)
-        /*
-        if (req.file) {
-            //le saco la palabra public para que sea a partir de /img/...
-            portada = req.file.path.replace('public/', '/');
-        }*/
-
-        //console.log(req.body.precio.isNumeric())
+    
         let infoLibro = {
+            /*Libro*/
             titulo:req.body.titulo,
             autor:req.body.autores,
             valoracion:req.body.valoracion,
@@ -41,7 +36,13 @@ module.exports ={
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
-            //ver checkbox de fisico-pdf-envio
+            /*detalle Libro*/
+            dimenciones:req.body.dimensiones,
+            formato:req.body.formato,
+            idioma:req.body.idioma,
+            fechaPublicacion:req.body.publicacion,
+            editorial:req.body.editorial,
+            ISBN:req.body.isbn,
         }
 
         if(!validationResult(req).isEmpty())     
