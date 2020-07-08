@@ -1,6 +1,7 @@
 *{
     margin : 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 header{
     box-sizing: border-box;
@@ -27,7 +28,56 @@ header{
     width: 99%;
     height: 40px;
 }
+
+/*menu hamburguesa*/
+#btn-menu-habmburguesa{
+    display: none;
+}
+#btn-menu-habmburguesa:checked ~ .menu-hamburguesa{
+    margin: 0;
+    display: flex;
+}
+#fas-hamburguesa{
+    font-size: 25px;
+    position: relative;
+    padding: 5px;
+    color: rgb(217,217,217);
+    font-size: 200%;
+}
+#fas-hamburguesa:hover{
+    border: 1px solid rgb(217,217,217);
+    background-color: rgb(97, 55, 102);
+}
+.menu-hamburguesa{
+    background-color: white;
+    position: absolute;
+    top: 65px;
+    z-index: 1;
+    display: none;
+}
+.menu-hamburguesa ul{
+    background-color: tomato;
+    padding:0px;
+    margin: 0px;
+}
+.menu-hamburguesa ul li {
+    padding: 5px 5px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid;
+    background-color: rgb(83,174,175);
+    font-weight: bolder;
+}
+.menu-hamburguesa ul li a{
+    color: white;
+}
+.menu-hamburguesa ul li:hover{
+    background-color: rgb(97, 55, 102);;
+}
+
 .menu-header i {
+    display: none;
     color: rgb(217,217,217);
     padding-left: 15px;
     font-size: 200%;
@@ -56,8 +106,8 @@ header{
     background-color: rgb(83,174,175);
     padding: 3px 10px;
     position: absolute;
-    right: 9px;
-    top: 1px;
+    right: 15px;
+    top: 4px;
     color: white;
 }
 .lupa i{
@@ -125,6 +175,9 @@ header{
     .logo-login{
         display: inline;
         
+    }
+    .logo-login a{
+        margin-left: 5px;
     }
     .logo-login button{
         border: none;
@@ -289,6 +342,10 @@ header{
         border-radius: 5px;
         background-color: rgba(83, 173, 175, 0.205);
         color: black;
+    }
+    #fas-hamburguesa,
+    .menu-hamburguesa{
+        display: none;
     }
     
 

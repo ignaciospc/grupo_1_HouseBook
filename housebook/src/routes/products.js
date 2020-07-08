@@ -14,14 +14,14 @@ const upload = require(path.join(__dirname, '..' , 'middlewares' , 'uploadImage'
 
 router.get("/", controllerProdcuts.products);
 
-
 router.get("/create",controllerProdcuts.create);
-router.post("/", upload.any(), middlewareProductCreate,  controllerProdcuts.createBook);
 
+router.post("/", upload.any(), middlewareProductCreate,  controllerProdcuts.createBook);
 
 router.get("/:id", controllerProdcuts.details);
 router.get("/:id/edit", controllerProdcuts.editForm);
-router.put("/:id/", upload.any(), middlewareProductEdit, controllerProdcuts.edit);
+
+router.put("/:id/", upload.any(), middlewareProductCreate, controllerProdcuts.edit);
 
 router.delete("/:id", controllerProdcuts.delete);
 
