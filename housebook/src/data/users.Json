@@ -31,17 +31,10 @@
   "id": 5
  },
  {
-  "nombre": "no quiero darte el nombre forro",
-  "usuario": "putoElqueLee@",
-  "email": "pene@maspene.com",
-  "password": "$2b$10$l70gdcHKD3Z14paFgdfZZ.Wdq7iHiHyngANqdEMV6xCDRw4tl2jKO",
+  "nombre": "contraseña asdasd123",
+  "usuario": "Test",
+  "email": "test@email.com",
+  "password": "$2b$10$OBi33Nqe3RXBMdySD6Op.eDxuUcQtx1i5XaXBVt3hekLT6Hsmjen6",
   "id": 6
- },
- {
-  "nombre": "no quiero darte el nombre forro",
-  "usuario": "pene2",
-  "email": "pene2@maspene.com",
-  "password": "$2b$10$ya5DWQ3brqd/f08wU0Rp5uMBP012jDgMi4ESwXi4RsrmqGhMW8kOq",
-  "id": 7
  }
 ]
