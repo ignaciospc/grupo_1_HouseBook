@@ -3,6 +3,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="   /css/header.css">
+    
 
 </head>
 
@@ -13,6 +14,8 @@
         <div class="contenedor-header">
         
             <!-- INICIO CABEZERA 1-->
+
+            
 
             <div class="contenedor-cabezera-1">
 
@@ -43,9 +46,27 @@
             <!-- FIN CABEZERA 1-->
             <!-- INICIO CABEZERA 2-->
 
+            
+
             <div class="contenedor-cabezera-2">
             
                 <div class="cabezera-1">
+                    
+                    <!-- menu btn-menu-habmburguesa-->
+
+                    <input type="checkbox" id="btn-menu-habmburguesa">
+                    <label for="btn-menu-habmburguesa"><i id="fas-hamburguesa" class="fas fa-bars"></i></label>
+
+                    <nav class="menu-hamburguesa">
+                        <ul>
+                            <li><a href="/account/register">Create Account</a></li>
+                            <li><a href="/account/login">Login</a></li>
+                            <li><a href="/products">Todos los productos</a></li>
+                            <li><a href="/contact">Contacto</a></li>
+                            <li><a href="">Ayuda</a></li>
+                        </ul>
+                    </nav>
+
                     <div class="menu-header"><i class="fas fa-bars"></i></div>
 
                     <div class="logo-header">
@@ -70,7 +91,7 @@
                         <div class="price-login">
                             <div class="logo-login">
                                 <button type="submit">
-                                    <i class="fas fa-user"></i> Sing up
+                                    <i class="fas fa-user"><a href="/account/register">Register</a></i> 
                                 </button>
                             </div>
                         </div>
@@ -81,7 +102,7 @@
             
                             <div class="logo-login">
                                 <button type="submit">
-                                    <i class="fas fa-user"></i> Login
+                                    <i class="fas fa-user"><a href="/account/login">Login</a></i> 
                                 </button>
                             </div>
             

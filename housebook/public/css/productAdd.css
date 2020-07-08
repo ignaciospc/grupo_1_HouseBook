@@ -78,7 +78,7 @@ section{
     text-align: center;
     background-color: white;
 }
-.segunda-columna label{
+.segunda-columna .titulo-principal{
     margin-bottom: 5px;
     border: 1px solid rgba(83, 173, 175, 0.9);
     background-color: rgba(83, 173, 175, 0.205);
@@ -87,6 +87,26 @@ section{
 .segunda-columna label:hover{
     background-color: rgba(83, 173, 175, 1);
 }
+.segunda-columna .columnas-detalle-libro{
+    flex-direction: initial;
+    flex-wrap: wrap;
+}
+.columnas-detalle-libro{
+    border: 1px solid black;
+}
+.columnas-detalle-libro .informacion-detalle{
+    width: 50%;
+    padding: 5px;
+}
+.columnas-detalle-libro .informacion-detalle input,
+select{
+    padding: 2px 5px;
+}
+.titulo-detalle {
+    width: max-content;
+    font-weight: bold;
+}
+
 
 .segunda-columna .buttons{
     display: flex;
