@@ -29,5 +29,12 @@
   "email": "ignacio.n.soria@hotmail.com",
   "password": "$2b$10$S0Y7tmSSXu03NTlhIYMgFu56iq1tsxVN.V/WYdlIZRRpU9myrzZny",
   "id": 5
+ },
+ {
+  "nombre": "contraseña asdasd123",
+  "usuario": "Test",
+  "email": "test@email.com",
+  "password": "$2b$10$OBi33Nqe3RXBMdySD6Op.eDxuUcQtx1i5XaXBVt3hekLT6Hsmjen6",
+  "id": 6
  }
 ]

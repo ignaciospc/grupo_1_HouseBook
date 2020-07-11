@@ -26,6 +26,7 @@
     border-bottom: 3px solid rgb(217 217 217);
     padding: 5px 0;
 }
+
 .tab{
     display: flex;        
 }
@@ -158,7 +159,7 @@
     }
     
 
-    ul li{
+    .filter ul li{
         list-style: none;
         padding: 5px 0;
         margin: 3px 1px;
@@ -188,11 +189,6 @@
         
     }
     
-   
-        
-  
-
-   
     .block-carousel{
         height: 100%;
         padding-bottom: 5px;
@@ -206,5 +202,13 @@
     .not-phone{
         display: block;
     }
-    
+    #main-tittle{
+        display: inline;
+    }
+    .block-title a{
+            float: right;
+            color: black;
+            top: 5px;
+            position: relative;
+    }
 }

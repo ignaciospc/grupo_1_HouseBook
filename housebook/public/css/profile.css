@@ -81,6 +81,21 @@
     border: 1px solid rgb(83,174,175);
     margin: 20px 5px;
 }
+.log-out {
+    text-align: center;
+}
+.log-out a{
+    text-align: center;
+    width: 25%;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(254, 47, 47, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+}
+.log-out a:hover{
+    background-color: rgb(254, 47, 47);
+}
 
 
 @media(min-width: 768px){
