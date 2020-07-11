@@ -1,11 +1,12 @@
  <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta titulo="viewport" content="width=device-width, initial-scale=1.0">
-    
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
+
+    <script src="/js-front/preview-obj.js"></script>
     <title>Home | House Book</title>
 <body>
     
@@ -20,37 +21,22 @@
                 <div class="block-title">
                     <h2 style="display: inline;">Lo Mas Vendidos</h2> <a href="/products">ver mas</a>
                 </div> 
-                <div class="block">
-                    <div class="carousel">
+
                         <div class="tab">
-                            <% let count = 0;
-                            for (const book of product) { 
-                                if (book.categoria == "mas-vendidos") { %>
-                                    <div class="block-item block-carousel"  >
-                                        <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/<%=book.portada%>" alt="Ejemplo0"></a>
-                                <div class="item-info">
-                                    <a href="/products/<%=book.id%>"></a><h3 class="item-title"><%=book.titulo%></h3></a>
-                                    <p class="autor"><%=book.autor%></p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="precio"><b>ARS$ <%=book.precio%></b></div>
-                            
-                                </div>
-                                <div class="item-action">
-                                    <a href="#" class="btn btn-carrusel">Añadir al Carrito</a>
-                                </div>
-                            </div>                                    
+                            <script >                                
+                                let products = <%-JSON.stringify(product)%>;
+                            </script>
+                            <% let  count = 0;
+                                
+                            for (let i = 0 ; i < product.length ; i++) {
+                                if (product[i].categoria == "mas-vendidos") { %>
+                                    <%-include('../partials/item-book', {product, i}) %>                                
                                 <% count++; if (count == 4){break;}
+                                // en ves de guardar el ID, guardar el I en un for normal. Asi saber de donde agarrar en la array
                                 }
                             }%>
                         </div>
-                    </div>
-                </div>
+
                 
             </div>
             <div class="content-wrap">
@@ -98,55 +84,50 @@
                         <div class="block-title">
                             <h2 style="display: inline-block;">Ofertas</h2> <a href="/products" style="color: black;">ver mas</a>
                         </div>
-                        <div class="block">
-                            <div class="carousel">
+
                                 <div class="tab">
                                     <%
-                                    for (const book of product) { 
-                                        if (book.categoria == "ofertas") { %>
-                                            <%-include('../partials/item-book', {book}) %>                                  
+                                    for (let i = 0 ; i < product.length ; i++) { 
+                                        if (product[i].categoria == "ofertas") { %>
+                                            <%-include('../partials/item-book', {product, i}) %>                                  
                                         <% count++; if (count == 8){break;}
                                         }
                                     }%>
                                 </div>
                             </div>
-                        </div>
-                    </div>                
+               
                 
                     <div class="block-wrap">
                         <div class="block-title">
                             <h2 style="display: inline-block;">Libros en español</h2> <a href="/products" style="color: black;">ver mas</a>
                         </div>
-                        <div class="block">
-                            <div class="carousel">
+
                                 <div class="tab">
                                     <%
-                            for (const book of product) { 
-                                if (book.categoria == "español") { %>
-                                    <%-include('../partials/item-book', {book}) %>                         
+                            for (let i = 0 ; i < product.length ; i++) { 
+                                if (product[i].categoria == "español") { %>
+                                    <%-include('../partials/item-book', {product, i}) %>                         
                                 <% count++; if (count == 12){break;}
                                 }
                             }%></div>
                             </div>
-                        </div>
-                    </div>                   
+                
                 
                     <div class="block-wrap">
                         <div class="block-title">
                             <h2>Novedades</h2> <a href="/products">ver mas</a>
                         </div>
-                        <div class="block">
-                            <div class="carousel">
-                                <div class="tab"><% let count4 = 0;
-                            for (const book of product) { 
-                                if (book.categoria == "nuevos-lanzamientos") { %>
-                                    <%-include('../partials/item-book', {book}) %>                  
+
+                                <div class="tab">
+                                <% let count4 = 0;
+                            for (let i = 0 ; i < product.length ; i++) { 
+                                if (product[i].categoria == "nuevos-lanzamientos") { %>
+                                    <%-include('../partials/item-book', {product, i}) %>                  
                                 <% count++; if (count == 16){break;}
                                 }
                             }%></div>
                             </div>
-                        </div>
-                    </div>   
+
 
 
                 </div>
@@ -159,7 +140,9 @@
     </div>
 
     <%- include("../partials/footer") %>
+    <div class="toolup blockup" >
 
+    </div>
 
 </body>
 </html>
