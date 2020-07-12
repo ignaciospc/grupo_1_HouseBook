@@ -1,0 +1,15 @@
+.hasToolUp{
+    margin: 20px;
+    display: inline-block;
+  }
+  .hasToolUp, .popUp{
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+  }
+  .toolup{
+    position: absolute;
+    z-index: 20;
+    background: red;
+    color: white;
+  }

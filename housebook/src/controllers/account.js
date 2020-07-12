@@ -86,8 +86,8 @@ let account = {
         //deberia poner en el primer string el ID y el resto el hash del email == cookie : 5XXXX;  donde 5 es el id y xxxx email haseado para validarlo.
         {
             let emailHash = bcrypt.hashSync(usuario.email, 4)
-            res.cookie('rId', usuario.id, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el id a una cookie
-            res.cookie('rEm', emailHash, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el email hasheado a una cookie
+            res.cookie('rId', usuario.id, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el id a una cookie :´/
+            res.cookie('rEm', emailHash, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el email hasheado a una cookie  :/
         } //3 dias
         res.redirect("/")
         
@@ -109,8 +109,8 @@ let account = {
 
     logout : (req, res) => {
         req.session.destroy();
-        res.cookie('rEm', null, {maxAge: -1})
-        res.cookie('rId', null, {maxAge: -1});
+        res.cookie('rEm', null, {maxAge: -1}) //rEm --> RECORDAR EMAIL
+        res.cookie('rId', null, {maxAge: -1}); // rID --> RECORDAR ID
         res.redirect("/")
     },
 

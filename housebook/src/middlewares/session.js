@@ -43,8 +43,8 @@ function renderCookie(id, em, req, res){
     
     let validacion =  bcrypt.compareSync(usuario.email, em); //true or false, 1ro no hash, 2do hash | verifico que email hasheado en la cookie sea el del usuario, sino . Borro la cookie
     if (!validacion) {
-        res.cookie('rEm', null, {maxAge: -1})
-        res.cookie('rId', null, {maxAge: -1})
+        res.cookie('rEm', null, {maxAge: -1})  //MATAR COOKIE
+        res.cookie('rId', null, {maxAge: -1})  //MATAR COOKIE
         return ""
     }
     let local = {

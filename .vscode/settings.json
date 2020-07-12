@@ -1,0 +1,5 @@
+{
+    "html.validate.scripts": false,
+    "html.format.extraLiners": "",
+    "html.format.wrapLineLength": 0,
+}

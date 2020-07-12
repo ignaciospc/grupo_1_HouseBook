@@ -1,8 +1,8 @@
 window.onload = () => {
-    let dad = document.querySelector(".toolup");
+    let dad = document.querySelector(".toolup");// 1er input
     let atribute = {
         offsets: [20, -30],
-        fadeSpeed: 1000,
+        fadeSpeed: 450,
         stickSize : [],
         fadeIn: (time) => { //https://stackoverflow.com/questions/23244338/pure-javascript-fade-in-function
             dad.style.opacity = 0;
@@ -34,7 +34,7 @@ window.onload = () => {
             dad.style.left = x + "px";
             dad.style.top = y + "px";
         },
-        init: (targetId, element) => {
+        init: (targetId, element) => { //acciones al pasar el mouse
             element.onmouseover = (e) => {
                 atribute.addHtml(targetId, element).style.display = "block";//hijo ponerlo con block
                 //dad.style.display = "block"                                 //(no es necesario)
@@ -51,7 +51,11 @@ window.onload = () => {
             let stick = dad.querySelector("#" + targetId) // https://stackoverflow.com/questions/5783969/how-to-get-child-element-by-id-in-javascript/5784028
             if (!stick) { //de existir true, de no existir false | de existir devolver el objeto, de no existir crearlo y devolverlo.
                 dad.innerHTML += `
-                <div class = popUp id="${targetId}" style ="display: none;">Hola soy un preview del ${element.getAttribute("idElement")}</div>` 
+                <div class = popUp id="${targetId}" style ="display: none;">
+
+                Hola soy un preview del ${element.getAttribute("idElement")}
+                
+                </div>`  //crear view de libro (linea 56)
                 stick = dad.querySelector("#" + targetId) //lo actualizo para que exista.
                 
                 let stickX =  getComputedStyle(stick).width,
@@ -64,7 +68,9 @@ window.onload = () => {
             return stick
         }
     }
-    let elements = document.querySelectorAll(".hasToolUp")
+
+    
+    let elements = document.querySelectorAll(".hasToolUp") //input-hover
     for (let element of elements) {
         let targetId = "stick" + element.getAttribute("idElement")
         atribute.init(targetId, element)
