@@ -1,5 +1,6 @@
 window.onload = () => {
-    let dad = document.querySelector(".toolup");
+    let dad = document.querySelector(".toolup"),
+        books;
     let atribute = {
         offsets: [20, -30],
         fadeSpeed: 1000,
@@ -87,5 +88,5 @@ function stringToNumber (string) { // https://jsperf.com/best-of-string-to-numbe
 }
 
 function productsFunc (string){
-    let books = string
+     books = string
 }
