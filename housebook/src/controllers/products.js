@@ -98,8 +98,8 @@ module.exports ={
             res.render("products/productEdit", {product : infoLibro, errores})
         }
         else{
-        
-        infoLibro.portada =  req.files == undefined ?  models.findOne(req.params.id).portada : req.files[0].filename
+        console.log(req.files)
+        infoLibro.portada =  req.files.length == 0 ?  models.findOne(req.params.id).portada : req.files[0].filename
 
        // console.log(infoLibro)
         models.actualizar(infoLibro)

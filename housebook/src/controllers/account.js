@@ -1,11 +1,11 @@
-const modelUsers = require("../models/users")
 const bcrypt = require("bcrypt");
 const path = require('path')
+const modelUsers = require(path.join(__dirname, "..", "models", "users"))
 const {check, validationResult, body} = require("express-validator");
 
 const error = path.join("..","middlewares", "validation.js")
 
-module.exports = {
+let account = {
     
     registerForm: (req, res) => {
         res.render("user/register-opcion")
@@ -16,7 +16,7 @@ module.exports = {
         let sal = 10;
         let validation = validationResult(req)       
         
-        console.log(validation.mapped());
+        //console.log(validation.mapped());
         
         if(!validation.isEmpty()){
 
@@ -42,10 +42,9 @@ module.exports = {
 
         //lo logueo
         req.session.isLogged = true;
-        req.session.idUser = usuario.id;
+        req.session.iduser = usuario.id;
+        req.session.user = usuario.usuario;
         req.session.emailUser = usuario.email;
-
-        console.log(res.locals.isLogged)
 
         res.redirect("/")
     },
@@ -78,28 +77,43 @@ module.exports = {
         //lo logueo
         
         req.session.isLogged = true;
-        req.session.idUser = usuario.id;
+        req.session.iduser = usuario.id;
         req.session.user = usuario.usuario;
-        req.session.emailUser = usuario.email;
+        req.session.email = usuario.email;
+
         
-        console.log(res.locals.isLogged)
-
-
-        if(req.body.remeber == 'on') 
+        if(req.body.remember) 
         //deberia poner en el primer string el ID y el resto el hash del email == cookie : 5XXXX;  donde 5 es el id y xxxx email haseado para validarlo.
-        {res.cookies('recordame', req.body.email, {expires: new Date(Date.now() + 1000*60*60)})} //60 min
+        {
+            let emailHash = bcrypt.hashSync(usuario.email, 4)
+            res.cookie('rId', usuario.id, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el id a una cookie :´/
+            res.cookie('rEm', emailHash, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el email hasheado a una cookie  :/
+        } //3 dias
         res.redirect("/")
         
 
     },
     profileUser : (req, res) => {
+        //verifico que el parametro id sea igual a la sesion existente. Si no la borro (soluciona bug de poner otro id en URI estando logueado)
+        // en middleware Session verifico que la cookie y el req.session sean reales.
 
-        let usuario = modelUsers.findId(req.params.id)
-
-        res.render("user/profile",{user : usuario})
-
+        if(req.params.id != req.session.iduser){ 
+            account.logout(req, res);
+        }
+        else{
+            let usuario = modelUsers.findId(req.params.id)
+            delete usuario.password;
+            res.render("user/profile",{usuario})
+        }
     },
 
-    
+    logout : (req, res) => {
+        req.session.destroy();
+        res.cookie('rEm', null, {maxAge: -1}) //rEm --> RECORDAR EMAIL
+        res.cookie('rId', null, {maxAge: -1}); // rID --> RECORDAR ID
+        res.redirect("/")
+    },
 
 }
+
+module.exports = account;

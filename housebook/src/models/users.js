@@ -57,7 +57,7 @@ let userData = {
         return usuario;
     },
     findId: (id) => {
-        let leerJson =userData.findAll();
+        let leerJson = userData.findAll();
         let user = leerJson.find(x => x.id == id)
 
         return user;

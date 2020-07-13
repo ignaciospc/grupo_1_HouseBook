@@ -1,10 +1,14 @@
 <div class="block-item block-carousel">
-    <a href="/products/<%=book.id%>" class="img"><img src="/images/libros/<%=book.portada%>" alt="Ejemplo0"></a>
+    <a href="/products/<%=product[i].id%>" idElement=<%=i%> class="hasToolUp">
+        <div class="img">
+        <img src="/images/libros/<%=product[i].portada%>" alt="imagen numero: <%=product[i].id%>">
+        </div>
+    </a>
     <div class="item-info">
-        <a href="/products/<%=book.id%>">
-            <h3 class="item-title"><%=book.titulo%></h3>
+        <a href="/products/<%=product[i].id%>" idElement=<%=i%> class="hasToolUp">
+            <h3 class="item-title"><%=product[i].titulo%></h3>
         </a>
-        <p class="autor"><%=book.autor%></p>
+        <p class="autor"><%=product[i].autor%></p>
         <div class="rating">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -12,7 +16,7 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <div class="precio"><b>ARS$ <%=book.precio%></b></div>
+        <div class="precio"><b>ARS$ <%=product[i].precio%></b></div>
 
     </div>
     <div class="item-action">
