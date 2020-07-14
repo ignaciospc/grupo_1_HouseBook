@@ -65,7 +65,7 @@ window.onload = () => {
             return stick
         }
     }
-    let elements = document.querySelectorAll(".hasToolUp")
+    let elements = document.querySelectorAll(".hasToolUp") //2nd imput
     for (let element of elements) {
         let targetId = "stick" + element.getAttribute("idElement")
         atribute.init(targetId, element)
