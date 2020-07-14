@@ -8,7 +8,7 @@ module.exports = [
     check("usuario").isLength({min: 2}).withMessage('debe tener como minimo 2 caracteres'),
 
     check('email').notEmpty().withMessage('este campo es obligatorio').bail(),
-    check("email").isEmail().withMessage('este campo debe ser un email'),
+    check("email").isEmail().withMessage('este campo debe ser un email').normalizeEmail({all_lowercase: true}),
 
     check("password").notEmpty().withMessage("este campo es obligatorio").bail(),
     body('password').isLength({min: 5}).withMessage('la contraseña debe tener al menos  5 caracteres')

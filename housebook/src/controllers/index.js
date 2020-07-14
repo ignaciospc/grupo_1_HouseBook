@@ -5,7 +5,7 @@ const models = require(path.join(__dirname, '..', 'models' , 'book'))
 //const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
 module.exports ={
-    home: (req, res) => {    
+    home: (req, res) => {
         let product = models.findAll()
         res.render('housebook/index', {product})
     },

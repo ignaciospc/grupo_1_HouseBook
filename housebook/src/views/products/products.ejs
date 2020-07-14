@@ -3,8 +3,8 @@
   <head>
     <title>home</title>
     <link rel="stylesheet" href="/css/products.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
    
+    <script src="/js-front/preview-obj.js"></script>
   </head>
 
   <%- include("../partials/header") %> 
@@ -39,25 +39,25 @@
         </nav>
       <section class="libros">
 
-        <% for (const libro of product) { %>
+        <% for (let i = 0; i < libro.length ; i++) { %>
       
           
           <div class="info-libro">
-            <h3 class="titulo"> <a href="/products/<%=libro.id%>"><%= libro.titulo %></a> </h3>
+            <h3 class="titulo hasToolUp" idElement = <%=i%>> <a href="/products/<%=libro[i].id%>"><%= libro[i].titulo %></a> </h3>
 
             <div class="valoracion-libro">
-              <i class="fas fa-star"></i>  <%= libro.valoracion %>
+              <i class="fas fa-star"></i>  <%= libro[i].valoracion %>
             </div>
 
-            <div class="img">
-              <a href="/products/<%=libro.id%>">
-                <img src="/images/libros/<%= libro.portada %>" alt="imagen de libro">
+            <div class="img hasToolUp" idElement = <%=i%>>
+              <a href="/products/<%=libro[i].id%>">
+                <img src="/images/libros/<%= libro[i].portada %>" alt="imagen de libro">
               </a>
             </div>
 
-            <a class="autor" href="/products/<%=libro.id%>"> <%= libro.autor %> </a>
+            <a class="autor" href="/products/<%=libro[i].id%>"> <%= libro[i].autor %> </a>
 
-            <span class="precio">$ <%= libro.precio %> </span>
+            <span class="precio">$ <%= libro[i].precio %> </span>
           </div>
 
           <% }  %> 
@@ -66,14 +66,10 @@
 
       
     </div>
-
-  
-
-
-    
-   
+    <footer><%- include("../partials/footer") %> </footer>
   </body>
 
-  <%- include("../partials/footer") %> 
   
+  
+  <div class="toolup"></div>
 </html>

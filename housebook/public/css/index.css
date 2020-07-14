@@ -215,14 +215,13 @@
             position: relative;
     }    
      .popUp{
-        width: 200px;
-        height: 100px;
-        border: 1px solid black;
+        width: 400px;
+        height: 300px;
     }
       .toolup{
         position: absolute;
         z-index: 20;
-        background: red;
-        color: white;
+        background: whitesmoke;
+        
     }
 }

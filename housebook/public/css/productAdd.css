@@ -26,7 +26,7 @@ section{
     padding: 5px;
     margin: 5px;
 }
-.selector-datos  div{
+.selector-datos  .fisico{
     box-sizing: border-box;
     padding: 5px;
     margin: 2px 0px;
@@ -122,9 +122,12 @@ select{
     margin-bottom: 20px;
 }
 .error{
+    margin-top: 15px;
     color:  rgb(238, 49, 49);
     font-weight: bold;
     font-size: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 @media(min-width:768px){

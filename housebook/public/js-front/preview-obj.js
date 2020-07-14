@@ -1,5 +1,6 @@
 window.onload = () => {
-    let dad = document.querySelector(".toolup");// 1er input
+    let dad = document.querySelector(".toolup"),
+        books;
     let atribute = {
         offsets: [20, -30],
         fadeSpeed: 450,
@@ -53,9 +54,48 @@ window.onload = () => {
                 dad.innerHTML += `
                 <div class = popUp id="${targetId}" style ="display: none;">
 
-                Hola soy un preview del ${element.getAttribute("idElement")}
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preview</title>
+    <link rel="stylesheet" href="/css/preview-products.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="container-preview">
+    <div class="titulo-preview">
+        ACA VA EL TITULO DEL LIBRO BIEN BONITO
+    </div>
+    <div class="img-portada-preview"><img src=/images/libros/libro-prueba.jpg alt="img-libro"></div>
+
+    <div class="info-preview">
+        <div class="datos"> <label for="">Autor :</label><span>Vargallosa</span></div>
+        <div class="datos"> <label for="">valoracion :</label><span><i class="fas fa-star"></i>5</span></div>
+        <div class="datos"> <label for="">Categoria :</label><span>Fiction</span></div>
+        <div class="datos"> <label for="">Precio :</label><span>$1550</span></div>
+        <div class="datos"> <label for="">Idioma :</label><span>Spanish</span></div>
+        <div class="datos"> <label for="">Formato :</label><span>Ambos</span></div>
+        
+        
+        
+        
+        
+    </div>
+    <div class="descripcion-preview">
+        <p class="descripcion-libro"> <span>Descripcion : </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate ea aspernatur possimus natus nihil labore sed, dolorum facilis aut unde. Commodi esse dolores eligendi laborum! Laudantium architecto necessitatibus praesentium blanditiis. Fuga fugit nisi et nobis quas vel, quod illum</p>
+    </div>
+
+</div>
+
+</body>
+</html>
                 
-                </div>`  //crear view de libro (linea 56)
+                </div>` 
                 stick = dad.querySelector("#" + targetId) //lo actualizo para que exista.
                 
                 let stickX =  getComputedStyle(stick).width,
@@ -68,9 +108,7 @@ window.onload = () => {
             return stick
         }
     }
-
-    
-    let elements = document.querySelectorAll(".hasToolUp") //input-hover
+    let elements = document.querySelectorAll(".hasToolUp") //2nd imput
     for (let element of elements) {
         let targetId = "stick" + element.getAttribute("idElement")
         atribute.init(targetId, element)
@@ -93,5 +131,5 @@ function stringToNumber (string) { // https://jsperf.com/best-of-string-to-numbe
 }
 
 function productsFunc (string){
-    let books = string
+     books = string
 }

@@ -1,17 +1,5 @@
 [
  {
-  "usuario": "thomas",
-  "email": "thomas@email.com",
-  "password": "$2b$10$nA1VU.iS6.je7Xt782wA7eGzN14qmDlcWzUQpWicS8c.UCe4Em5Ya",
-  "id": 1
- },
- {
-  "usuario": "thomas",
-  "email": "thomas@hotmail.com",
-  "password": "$2b$10$GEFBRV6hk9ML.YDtoVRE8O.Bfesyoy5ukVJYz6plIyUusA3IKt52G",
-  "id": 2
- },
- {
   "usuario": "男男男",
   "email": "algo@email.com",
   "password": "$2b$10$XalrqS4ckaJBfRDG4jrNseUDXaBQoJYonuqA5JE4a1Q8d7vH0jFtu",
@@ -36,5 +24,47 @@
   "email": "test@email.com",
   "password": "$2b$10$OBi33Nqe3RXBMdySD6Op.eDxuUcQtx1i5XaXBVt3hekLT6Hsmjen6",
   "id": 6
+ },
+ {
+  "nombre": "Thomas",
+  "usuario": "Towel",
+  "email": "Thomas@email.com",
+  "password": "$2b$10$TAkfXjWMBS.rNrhghiXPE.KiAzDMzncHW2tKdglM4kLS81QQqAe6q",
+  "id": 7
+ },
+ {
+  "nombre": "asd",
+  "usuario": "asd",
+  "email": "algo2@email.com",
+  "password": "$2b$10$qFKY5DRkV6j6NTd2vZo5jub.rCvJwFRx0JvGWbtNI0CWj2uaMn4.K",
+  "id": 8
+ },
+ {
+  "nombre": "asd",
+  "usuario": "asd",
+  "email": "algo3@email.com",
+  "password": "$2b$10$xPYzbpauBYAeeVLsfzHD4.Y9WpcKW7aDMem19utpFDTPHkItLJZU2",
+  "id": 9
+ },
+ {
+  "nombre": "asd",
+  "usuario": "asd",
+  "email": "algo4@email.com",
+  "password": "$2b$10$jDy0vR0E94tOMMQ1.tsXEuZ78hFZLB9tNtsHXwT/8fsfhhCX95wma",
+  "id": 10
+ },
+ {
+  "nombre": "asd",
+  "usuario": "asd",
+  "email": "algo56@email.com",
+  "password": "$2b$10$X5SqY9g/MVVyHoBOmKzb4uogC5LkUJgklWZoE5yemTFRnhE5BKrYG",
+  "id": 11
+ },
+ {
+  "nombre": "asd",
+  "usuario": "asd",
+  "email": "algo6@email.com",
+  "password": "$2b$10$nXbdPynbU.eHhLe2Rk1K1eMtQEDpi5T1KqAcD7D5LhHpafGkNSoa.",
+  "id": 12
  }
 ]
