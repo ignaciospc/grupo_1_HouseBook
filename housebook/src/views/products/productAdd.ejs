@@ -172,20 +172,31 @@
                     </div>
         
               
-                    
-                    <div class="error" style = "padding:0;"> 
+                    <div class="error">
+                    <div class="item-error" style = "padding:0;"> 
                     <%if(validacion == 1 && errores.precio.length !== 0)
                     {
                             // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
                         for (let error of errores.precio) 
                         { 
-                            %><span><%=error%></span><%                        
+                            %><div style = "padding:0"><%=error%></div><%                        
                         }
                     }
                     %>
                         </div> 
-
-        
+                    <div class="item-error" style = "padding:0"> 
+                    <%if(validacion == 1 && errores.precio.length !== 0)
+                    {
+                            // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
+                        for (let error of errores.precio) 
+                        { 
+                            %><div style = "padding:0"><%=error%></div><%                        
+                        }
+                    }
+                    %>
+                        </div> 
+                    </div>
+                        
                   <div class="fisico">             
 
                         <label class="precio" for="precio-fisico">Precio :</label>                        
