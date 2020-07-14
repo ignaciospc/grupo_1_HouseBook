@@ -5,6 +5,11 @@
     <meta titulo="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/preview-products.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    se lo llama en header-->
+
     <script src="/js-front/preview-obj.js"></script>
 
     <title>Home | House Book</title>
@@ -23,7 +28,7 @@
 
                         <div class="tab">
                             <script >                                
-                                productsFunc(<%-JSON.stringify(product)%>);
+                                const books = <%-JSON.stringify(product)%>
                             </script>
                             <% let  count = 0;
                                 

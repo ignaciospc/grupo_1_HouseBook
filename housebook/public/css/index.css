@@ -209,14 +209,5 @@
             top: 5px;
             position: relative;
     }    
-     .popUp{
-        width: 400px;
-        height: 300px;
-    }
-      .toolup{
-        position: absolute;
-        z-index: 20;
-        background: whitesmoke;
-        
-    }
+
 }

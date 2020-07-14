@@ -36,10 +36,9 @@
 }
 .info-preview .datos{
     display: flex;
-    width: 55%;
 }
 .datos label{
-    width: 60%;
+    width: 80px;
     color:  rgb(119, 63, 125);
     font-weight: bolder;
 }
@@ -58,4 +57,9 @@
     font-weight: bold;
     color: rgb(119, 63, 125);
     font-size: 17px;
+}
+.toolup{
+    position: absolute;
+    z-index: 20;
+    background: whitesmoke;        
 }

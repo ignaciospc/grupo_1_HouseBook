@@ -6,9 +6,6 @@ const bcrypt = require("bcrypt");
 function exportar (req, res, next) {
     res.locals.logueado = false;
     let local = "";
-    
-    console.log("session", req.session);
-
     //hay sesion interna creada? De ser asi agarra los datos de ahi (funcion)
     if(req.session.isLogged){ local = renderSession(req.session) }
 

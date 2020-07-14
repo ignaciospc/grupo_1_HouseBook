@@ -3,6 +3,7 @@
   <head>
     <title>home</title>
     <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/preview-products.css">
    
     <script src="/js-front/preview-obj.js"></script>
   </head>
@@ -38,7 +39,9 @@
         
         </nav>
       <section class="libros">
-
+        <script >                                
+          const books = <%-JSON.stringify(libro)%>
+        </script>
         <% for (let i = 0; i < libro.length ; i++) { %>
       
           

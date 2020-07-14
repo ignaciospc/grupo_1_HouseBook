@@ -1,10 +1,17 @@
 window.onload = () => {
-    let dad = document.querySelector(".toolup"),
+    let dad = document.querySelector(".toolup");
         books;
     let atribute = {
         offsets: [20, -30],
         fadeSpeed: 450,
-        stickSize : [],
+        stickSize: [],
+        stickProp : (stick) => {
+            let stickX =  getComputedStyle(stick).width,
+                stickY = getComputedStyle(stick).height;                
+                stickX = stringToNumber(stickX);
+                stickY = stringToNumber(stickY);
+                atribute.stickSize = [stickX, stickY];
+        },
         fadeIn: (time) => { //https://stackoverflow.com/questions/23244338/pure-javascript-fade-in-function
             dad.style.opacity = 0;
 
@@ -37,7 +44,10 @@ window.onload = () => {
         },
         init: (targetId, element) => { //acciones al pasar el mouse
             element.onmouseover = (e) => {
-                atribute.addHtml(targetId, element).style.display = "block";//hijo ponerlo con block
+                let stick = atribute.addHtml(targetId, element)
+                stick.style.display = "block"; //hijo ponerlo con block
+                atribute.stickProp(stick)
+
                 //dad.style.display = "block"                                 //(no es necesario)
                 atribute.fadeIn(atribute.fadeSpeed);
             }
@@ -51,63 +61,36 @@ window.onload = () => {
             
             let stick = dad.querySelector("#" + targetId) // https://stackoverflow.com/questions/5783969/how-to-get-child-element-by-id-in-javascript/5784028
             if (!stick) { //de existir true, de no existir false | de existir devolver el objeto, de no existir crearlo y devolverlo.
+                let i = element.getAttribute("idElement")
                 dad.innerHTML += `
                 <div class = popUp id="${targetId}" style ="display: none;">
 
-                <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>preview</title>
-    <link rel="stylesheet" href="/css/preview-products.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-
-
 <div class="container-preview">
-    <div class="titulo-preview">
-        ACA VA EL TITULO DEL LIBRO BIEN BONITO
-    </div>
-    <div class="img-portada-preview"><img src=/images/libros/libro-prueba.jpg alt="img-libro"></div>
+    <h3 class="titulo-preview">${books[i].titulo}</h3>
+    <div class="img-portada-preview"><img src=/images/libros/${books[i].portada} alt="img-libro"></div>
 
     <div class="info-preview">
-        <div class="datos"> <label for="">Autor :</label><span>Vargallosa</span></div>
-        <div class="datos"> <label for="">valoracion :</label><span><i class="fas fa-star"></i>5</span></div>
-        <div class="datos"> <label for="">Categoria :</label><span>Fiction</span></div>
-        <div class="datos"> <label for="">Precio :</label><span>$1550</span></div>
-        <div class="datos"> <label for="">Idioma :</label><span>Spanish</span></div>
+        <div class="datos"> <label for="">Autor :</label><span>${books[i].autor}</span></div>
+        <div class="datos"> <label for="">valoracion :</label><span><i class="fas fa-star"></i>${books[i].valoracion}</span></div>
+        <div class="datos"> <label for="">Categoria :</label><span>${books[i].categoria}</span></div>
+        <div class="datos"> <label for="">Precio :</label><span>$${books[i].precio}</span></div>
+        <div class="datos"> <label for="">Idioma :</label><span>${books[i].idioma}</span></div>
         <div class="datos"> <label for="">Formato :</label><span>Ambos</span></div>
-        
-        
-        
-        
-        
     </div>
     <div class="descripcion-preview">
-        <p class="descripcion-libro"> <span>Descripcion : </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate ea aspernatur possimus natus nihil labore sed, dolorum facilis aut unde. Commodi esse dolores eligendi laborum! Laudantium architecto necessitatibus praesentium blanditiis. Fuga fugit nisi et nobis quas vel, quod illum</p>
+        <p class="descripcion-libro"> <span>Descripcion : ${books[i].descripcion}</span> </p>
     </div>
-
-</div>
-
-</body>
-</html>
-                
+</div>  
                 </div>` 
                 stick = dad.querySelector("#" + targetId) //lo actualizo para que exista.
                 
-                let stickX =  getComputedStyle(stick).width,
-                stickY = getComputedStyle(stick).height;
-
-                stickX = stringToNumber(stickX);
-                stickY = stringToNumber(stickY);
-                atribute.stickSize = [stickX, stickY]; //coloco en una variable el tamaño del popup (se usara en coordenadas)                
+                 //coloco en una variable el tamaño del popup (se usara en coordenadas)
+               
             }
             return stick
         }
     }
+    
     let elements = document.querySelectorAll(".hasToolUp") //2nd imput
     for (let element of elements) {
         let targetId = "stick" + element.getAttribute("idElement")
@@ -128,8 +111,4 @@ function stringToNumber (string) { // https://jsperf.com/best-of-string-to-numbe
         result = result*10 + converted;
     }
     return result;
-}
-
-function productsFunc (string){
-     books = string
 }

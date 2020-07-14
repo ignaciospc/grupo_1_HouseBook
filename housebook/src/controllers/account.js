@@ -31,12 +31,6 @@ let account = {
             password : bcrypt.hashSync(req.body.password, sal ),
         }
 
-        if(!validationResult(req).isEmpty()){
-            let errores = error.registerUser(validationResult(req))
-
-            res.send(errores) //Mandar e imprimir errores
-        }
-
         //usuario en db 
         let usuario = modelUsers.createUsers(user); //comprobar que sea unico el email.
 
