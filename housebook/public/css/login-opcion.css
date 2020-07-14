@@ -72,6 +72,15 @@ a{
     text-decoration: none;
     color: black;
 }
+.error{
+    color:  rgb(238, 49, 49);
+    font-weight: bold;
+    font-size: 15px;
+}
+#forgetPass{
+    color: black;
+    float: right;
+}
 
 
 

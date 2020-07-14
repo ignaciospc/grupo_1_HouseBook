@@ -172,20 +172,31 @@
                     </div>
         
               
-                    
-                    <div class="error" style = "padding:0;"> 
+                    <div class="error">
+                    <div class="item-error" style = "padding:0;"> 
                     <%if(validacion == 1 && errores.precio.length !== 0)
                     {
                             // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
                         for (let error of errores.precio) 
                         { 
-                            %><span><%=error%></span><%                        
+                            %><div style = "padding:0"><%=error%></div><%                        
                         }
                     }
                     %>
                         </div> 
-
-        
+                    <div class="item-error" style = "padding:0"> 
+                    <%if(validacion == 1 && errores.precio.length !== 0)
+                    {
+                            // uso una propiedad de && en IF. Valida la izquierda, de ser false ignora la derecha (no tira error al desconocerlo)
+                        for (let error of errores.precio) 
+                        { 
+                            %><div style = "padding:0"><%=error%></div><%                        
+                        }
+                    }
+                    %>
+                        </div> 
+                    </div>
+                        
                   <div class="fisico">             
 
                         <label class="precio" for="precio-fisico">Precio :</label>                        
@@ -227,8 +238,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
+    <footer><%- include("../partials/footer") %> </footer>
 </body>
 
-<%- include("../partials/footer") %>
 
 </html>

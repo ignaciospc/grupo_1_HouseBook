@@ -8,7 +8,7 @@ module.exports ={
    
     products: (req, res) => {
         let product = models.findAll()
-        res.render("products/products", {product})
+        res.render("products/products", {libro : product})
     },
     details: (req, res) => {
         

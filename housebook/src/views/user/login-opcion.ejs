@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/login-opcion.css">
+
+    <script src="/js-front/show-password.js"></script>
+    
     <title>Login</title>
 </head>
 
@@ -19,12 +22,21 @@
         <h2>Iniciar sesion</h2>
     </div>
     <div class="forget-passwor">
-        <a href="#">Recuperar contraseña</a>
+        <a href="#" id="forgetPass">Recuperar contraseña</a>
     </div>
     <form action="/account/login" method="POST">
         <div class="block-form-sesion">
-            
+            <div class="error">
+                <% if(typeof errorUser !== "undefined") { %>
+                <span> Usuario Incorrecto </span>
+                <% } %>
+            </div>
             <input type="email" name="usuario" id="usuario" placeholder="Email">
+            <div class="error">
+                <% if(typeof errorPsw !== "undefined") { %>
+                <span> Contraseña incorrecta </span>
+                <% } %>
+            </div>
             <input type="password" name="password" id="password" placeholder="Password">
         
         </div>
@@ -51,9 +63,8 @@
 </div>
 
 </div>
+<footer><%- include("../partials/footer") %> </footer>
 
 </body>
 
 
-
-<%- include("../partials/footer") %>

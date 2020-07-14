@@ -62,7 +62,7 @@
     font-size: 130%;
 }
 .casilla-register input{
-    display: inline;
+    display: inline-block;
     width: 10%;
 }
 .forget-password{
