@@ -2,7 +2,6 @@
     font-family: 'Roboto', sans-serif;
 }
 .container-preview{
-    border: 1px solid;
     box-sizing: border-box;
     padding: 5px 15px;
     display: flex;
