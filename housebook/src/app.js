@@ -22,14 +22,16 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, '../public')));
+
+
+
 app.use(cookieParser());
 // este es session
+
 app.use(session({secret: 'HouseBook', resave: false, saveUninitialized: true}));
 app.use(sessionMDW)
 
-
-
-app.use(express.static(path.join(__dirname, '../public')));
 
 //use los method put y delete en las rutas y el formulario
 app.use(methodOverride('_method'));

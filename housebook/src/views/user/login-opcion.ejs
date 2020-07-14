@@ -22,12 +22,21 @@
         <h2>Iniciar sesion</h2>
     </div>
     <div class="forget-passwor">
-        <a href="#">Recuperar contraseña</a>
+        <a href="#" id="forgetPass">Recuperar contraseña</a>
     </div>
     <form action="/account/login" method="POST">
         <div class="block-form-sesion">
-            
+            <div class="error">
+                <% if(typeof errorUser !== "undefined") { %>
+                <span> Usuario Incorrecto </span>
+                <% } %>
+            </div>
             <input type="email" name="usuario" id="usuario" placeholder="Email">
+            <div class="error">
+                <% if(typeof errorPsw !== "undefined") { %>
+                <span> Contraseña incorrecta </span>
+                <% } %>
+            </div>
             <input type="password" name="password" id="password" placeholder="Password">
         
         </div>

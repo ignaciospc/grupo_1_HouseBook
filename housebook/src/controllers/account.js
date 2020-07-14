@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const path = require('path')
 const modelUsers = require(path.join(__dirname, "..", "models", "users"))
-const {check, validationResult, body} = require("express-validator");
+const {validationResult} = require("express-validator");
 
 const error = path.join("..","middlewares", "validation.js")
 
@@ -44,8 +44,8 @@ let account = {
         req.session.isLogged = true;
         req.session.iduser = usuario.id;
         req.session.user = usuario.usuario;
-        req.session.emailUser = usuario.email;
-
+        req.session.email = usuario.email;
+        
         res.redirect("/")
     },
 
@@ -61,7 +61,8 @@ let account = {
         
         if(usuario == undefined){
         let errorUser = "usuario no encontrado"; 
-        res.send (errorUser)} //TO DO
+        res.render ("user/login-opcion" , {errorUser})
+        }
         
         let validacion =  bcrypt.compareSync(req.body.password, usuario.password); //true or false
 
@@ -71,7 +72,8 @@ let account = {
 
         if (!validacion) { 
         let errorPsw = "contraseña incorrecta";
-        res.send(errorPsw)} //TO DO
+        res.render ("user/login-opcion" , {errorPsw})
+        }
        
         
         //lo logueo

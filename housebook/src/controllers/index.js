@@ -6,8 +6,6 @@ const models = require(path.join(__dirname, '..', 'models' , 'book'))
 
 module.exports ={
     home: (req, res) => {
-
-        
         let product = models.findAll()
         res.render('housebook/index', {product})
     },
