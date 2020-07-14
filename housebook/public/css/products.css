@@ -97,17 +97,17 @@ section{
 .info-libro .img img{
     width: 100%;
 }
+.popUp{
+    width: 400px;
+    height: 300px;
+}
 .toolup{
     position: absolute;
-    z-index: 100;
-    background: red;
-    color: white;
+    z-index: 20;
+    background: whitesmoke;
+    
 }
-.popUp{
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
-}
+
 
 @media(max-width : 768px){
     .libros{
