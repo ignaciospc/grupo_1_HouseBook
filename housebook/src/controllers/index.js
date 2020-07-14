@@ -19,5 +19,6 @@ module.exports ={
     contact: (req, res) => {
         res.render("housebook/contact");
     }
-  
+    
+    
 }
