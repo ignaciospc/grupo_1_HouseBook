@@ -31,5 +31,6 @@ TO DO {
     logueo de admin con 3 cuentas.
     Boton de admin solo para admin (edit, delete, create)
     confirmacion en el boton delete
+    precio final en index y detalle, aplican el descuento.
 }
 
