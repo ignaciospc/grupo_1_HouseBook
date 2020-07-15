@@ -76,7 +76,7 @@ let account = {
         req.session.iduser = usuario.id;
         req.session.user = usuario.usuario;
         req.session.email = usuario.email;
-
+        req.session.admin = usuario.admin ? usuario.admin : null;
         
         if(req.body.remember) 
         //deberia poner en el primer string el ID y el resto el hash del email == cookie : 5XXXX;  donde 5 es el id y xxxx email haseado para validarlo.

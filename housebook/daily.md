@@ -1,5 +1,5 @@
 TO DO {
-    Se rompio la tablet y celular en todos los productos
+    
 }
 
 20200708{
@@ -20,3 +20,16 @@ TO DO {
 20200711{
     se sigue realizando el objeto anterior. Se modificaron los "for of" en index por for nomrales. Asi guardar el i (la ubicacion del array) en un atributo para recogerlo con js
 }
+20200713{
+    se termino la preview. Falta lo estetico
+    solucionado al romperse en tablet y celular en todos los productos
+}
+20200714{
+    cambios menores, muestra errores al loguearte mal
+}
+20200715{
+    logueo de admin con 3 cuentas.
+    Boton de admin solo para admin (edit, delete, create)
+    confirmacion en el boton delete
+}
+

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail | HouseBook</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <% if (typeof locals.admin !== 'undefined') { %> <script src="/js-front/confirm.js"></script> <% } %>
 </head>
 
 <%- include("../partials/header") %> 
@@ -69,18 +71,16 @@
 
             <div class="img-libro">
                 <img src="/images/libros/<%=product.portada%>" alt="imagenLibro">
-
+                <% if (typeof locals.admin !== 'undefined') { %>
                 <div class="buttons-edit-delete">
                     <div class="form-button">
                         <a href="/products/<%=product.id%>/edit" class="button-edit">edit</a>
                     </div>
                     <form class="form-button" method="POST" action="/products/<%=product.id%>?_method=DELETE">
-                        <button type="submit" class="button-delete">delete</button>
+                        <button type="submit" id = deleteProduct class="button-delete">delete</button>
                     </form>
-                    
-                    
                 </div>
-    
+                <% } %>
             </div>
 
             

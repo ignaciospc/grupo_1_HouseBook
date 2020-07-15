@@ -16,21 +16,24 @@
   "usuario": "ignacio72",
   "email": "ignacio.n.soria@hotmail.com",
   "password": "$2b$10$S0Y7tmSSXu03NTlhIYMgFu56iq1tsxVN.V/WYdlIZRRpU9myrzZny",
-  "id": 5
+  "id": 5,
+  "admin" : true
  },
  {
   "nombre": "contraseña asdasd123",
   "usuario": "Test",
   "email": "test@email.com",
   "password": "$2b$10$OBi33Nqe3RXBMdySD6Op.eDxuUcQtx1i5XaXBVt3hekLT6Hsmjen6",
-  "id": 6
+  "id": 6,
+  "admin" : true
  },
  {
   "nombre": "Thomas",
   "usuario": "Towel",
-  "email": "Thomas@email.com",
+  "email": "thomas@email.com",
   "password": "$2b$10$TAkfXjWMBS.rNrhghiXPE.KiAzDMzncHW2tKdglM4kLS81QQqAe6q",
-  "id": 7
+  "id": 7,
+  "admin" : true
  },
  {
   "nombre": "asd",

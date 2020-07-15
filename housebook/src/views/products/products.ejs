@@ -19,14 +19,14 @@
       
          
         <nav class="filtros">
-          
+          <% if (typeof locals.admin !== 'undefined') { %>
           <div class="admin">
             <div class="crear">
               <a href="/products/create">Crear nuevo producto</a>
             </div>
             <div class="espacio-blanco"></div>
           </div>
-          
+        <% } %>
         
           <h3>Filtros</h3>
           <ul>

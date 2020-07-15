@@ -23,7 +23,7 @@
   "descuento": "0",
   "portada": "portada-1591649396081.jpg",
   "id": 2,
-  "idioma" : "Spanish"
+  "idioma": "Spanish"
  },
  {
   "titulo": "Little Fires Everywhere",
@@ -36,7 +36,7 @@
   "descuento": "50",
   "portada": "portada-1591649494646.jpg",
   "id": 3,
-  "idioma" : "English"
+  "idioma": "English"
  },
  {
   "titulo": "Moby Dick / Spanish Edition",
@@ -49,7 +49,7 @@
   "descuento": "25",
   "portada": "portada-1591649589169.jpg",
   "id": 4,
-  "idioma" : "Spanish"
+  "idioma": "Spanish"
  },
  {
   "id": "5",
@@ -62,7 +62,7 @@
   "precio": "500",
   "descuento": "5",
   "portada": "portada-1591649952460.jpg",
-  "idioma" : "English"
+  "idioma": "English"
  },
  {
   "id": "7",
@@ -75,7 +75,7 @@
   "precio": "1100",
   "descuento": "5",
   "portada": "portada-1594234074624.jpg",
-  "idioma" : "English"
+  "idioma": "English"
  },
  {
   "id": "6",
@@ -88,6 +88,6 @@
   "precio": "2000",
   "descuento": "5",
   "portada": "portada-1594234099624.jpg",
-  "idioma" : "Spanish"
+  "idioma": "Spanish"
  }
 ]

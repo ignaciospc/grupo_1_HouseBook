@@ -18,6 +18,7 @@ function exportar (req, res, next) {
         res.locals.user = local.user;
         res.locals.email = local.email
     }
+    req.session.admin ? res.locals.admin = true : '';
 
     next()
 }
@@ -47,10 +48,10 @@ function renderCookie(id, em, req, res){
     let local = {
         id : usuario.id,
         user: usuario.usuario,
-        email : usuario.email
-    }
-
+        email : usuario.email        
+    }   
     // logueo el usuario en la session interna para no hacer éste proceso devuelta
+    usuario.admin ? req.session.admin = true : null;
     req.session.isLogged = true; 
     req.session.iduser = usuario.id;
     req.session.user = usuario.usuario;
