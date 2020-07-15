@@ -91,9 +91,10 @@
         </div>
 
         <div class="contenedor-precio">
-
             <div class="precio">
-                <span>$<%=product.precio%></span>
+                <% if( product.descuento > 0) { %> <p class="originPrice rrt"> $<%=product.precio%> </p> <%}%>
+                <span>$<%=(product.precio * (1-product.descuento/100)).toFixed(2)%></span> 
+                <% if( product.descuento > 0) { %> <div class="discountProduct"> <%=product.descuento%>%Off</div> <%}%>
             </div>
 
             <div class="info-envio">

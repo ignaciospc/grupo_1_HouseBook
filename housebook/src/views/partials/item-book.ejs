@@ -16,7 +16,10 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <div class="precio"><b>ARS$ <%=product[i].precio%></b></div>
+        <div class="precio">
+            <b>ARS$ <%=(product[i].precio * (1-product[i].descuento/100)).toFixed(2)%></b>
+            <% if( product[i].descuento > 0) { %> <b class="discount"><%=product[i].descuento%>%Off</b> <%}%>
+        </div>
 
     </div>
     <div class="item-action">

@@ -181,8 +181,23 @@ body{
 .form-button{
     display: contents;
 }
-
-
+.originPrice{
+    padding: 0;
+    margin: 0;
+    text-decoration: line-through;
+    text-align: left;
+    line-height: 1;
+}
+.originPrice .rrt{
+    color: #999;
+    font-size: 16px;
+}
+.discountProduct{
+    font-size: 15px;
+    color: green;
+    vertical-align: super;
+    display: inline;
+}
 
 
 

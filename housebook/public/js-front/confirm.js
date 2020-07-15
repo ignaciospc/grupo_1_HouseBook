@@ -2,6 +2,7 @@ window.onload = () => {
     
     
     let deleteProduct = document.getElementById('deleteProduct');
+    console.log("estas logueado como admin")
     console.log(deleteProduct);
 
     deleteProduct.onclick = (e) => {
