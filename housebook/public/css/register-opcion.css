@@ -23,6 +23,10 @@
     font-family: 'Roboto', sans-serif;
     margin-bottom: 1px;
 }
+
+
+
+
 .forget{
     text-align: right;    
 }
@@ -104,6 +108,9 @@ a{
 
 
 
+
+
+
 @media(min-width: 768px){
 
     .container-sesion-register{
@@ -137,6 +144,9 @@ a{
     .forget-password{
         padding: 0;
     }
+
+    
+   
     
 }
 
@@ -147,5 +157,25 @@ a{
         box-shadow: 7px 13px 35px #000;
         width: 500px;
     }
+    .border-validation{
+    border: 1px solid red;
+    }
+    .border-validation-ok{
+        border: 1.5px solid green;
+    }
+    .fa-exclamation-circle{
+        margin: 0px 5px;
+    }
+    .nombre-error, .usuario-error,.email-error,
+    .password-error, .c_password-error{  
+        display: none;
+        color: rgb(119, 63, 125);
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-weight: bolder;
+    }
+    
+  
+    
     
 }
