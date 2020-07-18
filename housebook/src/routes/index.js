@@ -13,6 +13,9 @@ router.get('/terminos', controllerIndex.termininos);
 
 router.get("/preview", (req, res) =>{ res.render("housebook/preview")})
 
+
+
+// TEST --------------------------------------------------
 //test crear cookie y session
 router.get('/asd', (req, res) => {
     res.locals.fgh = 456
@@ -30,13 +33,20 @@ router.get('/destroy', (req, res) => {
     console.log(req.session) // no existe
     console.log(res.locals.fgh)
 })
+
+
 const db = require("../database/models")
-router.get("/db", (req, res) => {
+router.get("/db", (req, res) => { //crrear
     db.libro.create({
         titulo: "thomas"
     })
     res.send("creado")
 })
 
-
+router.get("/dbDelete", (req, res) => { //borrar 
+    db.libro.destroy({
+        where :{id : 1}
+    })
+    res.send("borrado")
+})
 module.exports = router;
