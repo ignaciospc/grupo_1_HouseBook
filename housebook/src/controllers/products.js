@@ -24,7 +24,7 @@ module.exports ={
     createBook : (req, res, next) => {
      
         let portada = "";
-        console.log(req.files)
+        //console.log(req.files)
     
         let infoLibro = {
             /*Libro*/
@@ -51,7 +51,7 @@ module.exports ={
             let errores = error.createBook(validationResult(req))
             
             //falta imprimir errores de precio, descuento, portada
-            console.log(errores)
+            //console.log(errores)
             res.render('products/productAdd', {errores, infoLibro})
         }
         
@@ -98,7 +98,7 @@ module.exports ={
             res.render("products/productEdit", {product : infoLibro, errores})
         }
         else{
-        console.log(req.files)
+        //console.log(req.files)
         infoLibro.portada =  req.files.length == 0 ?  models.findOne(req.params.id).portada : req.files[0].filename
 
        // console.log(infoLibro)

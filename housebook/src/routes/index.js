@@ -30,6 +30,13 @@ router.get('/destroy', (req, res) => {
     console.log(req.session) // no existe
     console.log(res.locals.fgh)
 })
+const db = require("../database/models")
+router.get("/db", (req, res) => {
+    db.libro.create({
+        titulo: "thomas"
+    })
+    res.send("creado")
+})
 
 
 module.exports = router;
