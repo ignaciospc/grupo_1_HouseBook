@@ -1,48 +1,36 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('libros', {
-      id: {
+    await queryInterface.createTable('detalles', {
+      isbn : {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        autoIncrement: true,
+        unique: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
       },
-      titulo: {
+      dimensiones: {
         type: Sequelize.STRING,
-        allowNull : false,
+        allowNull: true
       },
-      descripcion : {
+      fecha_publicacion : {
         type: Sequelize.STRING,
-        allowNull : true,
+        allowNull: true
       },
-      valoracion : {
-        type: Sequelize.DECIMAL(3,1),
-        allowNull : false
-      },
-      precio : {
-        type: Sequelize.DECIMAL(9,2),
-        allowNull : false
-      },
-      descuento : {
-        type: Sequelize.DECIMAL(4,2),
+      editorial : {
+        type: Sequelize.STRING,
         allowNull: true
       },
 
       //relaciones 1-M
-      autor_id: {
+      idioma_id:{
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      detalle_isbn: {
+      formato_id:{
         type: Sequelize.INTEGER,
         allowNull: false
       },
 
-      portada : {
-        type: Sequelize.STRING,
-        allowNull : false
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -54,6 +42,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('libros');
+    await queryInterface.dropTable('detalles');
   }
 };

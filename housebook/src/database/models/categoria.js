@@ -1,14 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const usuario = sequelize.define('usuario', { 
-    user: DataTypes.STRING,
-    nombre: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    admin: DataTypes.BOOLEAN
+  const categoria = sequelize.define('categoria', {
+    categoria: {type: DataTypes.STRING, allowNull: false},
   },
   {
-    timestamps: true
+    timestamps: false
   });
   /*autor.associate = function(models) {
     // associations can be defined here
@@ -18,5 +14,5 @@ module.exports = (sequelize, DataTypes) => {
    });
    
   };*/
-  return usuario;
+  return categoria;
 };

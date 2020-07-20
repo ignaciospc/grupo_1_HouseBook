@@ -37,15 +37,17 @@ router.get('/destroy', (req, res) => {
 
 const db = require("../database/models")
 router.get("/db", (req, res) => { //crrear
-    db.libro.create({
-        titulo: "thomas"
+    db.usuario.create({
+        user: "thomas"
     })
     res.send("creado")
 })
 
 router.get("/dbDelete", (req, res) => { //borrar 
-    db.libro.destroy({
-        where :{id : 1}
+    db.usuario.destroy({
+        where :{user :{
+            like: "thomas"
+        } }
     })
     res.send("borrado")
 })

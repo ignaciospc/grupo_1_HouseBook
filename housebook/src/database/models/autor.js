@@ -1,20 +1,20 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const libro = sequelize.define('libro', {
-    titulo: DataTypes.STRING,
+  const autor = sequelize.define('autor', {
+    name: DataTypes.STRING,
     createAt: DataTypes.DATE,
     updateAt: DataTypes.DATE
   },
   {
     timestamps: true
   });
-  libro.associate = function(models) {
+  /*autor.associate = function(models) {
     // associations can be defined here
-   libro.belongsTo(models.autor,{
-     as: "autores",
+    autor.hasMany(models.libro,{
+     as: "libros",
      foreignKey: "id"
    });
    
-  };
-  return libro;
+  };*/
+  return autor;
 };

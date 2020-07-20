@@ -1,17 +1,5 @@
 [
  {
-  "usuario": "男男男",
-  "email": "algo@email.com",
-  "password": "$2b$10$XalrqS4ckaJBfRDG4jrNseUDXaBQoJYonuqA5JE4a1Q8d7vH0jFtu",
-  "id": 3
- },
- {
-  "usuario": "姦姦",
-  "email": "algo1@email.com",
-  "password": "$2b$10$IKD2nqiGDzMYB/4OpYcuEepJ7UnJ6e95SOYBqxdAKzNxB3srhnuyy",
-  "id": 4
- },
- {
   "nombre": "ignacio nicolas soria",
   "usuario": "ignacio72",
   "email": "ignacio.n.soria@hotmail.com",

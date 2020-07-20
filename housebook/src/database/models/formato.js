@@ -1,11 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const usuario = sequelize.define('usuario', { 
-    user: DataTypes.STRING,
-    nombre: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    admin: DataTypes.BOOLEAN
+  const formato = sequelize.define('formato', {
+    format: DataTypes.STRING,    
   },
   {
     timestamps: true
@@ -18,5 +14,5 @@ module.exports = (sequelize, DataTypes) => {
    });
    
   };*/
-  return usuario;
+  return formato;
 };

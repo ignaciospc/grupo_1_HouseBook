@@ -42,8 +42,7 @@ let productData = {
             {
                 nroId = x.id
             }
-        }
-        )
+        })
 
         return nroId + 1
 
