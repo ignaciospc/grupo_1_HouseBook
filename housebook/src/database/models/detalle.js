@@ -1,7 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const detalle = sequelize.define('detalle', {
-    isbn: DataTypes.INTEGER,
+    isbn: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false      
+    },
     dimensiones: DataTypes.STRING,
     fecha_publicacion: DataTypes.STRING,
     editorial: DataTypes.STRING,

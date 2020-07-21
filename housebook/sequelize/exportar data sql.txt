@@ -1,0 +1,4 @@
+mysqldump  --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --column-statistics=0 --skip-triggers "app_movies" -p > /home/juan/dumps/app_movies.sql --verbose
+
+
+Terminal: mysqldump  --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --column-statistics=0 --skip-triggers "app_movies" -p > app_movies.sql --verbose
