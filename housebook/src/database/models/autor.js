@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     name: DataTypes.STRING,
-    createAt: DataTypes.DATE,
-    updateAt: DataTypes.DATE
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   {
     timestamps: true

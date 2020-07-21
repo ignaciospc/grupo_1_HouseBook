@@ -38,26 +38,43 @@ router.get('/destroy', (req, res) => {
 const db = require("../database/models")
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op;
+
+
 router.get("/db", (req, res) => { //crear en db
-    db.usuario.create({
-        user: "thomas"
+
+    db.formato.create({
+        format: "Fisico"
     })
     res.send("creado")
 })
 
 router.get("/dbDelete", (req, res) => { //borrar en db
-    db.usuario.destroy({
-        where :{user :{
-            [Op.like]: "thomas" //like es una operacion, ergo hay que llamar Sequlize y Op
-        } }
+    /*
+    db.libro.destroy({
+        where : {descripcion : null}
+            // { [Op.like]: "thomas" //like es una operacion, ergo hay que llamar Sequlize y Op } }
     })
+    */
     res.send("borrado")
 })
 
 router.get("/dbConsulta", async(req, res) => { //consultas a la db
 
-    let resultado = await db.sequelize.query('SELECT * FROM usuarios')
-    console.log(resultado)
+    //let resultado = await db.sequelize.query('SELECT * FROM usuarios')
+    let resultado = () => {
+        return db.libro.findOne({
+        where: {
+            id: 12
+        }
+    }).then(r => {
+        //console.log('resultado de db:', r)
+        return r;
+    })
+}
+    resultado().then(r => {
+        console.log(r)}
+    )
+    
 
     /* db.sequelize.query('SELECT * FROM usuarios').then(r =>{
         console.log(r)

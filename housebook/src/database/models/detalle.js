@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     dimensiones: DataTypes.STRING,
     fecha_publicacion: DataTypes.STRING,
     editorial: DataTypes.STRING,
-    createAt: DataTypes.DATE,
-    updateAt: DataTypes.DATE
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   {
     timestamps: true

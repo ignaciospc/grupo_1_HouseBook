@@ -1,13 +1,5 @@
 [
  {
-  "nombre": "ignacio nicolas soria",
-  "usuario": "ignacio72",
-  "email": "ignacio.n.soria@hotmail.com",
-  "password": "$2b$10$S0Y7tmSSXu03NTlhIYMgFu56iq1tsxVN.V/WYdlIZRRpU9myrzZny",
-  "id": 5,
-  "admin" : true
- },
- {
   "nombre": "contraseña asdasd123",
   "usuario": "Test",
   "email": "test@email.com",

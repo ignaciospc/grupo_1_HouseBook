@@ -23,7 +23,7 @@ module.exports= {
                 case ('precio') :      errores.precio.push(error.msg); break;
                 case ('descuento') :   errores.descuento.push(error.msg); break;
                 case ('portada') :     errores.portada.push(error.msg); break;
-                default : console.log(validacion); res.send('ERROR EN LA LISTA DE ERRORES. DUH'); break;
+                default : console.log('ERROR EN LA LISTA DE ERRORES. DUH', validacion); break;
             }
         }     
 

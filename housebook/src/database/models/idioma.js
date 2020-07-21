@@ -1,13 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const idioma = sequelize.define('idioma', {
-    id: {
-      type : DataTypes.INTEGER,
+    name: {
+      type : DataTypes.STRING,
       primaryKey: true,
-      autoIncrement: true,
       allowNull: false
-    },
-    name: DataTypes.STRING,    
+    },  
   },
   {
     timestamps: true

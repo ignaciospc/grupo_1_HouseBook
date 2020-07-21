@@ -1,4 +1,7 @@
 'use strict';
+
+const { sequelize } = require("../models");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('libros', {
@@ -36,6 +39,10 @@ module.exports = {
       },
       detalle_isbn: {
         type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      idioma_id: {
+        type: Sequelize.STRING,
         allowNull: false
       },
 

@@ -8,8 +8,14 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     titulo: DataTypes.STRING,
-    createAt: DataTypes.DATE,
-    updateAt: DataTypes.DATE
+    descripcion: DataTypes.STRING,
+    valoracion: DataTypes.INTEGER,
+    precio: DataTypes.INTEGER,
+    descuento: DataTypes.INTEGER,
+    idioma_id: DataTypes.STRING,
+    portada: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   {
     timestamps: true

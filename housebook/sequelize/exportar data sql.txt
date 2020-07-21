@@ -1,4 +1,10 @@
 mysqldump  --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --column-statistics=0 --skip-triggers "app_movies" -p > /home/juan/dumps/app_movies.sql --verbose
 
 
-Terminal: mysqldump  --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --column-statistics=0 --skip-triggers "app_movies" -p > app_movies.sql --verbose
+Terminal: mysqldump  --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --column-statistics=0 --skip-triggers "housebook" -p > housebook.sql --verbose
+
+C:/Users/thoma/Desktop/New folder/db/
+
+en la carpeta xampa bin
+.\mysqldump.exe --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --skip-triggers "housebook" -p > C:/Users/thoma/Desktop/New folder/db/housebook.sql --verbose
+

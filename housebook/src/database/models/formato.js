@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       allowNull: false
     },
-    format: DataTypes.STRING,    
+    format: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   {
     timestamps: true

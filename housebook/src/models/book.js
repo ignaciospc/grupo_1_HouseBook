@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const fileData = path.join(__dirname, '../data/librosDataBase.json')
-
+const db = require("../database/models")
 let productData = {
     findAll: () => {
         if(!fs.existsSync(fileData) ) { fs.writeFileSync(fileData, "")}; // de no existir el archivo crea uno vacio
@@ -57,6 +57,21 @@ let productData = {
         
         let jsonData = JSON.stringify(readJson, null, " ");
         //escribo
+        /*
+        for(let i = 0; i<readJson.length; i++){
+            let libro = {
+                titulo: readJson[i].titulo,
+                descripcion: readJson[i].descripcion,
+                valoracion:Number(readJson[i].valoracion),
+                precio: Number(readJson[i].precio),
+                descuento: Number(readJson[i].descuento),
+                idioma_id: readJson[i].idioma,
+                portada: readJson[i].portada,
+            }
+            console.log(libro)
+            db.libro.create(libro)
+            //
+        }*/
         fs.writeFileSync(fileData, jsonData);
         
     },
