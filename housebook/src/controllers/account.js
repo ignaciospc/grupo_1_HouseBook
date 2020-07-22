@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const path = require('path')
 const modelUsers = require(path.join(__dirname, "..", "models", "users"))
+const db = require(path.join(__dirname, "..", 'database', 'models'))
 const {validationResult} = require("express-validator");
 
 const error = path.join("..","middlewares", "validation.js")
@@ -31,7 +32,7 @@ let account = {
             password : bcrypt.hashSync(req.body.password, sal ),
         }
 
-        //usuario en db 
+        //usuario en db
         let usuario = modelUsers.createUsers(user); //comprobar que sea unico el email.
 
         //lo logueo

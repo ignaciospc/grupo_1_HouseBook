@@ -39,7 +39,7 @@ const db = require("../database/models")
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op;
 
-
+let categoria = ['novedades', 'ofertas','mas-vendidos','informacion', 'terror']
 router.get("/db", (req, res) => { //crear en db
 
     db.formato.create({

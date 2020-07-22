@@ -33,4 +33,13 @@ TO DO {
     confirmacion en el boton delete
     precio final en index y detalle, aplican el descuento.
 }
+20200718{
+    se empezo a estudiar api y db para transicionar
+}
+
+Categorias: cuantas?
+libros: cual categorias
+detalle: que pongo?
+Autores: ?? api
+vistas: 1 vista para crear nuevas categorias. Autores. Idiomas
 

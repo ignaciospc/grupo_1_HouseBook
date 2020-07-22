@@ -11,9 +11,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   {
-    timestamps: false
+    timestamps: true
   });
   /*autor.associate = function(models) {
     // associations can be defined here
