@@ -106,6 +106,25 @@ a{
     color: rgb(119, 63, 125);
 }
 
+/*js front*/
+.border-validation{
+    border: 1px solid rgb(119, 63, 125);
+    box-shadow: 0px 0px 6px rgb(119, 63, 125);
+    }
+.border-validation-ok{
+        border: 1.5px solid #28a745;
+        box-shadow: 0px 0px 6px #28a745;
+    }
+.error-nombre,.error-usuario,
+.error-email,.error-password,
+.error-c_password{  
+        color: rgb(119, 63, 125);
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-weight: bolder;
+    }
+
+
 
 
 
@@ -157,23 +176,7 @@ a{
         box-shadow: 7px 13px 35px #000;
         width: 500px;
     }
-    .border-validation{
-    border: 1px solid red;
-    }
-    .border-validation-ok{
-        border: 1.5px solid green;
-    }
-    .fa-exclamation-circle{
-        margin: 0px 5px;
-    }
-    .nombre-error, .usuario-error,.email-error,
-    .password-error, .c_password-error{  
-        display: none;
-        color: rgb(119, 63, 125);
-        font-size: 20px;
-        margin-bottom: 5px;
-        font-weight: bolder;
-    }
+    
     
   
     

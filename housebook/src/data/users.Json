@@ -19,10 +19,17 @@
   "id": 5
  },
  {
-  "nombre": "Maria Clara",
-  "usuario": "MolinaClari",
-  "email": "molina.mc@hotmail.com",
-  "password": "$2b$10$Z51blS6zIP/tp/r.X.505Oqmjnn.xXerV5VOMkCLtBxbJSQBspo.a",
+  "nombre": "ignacio",
+  "usuario": "ignaciospc72",
+  "email": "ignacio.n.soria@hotmail.com",
+  "password": "$2b$10$OQnEjON3Bp3CobMw.OnSSuBiUPfkV4wEE0LGk8ytiosjmN1Ynx.z2",
   "id": 6
+ },
+ {
+  "nombre": "ignacio",
+  "usuario": "aaaaaa",
+  "email": "cg_molina@yahoo.com.ar",
+  "password": "$2b$10$VlCDCDjhoCCldAwJAumfm.tXJcD8WhIXGDcMMJx4CyjHeWzp/6766",
+  "id": 7
  }
 ]

@@ -51,7 +51,7 @@ let account = {
 
     login: (req, res) => {
 
-        let usuario = modelUsers.findOne(req.body.usuario)
+        let usuario = modelUsers.findOne(req.body.usuario)  //usuario = email,RECORDAR !!!!
         
         if(usuario == undefined){
         let errorUser = "usuario no encontrado"; 
