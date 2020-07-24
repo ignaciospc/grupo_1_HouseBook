@@ -23,7 +23,7 @@ module.exports = {
 
       //relaciones 1-M
       idioma_id:{
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       formato_id:{

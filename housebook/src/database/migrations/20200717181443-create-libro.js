@@ -38,14 +38,19 @@ module.exports = {
         allowNull: false,
       },
       detalle_isbn: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DECIMAL(13,0),
         allowNull: false
       },
       idioma_id: {
         type: Sequelize.STRING,
         allowNull: false
       },
+      categoria: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
 
+      
       portada : {
         type: Sequelize.STRING,
         allowNull : false

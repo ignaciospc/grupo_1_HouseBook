@@ -17,13 +17,13 @@ module.exports = (sequelize, DataTypes) => {
   {
     timestamps: true
   });
-  /*autor.associate = function(models) {
+  categoria.associate = function(models) {
     // associations can be defined here
-    autor.hasMany(models.libro,{
+    categoria.hasMany(models.libro,{
      as: "libros",
-     foreignKey: "id"
+     foreignKey: "categoria"
    });
    
-  };*/
+  };
   return categoria;
 };

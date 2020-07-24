@@ -10,13 +10,17 @@ module.exports = (sequelize, DataTypes) => {
   {
     timestamps: true
   });
-  /*autor.associate = function(models) {
+  idioma.associate = function(models) {
     // associations can be defined here
-    autor.hasMany(models.libro,{
+    idioma.hasMany(models.libro,{
      as: "libros",
-     foreignKey: "id"
+     foreignKey: "idioma_id"
    });
+   idioma.hasMany(models.detalle,{
+     as: "detalles",
+     foreignKey: "idioma_id"
+   })
    
-  };*/
+  };
   return idioma;
 };

@@ -2,26 +2,34 @@
 module.exports = (sequelize, DataTypes) => {
   const detalle = sequelize.define('detalle', {
     isbn: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(13,0),
       primaryKey: true,
       allowNull: false      
     },
     dimensiones: DataTypes.STRING,
     fecha_publicacion: DataTypes.STRING,
     editorial: DataTypes.STRING,
+    
+    idioma_id: DataTypes.STRING,
+    formato_id: DataTypes.INTEGER,
+
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   },
   {
     timestamps: true
   });
-  /*autor.associate = function(models) {
+  detalle.associate = function(models) {
     // associations can be defined here
-    autor.hasMany(models.libro,{
-     as: "libros",
-     foreignKey: "id"
+    detalle.belongsTo(models.idioma,{
+     as: "idiomas",
+     foreignKey: "idioma_id"
    });
+   detalle.hasMany(models.libro,{
+     as: "libro",
+     foreignKey: "detalle_isbn"
+   })
    
-  };*/
+  };
   return detalle;
 };

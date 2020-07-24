@@ -37,9 +37,19 @@ TO DO {
     se empezo a estudiar api y db para transicionar
 }
 
-Categorias: cuantas?
-libros: cual categorias
-detalle: que pongo?
-Autores: ?? api
-vistas: 1 vista para crear nuevas categorias. Autores. Idiomas
+20200722{
+    se coloca los datos en SQL
+}
+libro 1: https://www.bookdepository.com/Lugares-Asombrosos-Travesias-Insolitas-Y-Otras-Maneras-Extranas-de-Conocer-Al-Mundo-Amazing-Places-Unusual-Journeys-Other-Strange-Ways-Getting-Luisito-Comunica/9786073184458
 
+Libro 2: https://www.bookdepository.com/Psicología-del-éxito-Mario-Luna/9788460681670
+
+Libro 3: https://www.bookdepository.com/Little-Fires-Everywhere-Celeste-Ng/9780349142920
+
+Libro 4: https://www.bookdepository.com/Moby-Dick-Spanish-Edition-Herman-Melville/9788491050209
+
+Libro 5: https://www.bookdepository.com/Girl-Woman-Other-Bernardine-Evaristo/9780241984994
+
+Libro 6: https://www.bookdepository.com/White-Fragility-Robin-Diangelo/9780141990569
+
+Libro 7: https://www.bookdepository.com/El-Libro-Negro-Dross-Dross/9786070762628
