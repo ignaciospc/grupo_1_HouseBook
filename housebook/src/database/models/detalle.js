@@ -29,6 +29,10 @@ module.exports = (sequelize, DataTypes) => {
      as: "libro",
      foreignKey: "detalle_isbn"
    })
+   detalle.belongsTo(models.formato,{
+     as: "formato",
+     foreignKey: "formato_id"
+   })
    
   };
   return detalle;

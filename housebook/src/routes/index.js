@@ -71,7 +71,7 @@ Spanish
 */
 router.get("/dbCreate", (req, res) => { //crear en db
      //nueva categoria
-     
+     /*
         db.detalle.create({
             isbn : detalles.isbn,
             dimensiones: detalles.dimensiones,
@@ -90,18 +90,18 @@ router.get("/dbCreate", (req, res) => { //crear en db
             id : 18
         }
     })
-
+*/
     
     res.send("creado")
 })
 
 router.get("/dbDelete", (req, res) => { //borrar en db
-    
+    /*
     db.detalle.destroy({
         where : {isbn : 2147483647}
             // { [Op.like]: "thomas" //like es una operacion, ergo hay que llamar Sequlize y Op } }
     })
-    
+    */
     res.send("borrado")
 })
 
@@ -155,6 +155,7 @@ router.get("/dbConsulta", async(req, res) => { //consultas a la db
 })
 
 router.get("/dbUpdate", (req, res) => {
+    /*
     db.idioma.update({
         name: "Germany"
     }, {
@@ -162,6 +163,7 @@ router.get("/dbUpdate", (req, res) => {
             name: "Aleman"
         }
     })
+    */
     res.send("actualizado")
 })
 module.exports = router;

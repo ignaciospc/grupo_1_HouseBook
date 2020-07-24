@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
   {
     timestamps: true
   });
-  /*autor.associate = function(models) {
+  formato.associate = function(models) {
     // associations can be defined here
-    autor.hasMany(models.libro,{
-     as: "libros",
-     foreignKey: "id"
+    formato.hasMany(models.detalle,{
+     as: "detalles",
+     foreignKey: "formato_id"
    });
    
-  };*/
+  };
   return formato;
 };
