@@ -44,6 +44,11 @@ TO DO {
 20200724{
     se modifican los controladores para abarcar DB
 }
+
+20200725{
+    se termino usuario. Se trabaja en productos (asociaciones incluida)
+}
+
 libro 1: https://www.bookdepository.com/Lugares-Asombrosos-Travesias-Insolitas-Y-Otras-Maneras-Extranas-de-Conocer-Al-Mundo-Amazing-Places-Unusual-Journeys-Other-Strange-Ways-Getting-Luisito-Comunica/9786073184458
 
 Libro 2: https://www.bookdepository.com/Psicología-del-éxito-Mario-Luna/9788460681670

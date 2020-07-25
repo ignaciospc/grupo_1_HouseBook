@@ -1,13 +1,36 @@
 const path = require('path')
 const models = require(path.join(__dirname, '..', 'models' , 'book'))
 const {validationResult} = require('express-validator')
-
+const db = require(path.join(__dirname, "..", 'database', 'models'))
 const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
 module.exports ={
    
-    products: (req, res) => {
+    products: async(req, res) => {
         let product = models.findAll()
+        let dbProduct = await db.libro.findAll({
+            include: [
+                {association: 'categorias'},
+                {association: 'idioma'},
+                {association: 'autores'},
+                {association: 'detalle'},
+            ]
+        })
+        res.send(dbProduct);
+        return;
+        let products = {
+            id: 6,
+            titulo: 'algo',
+            autor: 'algo',
+            valoracion: 5,
+            descripcion: 'algo',
+            categoria: 'algo',
+            detalle: 'algo',
+            precio: 5000,
+            descuento: 5,
+            portada: 'algo',
+            idioma: 'Spanish'
+        }
         res.render("products/products", {libro : product})
     },
     details: (req, res) => {
@@ -25,6 +48,7 @@ module.exports ={
      
         let portada = "";
         //console.log(req.files)
+        //12 cada 5 min
     
         let infoLibro = {
             /*Libro*/
