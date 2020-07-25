@@ -107,7 +107,6 @@ router.get("/dbDelete", (req, res) => { //borrar en db
 
 router.get("/dbConsulta", async(req, res) => { //consultas a la db
 
-    let resultado;
     //resultado = await db.sequelize.query('SELECT * FROM libros')
     /*
     let resultado = () => {
@@ -125,21 +124,26 @@ router.get("/dbConsulta", async(req, res) => { //consultas a la db
     )
     */
    
-    libro = await db.libro.findOne({
+    libro = await db.usuario.findOne({
+        where: {
+            id : 1
+        },
+        /*
         include: [
             {association: 'categorias'},
             {association: 'idioma'},
             {association: 'autores'},
             {association: 'detalle'},
         ]
-    },{
-        where: {
-            id : 12
-        }
+        */
+
     })
+    //.then(function(resultado) {
+        console.log(libro)
+        res.send(libro)
+    //})
 
     //detalle_id = await db.detalle.findAll()
-    console.log(libro.dataValues)
     /*
         resultado = await db.categoria.findAll({
         include: [{association: 'libros'}]
@@ -150,7 +154,7 @@ router.get("/dbConsulta", async(req, res) => { //consultas a la db
     /* db.sequelize.query('SELECT * FROM usuarios').then(r =>{
         console.log(r)
     })*/
-    res.send(resultado)
+    
     
 })
 

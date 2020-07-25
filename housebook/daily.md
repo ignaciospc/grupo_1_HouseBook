@@ -40,6 +40,10 @@ TO DO {
 20200722{
     se coloca los datos en SQL
 }
+
+20200724{
+    se modifican los controladores para abarcar DB
+}
 libro 1: https://www.bookdepository.com/Lugares-Asombrosos-Travesias-Insolitas-Y-Otras-Maneras-Extranas-de-Conocer-Al-Mundo-Amazing-Places-Unusual-Journeys-Other-Strange-Ways-Getting-Luisito-Comunica/9786073184458
 
 Libro 2: https://www.bookdepository.com/Psicología-del-éxito-Mario-Luna/9788460681670

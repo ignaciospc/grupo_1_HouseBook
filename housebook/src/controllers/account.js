@@ -12,7 +12,7 @@ let account = {
         res.render("user/register-opcion")
     },
 
-    register : (req, res) => {
+    register : async (req, res) => {
 
         let sal = 10;
         let validation = validationResult(req)       
@@ -22,24 +22,36 @@ let account = {
         if(!validation.isEmpty()){
 
            res.render("user/register-opcion", { errors : validation.mapped()});
-
+            return false;
         }       
 
         let user = {
             nombre: req.body.nombre,
-            usuario : req.body.usuario,
+            user : req.body.usuario,
             email : req.body.email,
             password : bcrypt.hashSync(req.body.password, sal ),
         }
 
-        //usuario en db
-        let usuario = modelUsers.createUsers(user); //comprobar que sea unico el email.
-
+        //valido unico mail
+        let dbUsuario = await db.usuario.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+        if(!dbUsuario){
+            let errors = {
+                email : "email ya tomado"
+            }
+            res.render("user/register-opcion", {errors})
+        }
+        //lo creo
+        db.usuario.create(user);
+        delete user.password;
         //lo logueo
         req.session.isLogged = true;
-        req.session.iduser = usuario.id;
-        req.session.user = usuario.usuario;
-        req.session.email = usuario.email;
+        req.session.iduser = dbUsuario.id;
+        req.session.user = dbUsuario.usuario;
+        req.session.email = dbUsuario.email;
         
         res.redirect("/")
     },
@@ -50,13 +62,18 @@ let account = {
 
     },
 
-    login: (req, res) => {
+    login: async (req, res) => {
 
-        let usuario = modelUsers.findOne(req.body.usuario)
-        
-        if(usuario == undefined){
+        let usuario = await db.usuario.findOne({
+            where: {
+                email : req.body.usuario
+            }
+        })
+
+        if(usuario == null){
         let errorUser = "usuario no encontrado"; 
         res.render ("user/login-opcion" , {errorUser})
+        return false;
         }
         
         let validacion =  bcrypt.compareSync(req.body.password, usuario.password); //true or false
@@ -68,6 +85,7 @@ let account = {
         if (!validacion) { 
         let errorPsw = "contraseña incorrecta";
         res.render ("user/login-opcion" , {errorPsw})
+        return false;
         }
        
         
@@ -75,33 +93,34 @@ let account = {
         
         req.session.isLogged = true;
         req.session.iduser = usuario.id;
-        req.session.user = usuario.usuario;
+        req.session.user = usuario.user;
         req.session.email = usuario.email;
         req.session.admin = usuario.admin ? usuario.admin : null;
         
         if(req.body.remember) 
-        //deberia poner en el primer string el ID y el resto el hash del email == cookie : 5XXXX;  donde 5 es el id y xxxx email haseado para validarlo.
         {
             let emailHash = bcrypt.hashSync(usuario.email, 4)
             res.cookie('rId', usuario.id, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el id a una cookie :´/
             res.cookie('rEm', emailHash, {expires: new Date(Date.now() + 1000*60*60*3)}) //sumo el email hasheado a una cookie  :/
         } //3 dias
+        /* debug
+        console.log("controlador account", req.session)
+        */
         res.redirect("/")
         
 
     },
-    profileUser : (req, res) => {
+    profileUser : async (req, res) => {
         //verifico que el parametro id sea igual a la sesion existente. Si no la borro (soluciona bug de poner otro id en URI estando logueado)
         // en middleware Session verifico que la cookie y el req.session sean reales.
-
-        if(req.params.id != req.session.iduser){ 
-            account.logout(req, res);
-        }
-        else{
-            let usuario = modelUsers.findId(req.params.id)
+            let usuario = await db.usuario.findOne({
+                where :{
+                    email: req.session.email
+                }
+            })
             delete usuario.password;
             res.render("user/profile",{usuario})
-        }
+
     },
 
     logout : (req, res) => {

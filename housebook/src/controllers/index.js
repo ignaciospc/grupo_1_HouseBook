@@ -6,6 +6,9 @@ const models = require(path.join(__dirname, '..', 'models' , 'book'))
 
 module.exports ={
     home: (req, res) => {
+        /* debug
+        console.log("controlador home", req.session)
+        */
         let product = models.findAll()
         res.render('housebook/index', {product})
     },

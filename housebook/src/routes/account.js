@@ -17,6 +17,6 @@ router.get('/login', hasNotLogged, controllerAccount.loginForm)
 router.post('/login', middleUserLogin , controllerAccount.login)
 
 router.get('/profile/logout', hasLogged, controllerAccount.logout)
-router.get('/profile/:id', hasLogged, controllerAccount.profileUser)
+router.get('/profile', hasLogged, controllerAccount.profileUser)
 
 module.exports = router;
