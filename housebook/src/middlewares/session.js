@@ -35,7 +35,7 @@ function exportar (req, res, next) {
 }
 module.exports = exportar;
 
-async function renderCookie(id, em, req, res){
+async function  renderCookie (id, em, req, res){
 
     let usuario = await db.usuario.findOne({
         where : {

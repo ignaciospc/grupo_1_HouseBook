@@ -112,22 +112,7 @@ router.get("/dbDelete", (req, res) => { //borrar en db
 router.get("/dbConsulta", async(req, res) => { //consultas a la db
 
     //resultado = await db.sequelize.query('SELECT * FROM libros')
-    /*
-    let resultado = () => {
-        return db.libro.findOne({
-        where: {
-            id: 12
-        }
-    }).then(r => {
-        //console.log('resultado de db:', r)
-        return r;
-    })
-}
-    resultado().then(r => {
-        console.log(r)}
-    )
-    */
-   
+    
    let dbProduct;
    try{
    dbProduct = await db.libro.findAll({

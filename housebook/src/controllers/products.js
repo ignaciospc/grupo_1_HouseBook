@@ -221,7 +221,7 @@ module.exports ={
         }
         await db.detalle.destroy({
             where : {
-                isbn : product.isbn,
+                isbn : product.detalle_isbn,
             }
         })
         await db.libro.destroy({
