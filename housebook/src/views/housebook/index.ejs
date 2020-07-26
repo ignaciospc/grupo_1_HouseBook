@@ -31,7 +31,6 @@
                                 const books = <%-JSON.stringify(product)%>
                             </script>
                             <% let  count = 0;
-                                console.log(product);
                             for (let i = 0 ; i < product.length ; i++) {
                                 if (product[i].categorias.categoria == "novedades") { %>
                                     <%-include('../partials/index-item-book', {product, i}) %>                                

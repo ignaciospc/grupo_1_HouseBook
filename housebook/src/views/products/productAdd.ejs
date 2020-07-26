@@ -55,11 +55,10 @@
                         <label for="autores" class="titulo-principal">Autor</label>
 
                         <select name="autores" id="autores">
-                            <option value="a1">autor 1</option>
-                            <option value="a2">autor 2</option>
-                            <option value="a3">autor 3</option>
-                            <option value="a4">autor 4</option>
-                            <option value="a5">autor 5</option>
+                            <% autores.map(x => { %>
+                                <option value="<%=x.name%>"><%=x.name%></option>
+                            <%})%>
+                            
                         </select>
         
                     </div>
@@ -101,7 +100,11 @@
                     }
                     %>
                         </div>
-                        <textarea name="categoria" id="categoria" cols="50" rows="2"><%= validacion === 1 ? infoLibro.categoria : "" %></textarea><!--pasar a select-->
+                        <select name="categoria" id="categoria">
+                            <% categorias.map(x => { %>
+                                <option value="<%=x.categoria%>"><%=x.categoria%></option>
+                            <%})%>                            
+                        </select>
                     </div>
         
                     <div class="detalle-libro">
@@ -116,18 +119,18 @@
                             <div class="informacion-detalle" >
                                 <label for="formato" class="titulo-detalle"> Formato</label>
                                 <select name="formato" id="formato">
-                                    <option value="PDF">PDF</option>
-                                    <option value="FISICO">FISICO</option>
-                                    <option value="PDF y FISICO">PDF y FISICO</option>
+                                    <% formatos.map(x => { %>
+                                        <option value="<%=x.format%>"><%=x.format%></option>
+                                    <%})%>
                                 </select>
                             </div>
 
                             <div class="informacion-detalle" >
                                 <label for="idioma" class="titulo-detalle"> Idioma</label>
                                 <select name="idioma" id="idioma">
-                                    <option value="ESPAÑOL">Español</option>
-                                    <option value="ENGLISH">Ingles</option>
-                                    <option value="DUSTCH">Aleman</option>
+                                    <% idiomas.map(x => { %>
+                                        <option value="<%=x.name%>"><%=x.name%></option>
+                                    <%})%>
                                 </select>
                             </div>
                             

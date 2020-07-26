@@ -58,9 +58,26 @@ module.exports ={
         if (!product) {res.send("producto no encontrado ameo"); return} //ACTIVA POR SI NO ENCUENTRA EL ID
         res.render("products/productDetail", {product})
     }, //end
-    create:(req,res) =>{
+    create: (req,res) =>{
+        let idiomas     =   db.idioma.findAll(),
+            formatos    =   db.formato.findAll(),
+            autores     =   db.autor.findAll(),
+            categorias  =   db.categoria.findAll();
 
-        res.render("products/productAdd")
+        Promise.all([idiomas, formatos, autores, categorias]).then(resultado => {
+            res.render("products/productAdd", {
+                idiomas : resultado[0],
+                formatos: resultado[1],
+                autores : resultado[2],
+                categorias : resultado[3]
+            })
+            return;
+        }).catch(error => {
+            console.log(error);
+            res.send((error))
+            return
+        })
+        
 
     },
     createBook : async (req, res, next) => {
@@ -160,10 +177,43 @@ module.exports ={
         res.redirect("/products")            
     }
     },
-    editForm: (req,res) => {
-        let product = models.findOne(req.params.id)
-        if (!product) {res.send("producto no encontrado ameo"); return} //ACTIVA POR SI NO ENCUENTRA EL ID
-        res.render("products/productEdit", {product})
+    editForm: async (req,res) => {
+        //let product = models.findOne(req.params.id)
+    let product =  db.libro.findOne({
+            where : {
+                id : req.params.id
+            },
+            include : [
+                {association: 'categorias'  },
+                {association: 'idioma'      },
+                {association: 'autores'     },
+                {association: 'detalle',
+                include: [
+                {association: 'formato'},
+                {association: 'idiomas'}
+           ]},
+            ]
+        }),
+        idiomas = db.idioma.findAll(),
+        formatos= db.formato.findAll(),
+        autores = db.autor.findAll(),
+        categorias = db.categoria.findAll();
+
+        Promise.all([product, idiomas, formatos, autores, categorias]).then(resultado => {
+            if (!resultado[0]) {res.send("producto no encontrado ameo"); return} //ACTIVA POR SI NO ENCUENTRA EL ID
+            res.render("products/productEdit", {
+                product: resultado[0],
+                idiomas: resultado[1],
+                formatos: resultado[2],
+                autores: resultado[3],
+                categorias: resultado[4]
+            })
+            return;
+        }).catch(error => {
+            console.log(error);
+            res.send("error");
+            return false;
+        })               
     },
     edit: (req,res, next) => {
         

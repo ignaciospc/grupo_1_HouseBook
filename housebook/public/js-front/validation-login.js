@@ -1,5 +1,12 @@
 window.onload = () => {
 
+    let check = document.getElementById("view-password");
+    let pass = document.getElementById("password");
+    
+    check.onclick = () => {
+    pass.type = pass.type == 'password' ? 'text' : 'password';
+    }
+
 
     let form = document.querySelector("form.form-login"); //se captura el form
 

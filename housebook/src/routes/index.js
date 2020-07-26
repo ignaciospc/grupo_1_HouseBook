@@ -133,9 +133,17 @@ catch(error){
    console.log(error);
    return false;
 }
+res.send(dbProduct)
+/* 
+let dbFormatos = db.formato.findAll()
+let idiomas = db.idioma.findAll()
+let libros = db.libro.findAll()
+Promise.all([dbFormatos, idiomas, libros]).then(resultado => {
+    res.send(resultado)
+})
+*/
     //.then(function(resultado) {
         //console.log(libro)
-        res.send(dbProduct)
     //})
 
     //detalle_id = await db.detalle.findAll()
