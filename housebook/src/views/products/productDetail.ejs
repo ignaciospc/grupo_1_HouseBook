@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail | HouseBook</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <% if (typeof locals.admin !== 'undefined') { %> <script src="/js-front/confirm.js"></script> <% } %>
 </head>
 
 <%- include("../partials/header") %> 
@@ -40,7 +42,7 @@
                 <ul>
                     <li class="valoracion"> <label for="">Valoracion :</label>  <a  href=""><i class="fas fa-star"></i></a> <%=product.valoracion%> </li>
                     
-                    <li><label for="">Autor:</label> <a href=""><%=product.autor%></a></li>
+                    <li><label for="">Autor:</label> <a class = "autor" href=""><%=product.autores.name%></a></li>
 
                     <li class="redes-desktop">
                         <label for="">compartir :</label>
@@ -69,18 +71,16 @@
 
             <div class="img-libro">
                 <img src="/images/libros/<%=product.portada%>" alt="imagenLibro">
-
+                <% if (typeof locals.admin !== 'undefined') { %>
                 <div class="buttons-edit-delete">
                     <div class="form-button">
                         <a href="/products/<%=product.id%>/edit" class="button-edit">edit</a>
                     </div>
                     <form class="form-button" method="POST" action="/products/<%=product.id%>?_method=DELETE">
-                        <button type="submit" class="button-delete">delete</button>
+                        <button type="submit" id = deleteProduct class="button-delete">delete</button>
                     </form>
-                    
-                    
                 </div>
-    
+                <% } %>
             </div>
 
             
@@ -91,9 +91,10 @@
         </div>
 
         <div class="contenedor-precio">
-
             <div class="precio">
-                <span>$<%=product.precio%></span>
+                <% if( product.descuento > 0) { %> <p class="originPrice rrt"> $<%=product.precio%> </p> <%}%>
+                <span>$<%=(product.precio * (1-product.descuento/100)).toFixed(2)%></span> 
+                <% if( product.descuento > 0) { %> <div class="discountProduct"> <%=product.descuento%>%Off</div> <%}%>
             </div>
 
             <div class="info-envio">
@@ -121,11 +122,7 @@
         <div class="descripcion-libro">
             <h3>Descripcion</h3>
             <span>
-                Tu vida, tu videojuego te descubre los aprendizajes que ya has obtenido gracias a los videojuegos para usarlos en tu día a día y de esta manera potenciar y dirigir tu vida hacia la abundancia, el éxito y el bienestar. Ya seas jugador/a ocasional o todo jugón/a este libro te lleva a realizar un viaje de descubrimiento y crecimiento a través de analogías con distintos videojuegos.
-
-                Un libro para trabajar la mentalidad frente a la vida y tu profesión desde la perspectiva de los videojuegos.
-                
-                ¡Diversión, éxito y abundancia!
+                    <%= product.descripcion%>
             </span>
            
         </div>
@@ -137,39 +134,31 @@
             <ul>
                 <li>
                     <label for="">Formato :</label>
-                    <span>PDF / Fisico</span>
+                    <span><%= product.detalle.formato.format%> </span>
                 </li>
                 <li>
                     <label for="">Dimenciones :</label>
-                    <span>13 × 1 × 17 cm</span>
+                    <span><%= product.detalle.dimensiones %></span>
                 </li>
                 <li>
                     <label for="">Fecha de publicacion :</label>
-                    <span>1 de diciembre de 2018</span>
+                    <span><%= product.detalle.fecha_publicacion %></span>
                 </li>
                 <li>
                     <label for="">Idioma :</label>
-                    <span>Español</span>
-                </li>
-                <li>
-                    <label for="">Edicion :</label>
-                    <span>Héroes de Papel</span>
-                </li>
-                <li>
-                    <label for="">valoracion :</label>
-                    <span><i class="fas fa-star"></i></span>
+                    <span><%= product.idioma.name %></span>
                 </li>
                 <li>
                     <label for="">ISBN :</label>
-                    <span>8417649050</span>
+                    <span><%= product.detalle.isbn %></span>
                 </li>
                 <li>
                     <label for="">Editorial :</label>
-                    <span>Héroes de Papel</span>
+                    <span><%= product.detalle.editorial %></span>
                 </li>
                 <li>
                     <label for="">Autor :</label>
-                    <span>Rodrigo Río – Lithany</span>
+                    <span><%= product.autores.name %></span>
                 </li>
             </ul>
         </div>
@@ -181,8 +170,8 @@
 </section>
 
     
+<footer><%- include("../partials/footer") %> </footer>
 </body>
 
-<%- include("../partials/footer") %> 
 
 </html>

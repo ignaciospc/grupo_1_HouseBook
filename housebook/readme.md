@@ -10,6 +10,9 @@ Repositorio Git:
 
 https://github.com/ignaciospc/grupo_1_HouseBook.git
 
+Cuentas admin:
+user : thomas@email.com | pass: asdasd123
+user : test@email.com   | pass: asdasd123
 
 info E-comerce
 
@@ -24,7 +27,7 @@ info Integrantes del Grupo.
 
 Ignacio Nicola Soria - 22 años, Trabajo en el area de telecomunicaciones y estoy incursionando en la programacion.
 Indira Belen Callahuara -26 años, Estudiante de Cs Ambientales, Escalada.
-Thomas Gabela - falta descripcion
+Thomas Gabela - 22 años, trabajo en el area de telecomunicaciones. He estudiado c# y siempre me intereso el desarrollo web
 
 
 

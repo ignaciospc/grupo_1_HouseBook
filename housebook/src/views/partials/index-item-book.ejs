@@ -1,0 +1,29 @@
+<div class="block-item block-carousel">
+    <a href="/products/<%=product[i].id%>" idElement=<%=i%> class="hasToolUp">
+        <div class="img">
+        <img src="/images/libros/<%=product[i].portada%>" alt="imagen numero: <%=product[i].id%>">
+        </div>
+    </a>
+    <div class="item-info">
+        <a href="/products/<%=product[i].id%>" idElement=<%=i%> class="hasToolUp">
+            <h3 class="item-title"><%=product[i].titulo%></h3>
+        </a>
+        <p class="autor"><a href="#"><%=product[i].autores.name%></a></p>
+        <div class="rating">
+            <% for (let j = 1 ; j <= product[i].valoracion ; j++){ %>
+                <i class="fas fa-star"></i>
+            <%} %>
+            <% if((product[i].valoracion%1).toFixed(1)[2] != '0') { %>
+                <i class="fas fa-star-half-alt"></i> 
+            <%}%>
+        </div>
+        <div class="precio">
+            <b>ARS$ <%=(product[i].precio * (1-product[i].descuento/100)).toFixed(2)%></b>
+            <% if( product[i].descuento > 0) { %> <b class="discount"><%=product[i].descuento%>%Off</b> <%}%>
+        </div>
+
+    </div>
+    <div class="item-action">
+        <a href="#" class="btn">Añadir al Carrito</a>
+    </div>
+</div>

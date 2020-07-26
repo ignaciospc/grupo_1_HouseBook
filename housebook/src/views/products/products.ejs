@@ -3,8 +3,9 @@
   <head>
     <title>home</title>
     <link rel="stylesheet" href="/css/products.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/preview-products.css">
    
+    <script src="/js-front/preview-obj.js"></script>
   </head>
 
   <%- include("../partials/header") %> 
@@ -18,14 +19,14 @@
       
          
         <nav class="filtros">
-          
+          <% if (typeof locals.admin !== 'undefined') { %>
           <div class="admin">
             <div class="crear">
               <a href="/products/create">Crear nuevo producto</a>
             </div>
             <div class="espacio-blanco"></div>
           </div>
-          
+        <% } %>
         
           <h3>Filtros</h3>
           <ul>
@@ -38,42 +39,20 @@
         
         </nav>
       <section class="libros">
-
-        <% for (const libro of product) { %>
-      
-          
-          <div class="info-libro">
-            <h3 class="titulo"> <a href="/products/<%=libro.id%>"><%= libro.titulo %></a> </h3>
-
-            <div class="valoracion-libro">
-              <i class="fas fa-star"></i>  <%= libro.valoracion %>
-            </div>
-
-            <div class="img">
-              <a href="/products/<%=libro.id%>">
-                <img src="/images/libros/<%= libro.portada %>" alt="imagen de libro">
-              </a>
-            </div>
-
-            <a class="autor" href="/products/<%=libro.id%>"> <%= libro.autor %> </a>
-
-            <span class="precio">$ <%= libro.precio %> </span>
-          </div>
-
-          <% }  %> 
-       
+        <script >                                
+          const books = <%-JSON.stringify(product)%>
+        </script>
+        <% for (let i = 0; i < product.length ; i++) { %>
+          <%-include('../partials/product-item-book', {product, i}) %> 
+        <% }  %>       
       </section>
 
       
     </div>
-
-  
-
-
-    
-   
+    <footer><%- include("../partials/footer") %> </footer>
   </body>
 
-  <%- include("../partials/footer") %> 
   
+  
+  <div class="toolup"></div>
 </html>

@@ -104,12 +104,53 @@
                     </div>
         
                     <div class="detalle-libro">
-                        <label for="detalle">Detalle del Compra</label>
-                        <textarea name="detalle" id="detalle" cols="30" rows="5"
-                            placeholder="ACA VA EL DETALLE DEL LIBRO( formato / dimesiones / fecha de Publicacion / Idioma / Edicion / Ranking / ISBN  / Editorial / Autor">
-                        <%=product.detalle%>
-                        </textarea>
+                        <label for="detalle" class="titulo-principal">Detalle del Compra</label>
+                         <div class="columnas-detalle-libro">
+
+                            <div class="informacion-detalle" >
+                                <label for="dimensiones" class="titulo-detalle"> Dimensiones</label>
+                                <input type="text" name="dimensiones" id="dimensiones">
+                            </div>
+                            
+                            <div class="informacion-detalle" >
+                                <label for="formato" class="titulo-detalle"> Formato</label>
+                                <select name="formato" id="formato">
+                                    <option value="PDF">PDF</option>
+                                    <option value="FISICO">FISICO</option>
+                                    <option value="PDF y FISICO">PDF y FISICO</option>
+                                </select>
+                            </div>
+
+                            <div class="informacion-detalle" >
+                                <label for="idioma" class="titulo-detalle"> Idioma</label>
+                                <select name="idioma" id="idioma">
+                                    <option value="ESPAÑOL">Español</option>
+                                    <option value="ENGLISH">Ingles</option>
+                                    <option value="DUSTCH">Aleman</option>
+                                </select>
+                            </div>
+                            
+                            <div class="informacion-detalle" >
+                                <label for="publicacion" class="titulo-detalle"> Fecha de Publicacion</label>
+                                <input type="date" name="publicacion" id="publicacion">
+                            </div>
+
+                            <div class="informacion-detalle" >
+                                <label for="editorial" class="titulo-detalle"> Editorial</label>
+                                <input type="text" name="editorial" id="editorial">
+                            </div>
+
+                            <div class="informacion-detalle" >
+                                <label for="isbn" class="titulo-detalle"> ISBN</label>
+                                <input type="number" name="isbn"  id="isbn">
+                            </div>
+                                
+                        </div>
+
                     </div>
+        
+        
+                </div>
         
         
                 </div>
@@ -169,8 +210,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
+    <footer><%- include("../partials/footer") %> </footer>
 </body>
 
-<%- include("../partials/footer") %>
 
 </html>

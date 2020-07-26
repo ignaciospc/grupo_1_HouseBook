@@ -17,6 +17,10 @@
     margin-bottom: 10px;
     background: white;
 }
+
+.carousel-main .tab .item-action{
+    display: none;
+}
 .left{
     display: none;
 }
@@ -26,6 +30,7 @@
     border-bottom: 3px solid rgb(217 217 217);
     padding: 5px 0;
 }
+
 .tab{
     display: flex;        
 }
@@ -33,11 +38,8 @@
     color: rgb(207, 155, 22);
 }
 
-.block-item{        
-    width: 160px;
-    height: 320px;
-    padding: 5px 5px;
-    
+.block-item{
+    padding: 5px 5px;    
     box-sizing: border-box;
 }
 
@@ -56,9 +58,11 @@
 .autor{
     margin: 5px 0;
 }
+.autor a{
+    color: #4d4d4d;
+}
 .img{
     width: 140px;
-    height: 140px;
     box-sizing: border-box;
 }
 
@@ -91,7 +95,26 @@
 .item-info a h3{
     overflow: hidden;
     color: black;
+    width: 140px;
 }
+.item-title, .img{
+    text-align: center;
+}
+.discount{
+    font-size: 14px;
+    color: green;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.precio{
+    height: 35px;
+    font-size: 140%;
+    color: rgb(223, 132, 147);
+    margin: 5px 0;    
+}
+
+
 @media(min-width: 768px)
 {
     .main{
@@ -103,14 +126,6 @@
 }
 
 @media(min-width: 1024px){
-    
-    .item-title, .img{
-        text-align: center;
-    }
-    .item-title:hover{
-        overflow: auto;
-        height: auto;
-    }
     
     .main{
         max-width: 1024px;
@@ -158,7 +173,7 @@
     }
     
 
-    ul li{
+    .filter ul li{
         list-style: none;
         padding: 5px 0;
         margin: 3px 1px;
@@ -180,19 +195,7 @@
     }
 
 
-    .precio{
-        height: 35px;
-        font-size: 140%;
-        color: rgb(223, 132, 147);
-        margin: 5px 0;
-        
-    }
-    
-   
-        
-  
-
-   
+ 
     .block-carousel{
         height: 100%;
         padding-bottom: 5px;
@@ -206,5 +209,14 @@
     .not-phone{
         display: block;
     }
-    
+    #main-tittle{
+        display: inline;
+    }
+    .block-title a{
+            float: right;
+            color: black;
+            top: 5px;
+            position: relative;
+    }    
+
 }

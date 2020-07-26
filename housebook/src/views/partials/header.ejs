@@ -1,9 +1,7 @@
-
-    <!-- awsome-->
-    
+<head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="   /css/header.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
 </head>
 
 <body>
@@ -13,6 +11,8 @@
         <div class="contenedor-header">
         
             <!-- INICIO CABEZERA 1-->
+
+            
 
             <div class="contenedor-cabezera-1">
 
@@ -26,15 +26,13 @@
                     <div class="nav-right-header">
                         <div class="logo-login" id="relleno"> <i class="fas fa-user"></i> </div>
                         <% if(locals.logueado) { %>                             
-                            <div class="feedback"><a href="/account/profile/<%=locals.id%>"> Hola! <%= locals.user %></a></div> 
+                            <div class="feedback"><a href="/account/profile"> Hola! <%= locals.user %></a></div> 
                         <% } 
                         else { %> 
                             <div class="feedback"><a href="/account/register">Create an Account</a></div>
                             <div class="feedback"><a href="/account/login">Login</a></div> 
                             <% }
                         %>
-                        
-                        
                     </div>
 
                 </div>
@@ -43,9 +41,27 @@
             <!-- FIN CABEZERA 1-->
             <!-- INICIO CABEZERA 2-->
 
+            
+
             <div class="contenedor-cabezera-2">
             
                 <div class="cabezera-1">
+                    
+                    <!-- menu btn-menu-habmburguesa-->
+
+                    <input type="checkbox" id="btn-menu-habmburguesa">
+                    <label for="btn-menu-habmburguesa"><i id="fas-hamburguesa" class="fas fa-bars"></i></label>
+
+                    <nav class="menu-hamburguesa">
+                        <ul>
+                            <li><a href="/account/register">Create Account</a></li>
+                            <li><a href="/account/login">Login</a></li>
+                            <li><a href="/products">Todos los productos</a></li>
+                            <li><a href="/contact">Contacto</a></li>
+                            <li><a href="">Ayuda</a></li>
+                        </ul>
+                    </nav>
+
                     <div class="menu-header"><i class="fas fa-bars"></i></div>
 
                     <div class="logo-header">
@@ -55,7 +71,7 @@
                     <div class="search" id="si-pc">
                         <div class="barra-busqueda">
                             <form action="#">
-                                <input id="busqueda" name="busqueda" type="text"
+                                <input class ="busqueda" name="busqueda" type="text"
                                     placeholder="Buscar libro por palabra / clave / autor / ISBN">
                             </form>
                         </div>
@@ -70,7 +86,7 @@
                         <div class="price-login">
                             <div class="logo-login">
                                 <button type="submit">
-                                    <i class="fas fa-user"></i> Sing up
+                                    <i class="fas fa-user"><a href="/account/register">Register</a></i> 
                                 </button>
                             </div>
                         </div>
@@ -81,7 +97,7 @@
             
                             <div class="logo-login">
                                 <button type="submit">
-                                    <i class="fas fa-user"></i> Login
+                                    <i class="fas fa-user"><a href="/account/login">Login</a></i> 
                                 </button>
                             </div>
             
@@ -101,7 +117,7 @@
             <div class="search" id="no-pc">
                 <div class="barra-busqueda">
                     <form action="#">
-                        <input id="busqueda" name="busqueda" type="text"
+                        <input class ="busqueda" name="busqueda" type="text"
                             placeholder="Buscar libro por palabra / clave / autor / ISBN">
                     </form>
                 </div>
