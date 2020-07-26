@@ -5,6 +5,6 @@ Terminal: mysqldump  --user=root --host=localhost --protocol=tcp --port=3306 --d
 
 C:/Users/thoma/Desktop/New folder/db/
 
-en la carpeta xampa bin
-.\mysqldump.exe --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --skip-triggers "housebook" -p > C:/Users/thoma/Desktop/New folder/db/housebook.sql --verbose
+en la carpeta xampa mysql bin (C:\xampp\mysql\bin)
+.\mysqldump.exe --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8 --single-transaction=TRUE --routines --skip-triggers "housebook" -p > C:/Users/thoma/Desktop/housebook.sql --verbose
 

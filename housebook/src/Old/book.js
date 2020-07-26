@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+//const fs = require('fs');
+//const path = require('path');
 
-const fileData = path.join(__dirname, '../data/librosDataBase.json')
-const db = require("../database/models")
+//const fileData = path.join(__dirname, '../data/librosDataBase.json')
+//const db = require("../database/models")
 let productData = {
     findAll: () => {
         if(!fs.existsSync(fileData) ) { fs.writeFileSync(fileData, "")}; // de no existir el archivo crea uno vacio

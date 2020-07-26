@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 const path = require('path')
-const modelUsers = require(path.join(__dirname, "..", "models", "users"))
+//const modelUsers = require(path.join(__dirname, "..", "models", "users"))
 const db = require(path.join(__dirname, "..", 'database', 'models'))
 const {validationResult} = require("express-validator");
 
