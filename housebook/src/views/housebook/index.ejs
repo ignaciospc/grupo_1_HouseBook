@@ -23,7 +23,7 @@
         <div class="main">
             <div class="carousel-main">
                 <div class="block-title">
-                    <h2 style="display: inline;">Lo Mas Vendidos</h2> <a href="/products">ver mas</a>
+                    <h2 style="display: inline;">Novedades</h2> <a href="/products">ver mas</a>
                 </div> 
 
                         <div class="tab">
@@ -31,9 +31,9 @@
                                 const books = <%-JSON.stringify(product)%>
                             </script>
                             <% let  count = 0;
-                                
+                                console.log(product);
                             for (let i = 0 ; i < product.length ; i++) {
-                                if (product[i].categoria == "mas-vendidos") { %>
+                                if (product[i].categorias.categoria == "novedades") { %>
                                     <%-include('../partials/item-book', {product, i}) %>                                
                                 <% count++; if (count == 4){break;}
                                 // en ves de guardar el ID, guardar el I en un for normal. Asi saber de donde agarrar en la array
@@ -86,15 +86,16 @@
 
                     <div class="block-wrap">
                         <div class="block-title">
-                            <h2 style="display: inline-block;">Ofertas</h2> <a href="/products" style="color: black;">ver mas</a>
+                            <h2 style="display: inline-block;">Poesia & drama</h2> <a href="/products" style="color: black;">ver mas</a>
                         </div>
 
                                 <div class="tab">
                                     <%
                                     for (let i = 0 ; i < product.length ; i++) { 
-                                        if (product[i].categoria == "ofertas") { %>
+                                        count = 0;
+                                        if (product[i].categorias.categoria == "poesia-drama") { %>
                                             <%-include('../partials/item-book', {product, i}) %>                                  
-                                        <% count++; if (count == 8){break;}
+                                        <% count++; if (count == 4){break;}
                                         }
                                     }%>
                                 </div>
@@ -103,15 +104,16 @@
                 
                     <div class="block-wrap">
                         <div class="block-title">
-                            <h2 style="display: inline-block;">Libros en español</h2> <a href="/products" style="color: black;">ver mas</a>
+                            <h2 style="display: inline-block;">Novelas</h2> <a href="/products" style="color: black;">ver mas</a>
                         </div>
 
                                 <div class="tab">
                                     <%
                             for (let i = 0 ; i < product.length ; i++) { 
-                                if (product[i].categoria == "español") { %>
+                                count = 0;
+                                if (product[i].categorias.categoria == "novela") { %>
                                     <%-include('../partials/item-book', {product, i}) %>                         
-                                <% count++; if (count == 12){break;}
+                                <% count++; if (count == 4){break;}
                                 }
                             }%></div>
                             </div>
@@ -119,15 +121,16 @@
                 
                     <div class="block-wrap">
                         <div class="block-title">
-                            <h2>Novedades</h2> <a href="/products">ver mas</a>
+                            <h2>Psicologia</h2> <a href="/products">ver mas</a>
                         </div>
 
                                 <div class="tab">
                                 <% let count4 = 0;
                             for (let i = 0 ; i < product.length ; i++) { 
-                                if (product[i].categoria == "novedades") { %>
+                                count = 0;
+                                if (product[i].categorias.categoria == "psicologia") { %>
                                     <%-include('../partials/item-book', {product, i}) %>                  
-                                <% count++; if (count == 16){break;}
+                                <% count++; if (count == 4){break;}
                                 }
                             }%></div>
                             </div>

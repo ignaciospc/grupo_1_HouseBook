@@ -8,14 +8,25 @@ module.exports ={
    
     products: async(req, res) => {
         let product = models.findAll()
-        let dbProduct = await db.libro.findAll({
+        let dbProduct;
+        try{
+        dbProduct = await db.libro.findAll({
             include: [
-                {association: 'categorias'},
-                {association: 'idioma'},
-                {association: 'autores'},
-                {association: 'detalle'},
+                {association: 'categorias'  },
+                {association: 'idioma'      },
+                {association: 'autores'     },
+                {association: 'detalle',
+                 include: [
+                     {association: 'formato'}
+                ]},
             ]
         })
+    }
+    catch(error){
+        res.send(error)
+        console.log(error);
+        return false;
+    }
         res.send(dbProduct);
         return;
         let products = {
@@ -31,7 +42,7 @@ module.exports ={
             portada: 'algo',
             idioma: 'Spanish'
         }
-        res.render("products/products", {libro : product})
+        res.render("products/products", {libro : dbProduct})
     },
     details: (req, res) => {
         

@@ -58,6 +58,9 @@
 .autor{
     margin: 5px 0;
 }
+.autor a{
+    color: #4d4d4d;
+}
 .img{
     width: 140px;
     box-sizing: border-box;
