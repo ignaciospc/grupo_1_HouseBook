@@ -97,6 +97,15 @@ section{
 .info-libro .img img{
     width: 100%;
 }
+.discount{
+    font-size: 14px;
+    color: green;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.autor{
+    color: #4d4d4d;
+}
 
 
 @media(max-width : 768px){

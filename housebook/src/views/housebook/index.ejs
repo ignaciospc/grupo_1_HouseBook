@@ -34,7 +34,7 @@
                                 console.log(product);
                             for (let i = 0 ; i < product.length ; i++) {
                                 if (product[i].categorias.categoria == "novedades") { %>
-                                    <%-include('../partials/item-book', {product, i}) %>                                
+                                    <%-include('../partials/index-item-book', {product, i}) %>                                
                                 <% count++; if (count == 4){break;}
                                 // en ves de guardar el ID, guardar el I en un for normal. Asi saber de donde agarrar en la array
                                 }
@@ -94,7 +94,7 @@
                                     for (let i = 0 ; i < product.length ; i++) { 
                                         count = 0;
                                         if (product[i].categorias.categoria == "poesia-drama") { %>
-                                            <%-include('../partials/item-book', {product, i}) %>                                  
+                                            <%-include('../partials/index-item-book', {product, i}) %>                                  
                                         <% count++; if (count == 4){break;}
                                         }
                                     }%>
@@ -112,7 +112,7 @@
                             for (let i = 0 ; i < product.length ; i++) { 
                                 count = 0;
                                 if (product[i].categorias.categoria == "novela") { %>
-                                    <%-include('../partials/item-book', {product, i}) %>                         
+                                    <%-include('../partials/index-item-book', {product, i}) %>                         
                                 <% count++; if (count == 4){break;}
                                 }
                             }%></div>
@@ -129,7 +129,7 @@
                             for (let i = 0 ; i < product.length ; i++) { 
                                 count = 0;
                                 if (product[i].categorias.categoria == "psicologia") { %>
-                                    <%-include('../partials/item-book', {product, i}) %>                  
+                                    <%-include('../partials/index-item-book', {product, i}) %>                  
                                 <% count++; if (count == 4){break;}
                                 }
                             }%></div>

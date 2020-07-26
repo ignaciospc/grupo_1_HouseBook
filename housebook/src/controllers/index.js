@@ -18,7 +18,9 @@ module.exports ={
                 {association: 'idioma'      },
                 {association: 'autores'     },
                 {association: 'detalle',
-                 include: [{association: 'formato'}
+                 include: [
+                    {association: 'formato'},
+                    {association: 'idiomas'}
                 ]},
             ]
         })

@@ -46,7 +46,13 @@ TO DO {
 }
 
 20200725{
-    se termino usuario. Se trabaja en productos (asociaciones incluida)
+    se termino usuario. Se trabaja en productos (asociaciones incluida) : Terminado
+}
+20200726{
+    se trabaja en mostrar desde db : Productos Terminado
+    se trabaja en mostrar desde db : Usuarios Terminado
+    se trabaja en mostrar desde db : Edit
+    Se trabaja en crear, update, delete en DB
 }
 
 libro 1: https://www.bookdepository.com/Lugares-Asombrosos-Travesias-Insolitas-Y-Otras-Maneras-Extranas-de-Conocer-Al-Mundo-Amazing-Places-Unusual-Journeys-Other-Strange-Ways-Getting-Luisito-Comunica/9786073184458

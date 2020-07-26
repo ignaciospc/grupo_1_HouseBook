@@ -198,7 +198,9 @@ body{
     vertical-align: super;
     display: inline;
 }
-
+.autor{
+    color: #4d4d4d;
+}
 
 
 @media(min-width:768px){
