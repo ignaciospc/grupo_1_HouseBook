@@ -129,6 +129,10 @@ select{
     display: flex;
     justify-content: space-between;
 }
+.error-input{
+    border: 1px solid rgb(238, 49, 49);   
+}
+
 
 @media(min-width:768px){
     .columnas{

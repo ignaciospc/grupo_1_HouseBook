@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/register-opcion.css">
     <script src="/js-front/show-password.js"></script>
 
@@ -14,98 +14,105 @@
 <%- include("../partials/header") %> 
 
 <body>
-    
-        <div class="container-sesion-register">
-            
-            <div class="box-register">
-                <div class="titulo-register">
-                    <h2>Registrarse</h2>
 
-                    <div class="block-form-sesion block-register">
+    <div class="container-sesion-register">
 
-                       
-                        
-                        <form action="/account/register" method="POST">   
-                            <!-- nombre completo -->
+        <div class="box-register">
+            <div class="titulo-register">
+                <h2>Registrarse</h2>
 
-                            <div class="errores">
-                            <% if (typeof errors !== "undefined") { %>
-                                       <div class="error-msg">
-                                           <%= errors.nombre ? errors.nombre.msg : " " ;%> 
-                                       </div>
-                                <% } %> 
-                            </div>
+                <div class="block-form-sesion block-register">
 
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" name="nombre">
 
-                            <!-- usuario -->
+
+                    <form action="/account/register" method="POST" class="registro-form">
+                        <!-- nombre completo -->
+
+                        <div class="error-nombre">
                             
-                            <div class="errores">
                             <% if (typeof errors !== "undefined") { %>
-                                       <div class="error-msg">
-                                           <%= errors.usuario ? errors.usuario.msg : " " ;%> 
-                                       </div>
-                                <% } %> 
+                            <div class="error-msg">
+                                <%= errors.nombre ? errors.nombre.msg : " " ;%>
                             </div>
+                            <% } %>
+                        </div>
 
-                            <input type="text" name="usuario" id="usuario" placeholder="Usuario" name="usuario">
-                           <!-- email  -->
-                            <div class="errores">
-                                <% if (typeof errors !== "undefined") { %>
-                                           <div class="error-msg">
-                                               <%= errors.email ? errors.email.msg : " " ;%> 
-                                           </div>
-                                    <% } %> 
-                                </div>
-                            <input type="email" name="email" id="email" placeholder="Email">
 
-                            <!-- password -->
+                        <input type="text" class="nombre" id="nombre" placeholder="Nombre completo" name="nombre">
 
-                            <div class="errores">
-                                <% if (typeof errors !== "undefined") { %>
-                                           <div class="error-msg">
-                                               <%= errors.password ? errors.password.msg : " " ;%> 
-                                           </div>
-                                    <% } %> 
-                                </div>
-                            <input type="password" name="password" id="password" placeholder="Password">
 
-                            <!-- c_password -->
-                            <div class="errores">
-                                <% if (typeof errors !== "undefined") { %>
-                                           <div class="error-msg">
-                                               <%= errors.password ? errors.password.msg : " " ;%> 
-                                           </div>
-                                    <% } %> 
-                                </div>
+                        <!-- usuario -->
 
-                            <input type="password" name="c_password" id="c_password" placeholder="Confirmar Password"> 
-
-                            <div class="casilla-register">
-                                <label for="view-password">
-                                    <input type="checkbox" name="view-password" id="view-password">
-                                    <span> Mostrar Contraseña</span>
-                                </label>
+                        <div class="error-usuario">
+                            <% if (typeof errors !== "undefined") { %>
+                            <div class="error-msg">
+                                <%= errors.usuario ? errors.usuario.msg : " " ;%>
                             </div>
+                            <% } %>
+                        </div>
 
-                            <p class="terminos">Estoy de acuerdo con los <a href="">terminos y condiciones</a></p>
+                        <input type="text" name="usuario" id="usuario" placeholder="Usuario" class="usuario">
+                        <!-- email  -->
+                        <div class="error-email">
+                            <% if (typeof errors !== "undefined") { %>
+                            <div class="error-msg">
+                                <%= errors.email ? errors.email.msg : " " ;%>
+                            </div>
+                            <% } %>
+                        </div>
 
-                            <button class="register" type="submit">Registrarse</button>
+                        <input type="text" name="email" id="email" placeholder="Email" class="email">
 
-                            <p class="re-login"><a href="/account/login">ya tengo usuario</a></p>
+                        <!-- password -->
 
-                        </form>    
+                        <div class="error-password">
+                            <% if (typeof errors !== "undefined") { %>
+                            <div class="error-msg">
+                                <%= errors.password ? errors.password.msg : " " ;%>
+                            </div>
+                            <% } %>
+                        </div>
+                        <input type="password" class="password" name="password" id="password" placeholder="Password">
 
-                    </div>
+                        <!-- c_password -->
+                        <div class="error-c_password">
+                            <% if (typeof errors !== "undefined") { %>
+                            <div class="error-msg">
+                                <%= errors.password ? errors.password.msg : " " ;%>
+                            </div>
+                            <% } %>
+                        </div>
 
-                   
-                   
-                
+                        <input type="password" name="c_password" id="c_password" class="c_password" placeholder="Confirmar Password">
+
+
+
+                        <div class="casilla-register">
+                            <label for="view-password">
+                                <input type="checkbox" name="view-password" id="view-password">
+                                <span> Mostrar Contraseña</span>
+                            </label>
+                        </div>
+
+
+                        <p class="terminos">Al registrarse usted esta aceptando los <a href="">terminos y condiciones</a></p>
+
+                        <button class="register" type="submit">Registrarse</button>
+
+                        <p class="re-login"><a href="/account/login">ya tengo usuario</a></p>
+
+                    </form>
+
                 </div>
+
+                <script src="/js-front/validation-register.js"></script>
+
+
             </div>
         </div>
-    
-        <footer><%- include("../partials/footer") %> </footer>
+    </div>
+
+    <footer><%- include("../partials/footer") %> </footer>
 </body>
 
 

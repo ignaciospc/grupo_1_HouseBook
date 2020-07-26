@@ -21,23 +21,31 @@
     <div class="titulo-sesion">
         <h2>Iniciar sesion</h2>
     </div>
-    <div class="forget-passwor">
+  <!--  <div class="forget-passwor">
         <a href="#" id="forgetPass">Recuperar contraseña</a>
+    </div>  -->
+
+    <div id="box-errors">
+        <h3>Hubo errores</h3>
+        <ul class="lista-errores">
+            
+        </ul>
     </div>
-    <form action="/account/login" method="POST">
+
+    <form action="/account/login" method="POST" class="form-login">
         <div class="block-form-sesion">
             <div class="error">
                 <% if(typeof errorUser !== "undefined") { %>
-                <span> Usuario Incorrecto </span>
+                <span > Usuario Incorrecto </span>
                 <% } %>
             </div>
-            <input type="email" name="usuario" id="usuario" placeholder="Email">
+            <input type="text" name="usuario" class="email" id="email" placeholder="Email">
             <div class="error">
                 <% if(typeof errorPsw !== "undefined") { %>
-                <span> Contraseña incorrecta </span>
+                <span > Contraseña incorrecta </span>
                 <% } %>
             </div>
-            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="password" name="password" id="password" class="password" placeholder="Password">
         
         </div>
 
@@ -62,7 +70,13 @@
 
 </div>
 
+<script src="/js-front/validation-login.js"></script>
+
+
 </div>
+
+
+
 <footer><%- include("../partials/footer") %> </footer>
 
 </body>
