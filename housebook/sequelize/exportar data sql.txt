@@ -8,4 +8,4 @@ C:/Users/thoma/Desktop/New folder/db/
 en la carpeta xampa mysql bin (C:\xampp\mysql\bin)
 .\mysqldump.exe --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=UTF-8 --single-transaction=TRUE --routines --skip-triggers "housebook" -p > C:/Users/thoma/Desktop/housebook.sql --verbose
 
-.\mysqldump.exe --user=root --host=localhost --protocol=tcp --port=3306 --default-character-set=utf8mb4 --single-transaction=TRUE --routines --column-statistics=0 --skip-triggers "housebook" -p > C:/Users/thoma/Desktop/housebook.sql --verbose
+.\mysqldump.exe --user=root --host=localhost --protocol=tcp --port=3306  --single-transaction=TRUE --routines --column-statistics=0 --skip-triggers "housebook" -p > C:/Users/thoma/Desktop/housebook.sql --verbose
