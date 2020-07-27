@@ -215,7 +215,7 @@ module.exports ={
             return false;
         })               
     },
-    edit: (req,res, next) => {
+    edit:async (req,res, next) => {
         
 
        /* let portada = ""
