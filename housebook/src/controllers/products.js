@@ -225,7 +225,6 @@ module.exports ={
         }*/
 
         let infoLibro = {
-            id:req.params.id,
             titulo:req.body.titulo,
             autor:req.body.autores,
             valoracion:req.body.valoracion,
@@ -234,8 +233,12 @@ module.exports ={
             detalle:req.body.detalle,
             precio:req.body.precio,
             descuento:req.body.descuento,
-           
-            //ver checkbox de fisico-pdf-envio
+            /*detalle Libro*/
+            dimensiones:req.body.dimensiones,
+            formato:req.body.formato,
+            idioma:req.body.idioma,
+            fechaPublicacion:req.body.publicacion,
+            editorial:req.body.editorial,
         }
        
         if(!validationResult(req).isEmpty()){
@@ -245,15 +248,46 @@ module.exports ={
             res.render("products/productEdit", {product : infoLibro, errores})
         }
         else{
-        //console.log(req.files)
-        infoLibro.portada =  req.files.length == 0 ?  models.findOne(req.params.id).portada : req.files[0].filename
+            
+            let libroSubir = {
+                titulo: infoLibro.titulo,
+                descripcion: infoLibro.descripcion,
+                valoracion: infoLibro.valoracion,
+                precio: infoLibro.precio,
+                descuento: infoLibro.descuento,
+                autor_id: autor.id,
+                detalle_isbn: infoLibro.ISBN,
+                idioma_id: idioma.name,
+                categoria: categoria.id,
+            }
+            req.files.length == 0 ?  null : libroSubir.portada = req.files[0].filename; //de subir un archivo ponelo, sino no
 
-       // console.log(infoLibro)
-        models.actualizar(infoLibro)
-        res.redirect("/products")
+            await db.libro.findAll(libroSubir,{
+                where : {
+                    id : req.params.id
+                }
+            })
+            await db.detalle.findAll({
+                dimensiones: infoLibro.dimensiones,
+                fecha_publicacion: infoLibro.fechaPublicacion,
+                editorial: infoLibro.editorial,
+                idioma_id: idioma.id,
+                formato_id: formato.id
+            },{
+                where: {
+                    isbn:456
+                }
+            })
+            res.redirect("/products")
         }
     },
     delete: async (req, res, next) => {
+        //console.log(req.files)
+        //infoLibro.portada =  req.files.length == 0 ?  models.findOne(req.params.id).portada : req.files[0].filename
+
+       // console.log(infoLibro)
+        //models.actualizar(infoLibro)
+       // res.redirect("/products")
 
         //let product = models.findOne(req.params.id)
         //models.delete(product);
