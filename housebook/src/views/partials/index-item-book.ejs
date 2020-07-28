@@ -8,15 +8,19 @@
         <a href="/products/<%=product[i].id%>" idElement=<%=i%> class="hasToolUp">
             <h3 class="item-title"><%=product[i].titulo%></h3>
         </a>
-        <p class="autor"><%=product[i].autor%></p>
+        <p class="autor"><a href="#"><%=product[i].autores.name%></a></p>
         <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <% for (let j = 1 ; j <= product[i].valoracion ; j++){ %>
+                <i class="fas fa-star"></i>
+            <%} %>
+            <% if((product[i].valoracion%1).toFixed(1)[2] != '0') { %>
+                <i class="fas fa-star-half-alt"></i> 
+            <%}%>
         </div>
-        <div class="precio"><b>ARS$ <%=product[i].precio%></b></div>
+        <div class="precio">
+            <b>ARS$ <%=(product[i].precio * (1-product[i].descuento/100)).toFixed(2)%></b>
+            <% if( product[i].descuento > 0) { %> <b class="discount"><%=product[i].descuento%>%Off</b> <%}%>
+        </div>
 
     </div>
     <div class="item-action">

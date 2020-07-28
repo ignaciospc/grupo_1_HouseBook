@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+//const fs = require('fs');
+//const path = require('path');
 
-const dataUsers = path.join(__dirname,"../data/users.Json")
+//const dataUsers = path.join(__dirname,"../data/users.Json")
 
 let userData = {
 

@@ -1,0 +1,25 @@
+<div class="info-libro">
+    <h3 class="titulo hasToolUp" idElement = <%=i%>> <a href="/products/<%=product[i].id%>"><%= product[i].titulo %></a> </h3>
+
+    <div class="valoracion-libro">
+        <% for (let j = 1 ; j <= product[i].valoracion ; j++){ %>
+            <i class="fas fa-star"></i>
+        <%} %>
+        <% if((product[i].valoracion%1).toFixed(1)[2] != '0') { %>
+            <i class="fas fa-star-half-alt"></i> 
+        <%}%>
+    </div>
+
+    <div class="img hasToolUp" idElement = <%=i%>>
+      <a href="/products/<%=product[i].id%>">
+        <img src="/images/libros/<%= product[i].portada %>" alt="imagen de libro">
+      </a>
+    </div>
+
+    <a class="autor" href="/products/<%=product[i].id%>"> <%= product[i].autores.name %> </a>
+
+    <div class="precio">
+        <b>ARS$ <%=(product[i].precio * (1-product[i].descuento/100)).toFixed(2)%></b>
+        <% if( product[i].descuento > 0) { %> <b class="discount"><%=product[i].descuento%>%Off</b> <%}%>
+    </div>
+  </div>

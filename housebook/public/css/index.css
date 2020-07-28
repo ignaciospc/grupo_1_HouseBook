@@ -38,8 +38,7 @@
     color: rgb(207, 155, 22);
 }
 
-.block-item{        
-    width: 160px;
+.block-item{
     padding: 5px 5px;    
     box-sizing: border-box;
 }
@@ -58,6 +57,9 @@
 
 .autor{
     margin: 5px 0;
+}
+.autor a{
+    color: #4d4d4d;
 }
 .img{
     width: 140px;
@@ -93,9 +95,16 @@
 .item-info a h3{
     overflow: hidden;
     color: black;
+    width: 140px;
 }
 .item-title, .img{
     text-align: center;
+}
+.discount{
+    font-size: 14px;
+    color: green;
+    margin-left: 5px;
+    vertical-align: middle;
 }
 
 .precio{

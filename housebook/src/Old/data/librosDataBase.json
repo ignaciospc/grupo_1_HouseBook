@@ -6,7 +6,7 @@
   "descripcion": "¿Cuál es nuestra urgencia por descubrir vida en otros planetas cuando ni siquiera hemos terminado de comprender las complejidades de la vida en nuestro propio mundo? A lo largo de las páginas que estás por leer te llevaré de la mano a algunos de los sitios más extraños que nos rodean: unos curiosos, otros perturbadores...Los destinos que estamos por recorrer no están en amigables guías de turismo. Me atrevo a decir, incluso, que las autoridades no desean que conozcamos la mayoría de estos sitios. Prepárate para ver el mundo como nunca antes. Solo una advertencia antes de comenzar: el grado de tolerancia a diferentes gustos e ideologías debe ser máximo; no hay espacio eneste avión para mentes cerradas y prejuiciosas. ¿Estás listo?\r\n",
   "detalle": "esta bueno",
   "precio": "500",
-  "descuento": "100",
+  "descuento": "90",
   "categoria": "ofertas",
   "portada": "portada-1591648744570.jpg",
   "id": 1,
@@ -23,7 +23,7 @@
   "descuento": "0",
   "portada": "portada-1591649396081.jpg",
   "id": 2,
-  "idioma" : "Spanish"
+  "idioma": "Spanish"
  },
  {
   "titulo": "Little Fires Everywhere",
@@ -36,7 +36,7 @@
   "descuento": "50",
   "portada": "portada-1591649494646.jpg",
   "id": 3,
-  "idioma" : "English"
+  "idioma": "English"
  },
  {
   "titulo": "Moby Dick / Spanish Edition",
@@ -49,7 +49,7 @@
   "descuento": "25",
   "portada": "portada-1591649589169.jpg",
   "id": 4,
-  "idioma" : "Spanish"
+  "idioma": "Spanish"
  },
  {
   "id": "5",
@@ -60,9 +60,9 @@
   "categoria": "mas-vendidos",
   "detalle": "                                                 WINNER OF THE BOOKER PRIZE 2019\r\n                        \r\n                        ",
   "precio": "500",
-  "descuento": "5",
+  "descuento": "0",
   "portada": "portada-1591649952460.jpg",
-  "idioma" : "English"
+  "idioma": "English"
  },
  {
   "id": "7",
@@ -70,12 +70,12 @@
   "autor": "a1",
   "valoracion": "4",
   "descripcion": " The International Bestseller\r\n\r\nAnger. Fear. Guilt. Denial. Silence. These are the ways in which ordinary white people react when it is pointed out to them that they have done or said something that has - unintentionally - caused racial offence or hurt. But these reactions only serve to silence people of colour, who cannot give honest feedback to 'liberal' white people lest they provoke a dangerous emotional reaction.\r\n\r\nRobin DiAngelo coined the term 'White Fragility' in 2011 to describe this process and is here to show us how it serves to uphold the system of white supremacy. Using knowledge and insight gained over decades of running racial awareness workshops and working on this idea as a Professor of Whiteness Studies, she shows us how we can start having more honest conversations, listen to each other better and react to feedback with grace and humility. It is not enough to simply hold abstract progressive views and condemn the obvious racists on social media - change starts with us all at a practical, granular level, and it is time for all white people to take responsibility for relinquishing their own racial supremacy.\r\n\r\n'With clarity and compassion, DiAngelo allows us to understand racism as a practice not restricted to \"bad people.\" In doing so, she moves our national discussions forward. This is a necessary book for all people invested in societal change' Claudia Rankine\r\n\r\n'An important book' Nikesh Shukla\r\n\r\n'By turns mordant and then inspirational, an argument that powerful forces and tragic histories stack the deck fully against racial justice alongside one that we need only to be clearer, try harder, and do better' David Roediger, Los Angeles Review of Books\r\n\r\n'The value in White Fragility lies in its methodical, irrefutable exposure of racism in thought and action, and its call for humility and vigilance' Katy Waldman, New Yorker\r\n\r\n'A vital, necessary, and beautiful book' Michael Eric Dyson\r\n                         ",
-  "categoria": "information",
+  "categoria": "informacion",
   "detalle": "                        \r\n                        ",
   "precio": "1100",
   "descuento": "5",
   "portada": "portada-1594234074624.jpg",
-  "idioma" : "English"
+  "idioma": "English"
  },
  {
   "id": "6",
@@ -88,6 +88,6 @@
   "precio": "2000",
   "descuento": "5",
   "portada": "portada-1594234099624.jpg",
-  "idioma" : "Spanish"
+  "idioma": "Spanish"
  }
 ]

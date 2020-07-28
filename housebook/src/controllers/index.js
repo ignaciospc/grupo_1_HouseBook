@@ -1,13 +1,36 @@
 const path = require('path')
-const models = require(path.join(__dirname, '..', 'models' , 'book'))
-//const {validationResult} = require('express-validator')
+const db = require(path.join(__dirname, "..", 'database', 'models'))
 
+//const models = require(path.join(__dirname, '..', 'models' , 'book'))
+//const {validationResult} = require('express-validator')
 //const error = require(path.join(__dirname, '..', 'models', 'validation'))
 
 module.exports ={
-    home: (req, res) => {
-        let product = models.findAll()
-        res.render('housebook/index', {product})
+    home: async (req, res) => {
+        /* debug
+        console.log("controlador home", req.session)
+        */
+       let dbProduct;
+        try{
+        dbProduct = await db.libro.findAll({
+            include: [
+                {association: 'categorias'  },
+                {association: 'idioma'      },
+                {association: 'autores'     },
+                {association: 'detalle',
+                 include: [
+                    {association: 'formato'},
+                    {association: 'idiomas'}
+                ]},
+            ]
+        })
+        } catch(error){
+            res.send('error en la base de datos', error)
+            console.log(error);
+            return false
+        }
+        //let product = models.findAll()
+        res.render('housebook/index', {product : dbProduct})
     },
     cart : (req, res) => {
 

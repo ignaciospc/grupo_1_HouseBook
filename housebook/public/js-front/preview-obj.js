@@ -1,6 +1,6 @@
 window.onload = () => {
-    let dad = document.querySelector(".toolup");
-        books;
+    let dad = document.querySelector(".toolup"); //1ft imput
+        books; //2nd imput (from html)
     let atribute = {
         offsets: [20, -30],
         fadeSpeed: 450,
@@ -48,12 +48,12 @@ window.onload = () => {
                 stick.style.display = "block"; //hijo ponerlo con block
                 atribute.stickProp(stick)
 
-                //dad.style.display = "block"                                 //(no es necesario)
+                dad.style.display = "block"                                 //(no es necesario)
                 atribute.fadeIn(atribute.fadeSpeed);
             }
             element.onmouseout = () => { 
                 atribute.addHtml(targetId, element).style.display = "none" 
-                //dad.style.display = "none"                                 //(no es necesario)
+                dad.style.display = "none"                                 //(no es necesario)
             }
             element.onmousemove = (e) => { atribute.coords(e) }
         },
@@ -70,12 +70,12 @@ window.onload = () => {
     <div class="img-portada-preview"><img src=/images/libros/${books[i].portada} alt="img-libro"></div>
 
     <div class="info-preview">
-        <div class="datos"> <label for="">Autor :</label><span>${books[i].autor}</span></div>
+        <div class="datos"> <label for="">Autor :</label><span>${books[i].autores.name}</span></div>
         <div class="datos"> <label for="">valoracion :</label><span><i class="fas fa-star"></i>${books[i].valoracion}</span></div>
-        <div class="datos"> <label for="">Categoria :</label><span>${books[i].categoria}</span></div>
+        <div class="datos"> <label for="">Categoria :</label><span>${books[i].categorias.categoria}</span></div>
         <div class="datos"> <label for="">Precio :</label><span>$${books[i].precio}</span></div>
-        <div class="datos"> <label for="">Idioma :</label><span>${books[i].idioma}</span></div>
-        <div class="datos"> <label for="">Formato :</label><span>Ambos</span></div>
+        <div class="datos"> <label for="">Idioma :</label><span>${books[i].idioma.name}</span></div>
+        <div class="datos"> <label for="">Formato :</label><span>${books[i].detalle.formato.format}</span></div>
     </div>
     <div class="descripcion-preview">
         <p class="descripcion-libro"> <span>Descripcion : ${books[i].descripcion}</span> </p>
@@ -83,15 +83,13 @@ window.onload = () => {
 </div>  
                 </div>` 
                 stick = dad.querySelector("#" + targetId) //lo actualizo para que exista.
-                
-                 //coloco en una variable el tamaño del popup (se usara en coordenadas)
                
             }
             return stick
         }
     }
     
-    let elements = document.querySelectorAll(".hasToolUp") //2nd imput
+    let elements = document.querySelectorAll(".hasToolUp") //3rd imput
     for (let element of elements) {
         let targetId = "stick" + element.getAttribute("idElement")
         atribute.init(targetId, element)

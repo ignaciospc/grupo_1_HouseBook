@@ -19,14 +19,14 @@
       
          
         <nav class="filtros">
-          
+          <% if (typeof locals.admin !== 'undefined') { %>
           <div class="admin">
             <div class="crear">
               <a href="/products/create">Crear nuevo producto</a>
             </div>
             <div class="espacio-blanco"></div>
           </div>
-          
+        <% } %>
         
           <h3>Filtros</h3>
           <ul>
@@ -40,31 +40,11 @@
         </nav>
       <section class="libros">
         <script >                                
-          const books = <%-JSON.stringify(libro)%>
+          const books = <%-JSON.stringify(product)%>
         </script>
-        <% for (let i = 0; i < libro.length ; i++) { %>
-      
-          
-          <div class="info-libro">
-            <h3 class="titulo hasToolUp" idElement = <%=i%>> <a href="/products/<%=libro[i].id%>"><%= libro[i].titulo %></a> </h3>
-
-            <div class="valoracion-libro">
-              <i class="fas fa-star"></i>  <%= libro[i].valoracion %>
-            </div>
-
-            <div class="img hasToolUp" idElement = <%=i%>>
-              <a href="/products/<%=libro[i].id%>">
-                <img src="/images/libros/<%= libro[i].portada %>" alt="imagen de libro">
-              </a>
-            </div>
-
-            <a class="autor" href="/products/<%=libro[i].id%>"> <%= libro[i].autor %> </a>
-
-            <span class="precio">$ <%= libro[i].precio %> </span>
-          </div>
-
-          <% }  %> 
-       
+        <% for (let i = 0; i < product.length ; i++) { %>
+          <%-include('../partials/product-item-book', {product, i}) %> 
+        <% }  %>       
       </section>
 
       
