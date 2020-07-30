@@ -68,3 +68,8 @@ Libro 5: https://www.bookdepository.com/Girl-Woman-Other-Bernardine-Evaristo/978
 Libro 6: https://www.bookdepository.com/White-Fragility-Robin-Diangelo/9780141990569
 
 Libro 7: https://www.bookdepository.com/El-Libro-Negro-Dross-Dross/9786070762628
+
+
+20200728{
+se realizo las validaciones del front para crearProducto, falta el mensaje.
+}

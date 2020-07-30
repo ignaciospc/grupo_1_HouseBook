@@ -19,16 +19,7 @@
         <div class="datos">
         
             <form action="/products" method="POST" enctype="multipart/form-data"  name="formulrio" id="form-formulario">
-        
-                <div class="columnas">
-        
-                    <!-- <div class="primera-columna">
-                
-                            <div class="imagen-libro">
-                                <img src="/images/libros/libro-prueba.jpg" alt="">
-                            </div> -->
-        
-                </div>
+    
                 
                 <div class="segunda-columna">
                     <% let validacion = 0
@@ -36,6 +27,7 @@
                     // de haber un errores. Validacion pasa a ser 1
                     %>
                     <div class="titulo">
+                        <span class="error-titulo"><i class="fas fa-exclamation-triangle"></i></span>
                         <label for="titulo" class="titulo-principal">Titulo</label>
                         <div class="error" style = "padding:0;"> 
                     <%if(validacion == 1 && errores.titulo.length !== 0)
@@ -52,6 +44,7 @@
                     </div>
         
                     <div class="autor">
+                        <span class="error-autor"></span>
                         <label for="autores" class="titulo-principal">Autor</label>
 
                         <select name="autores" id="autores">
@@ -66,7 +59,7 @@
                     </div>
 
                     <div class="valoracion">
-                        
+                        <span class="error-valoracion"></span>
                         <label for="valoracion" class="titulo-principal">valoracion del Libro</label>
                         <div class="error" style = "padding:0;"> 
                     <%if(validacion == 1 && errores.valoracion.length !== 0)
@@ -83,6 +76,7 @@
                     </div>
         
                     <div class="descripcion">
+                        <span class="error-descripcion"></span>
                         <label for="descripcion" class="titulo-principal">Descripcion del Libro</label>
                         <textarea name="descripcion" id="descripcion" cols="50" rows="7"
                             placeholder="Descripcion Libro"
@@ -90,6 +84,7 @@
                     </div>
         
                     <div class="categoria">
+                        <span class="error-categoria"></span>
                         <label for="categoria" class="titulo-principal">Categoria</label>
                         <div class="error" style = "padding:0;"> 
                     <%if(validacion == 1 && errores.categoria.length !== 0)
@@ -106,7 +101,8 @@
                     </div>
         
                     <div class="detalle-libro">
-                        <label for="detalle" class="titulo-principal">Detalle del Compra</label>
+                        <span class="error-detalle"></span>
+                        <label for="detalle" class="titulo-principal">Detalle del producto</label>
                          <div class="columnas-detalle-libro">
 
                             <div class="informacion-detalle" >
@@ -117,15 +113,17 @@
                             <div class="informacion-detalle" >
                                 <label for="formato" class="titulo-detalle"> Formato</label>
                                 <select name="formato" id="formato">
+                                    <option value="" selected >Seleccione un Formato</option>
                                     <option value="PDF">PDF</option>
                                     <option value="FISICO">FISICO</option>
-                                    <option value="PDF y FISICO">PDF y FISICO</option>
+                                    <option value="PDF y FISICO">PDF y FISICO</option>  
                                 </select>
                             </div>
 
                             <div class="informacion-detalle" >
                                 <label for="idioma" class="titulo-detalle"> Idioma</label>
                                 <select name="idioma" id="idioma">
+                                    <option value="" selected >Seleccione un Idioma</option>
                                     <option value="ESPAÑOL">Español</option>
                                     <option value="ENGLISH">Ingles</option>
                                     <option value="DUSTCH">Aleman</option>
@@ -168,6 +166,7 @@
                         </div> 
 
                     <div class="carga-imagen">
+                        <span class="error-img"></span>
                         <label for="portada">Subir Portada</label>
                         <input type="file" name="portada" id="portada">
                     </div>
@@ -200,12 +199,14 @@
                         
                   <div class="fisico">             
 
+                         
+                         <span class="error-precio"></span>
                         <label class="precio" for="precio-fisico">Precio :</label>                        
-                        <input class="precio-producto"  name="precio" type="text" value = "<%=validacion===1 ? infoLibro.precio : ""%>">
+                        <input class="precio-producto" id="precio" name="precio" type="text" value = "<%=validacion===1 ? infoLibro.precio : ""%>">
 
-
+                          <span class="error-descuento"></span>
                         <label class= "precio" for="descuento">Descuento :</label>                        
-                        <input class="precio-producto" name="descuento" type="number" id="descuento" value="<%=validacion===1? infoLibro.descuento : ""%>" >
+                        <input class="precio-producto" id="descuento" name="descuento" type="number" id="descuento" value="<%=validacion===1? infoLibro.descuento : ""%>" >
                     </div>
         
                     
