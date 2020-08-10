@@ -325,12 +325,15 @@ header{
         border: 1px solid rgba(83, 173, 175, 0.205);
         border-radius: 5px;
         background-color: rgba(83, 173, 175, 0.205);
-        padding: 0px 0;
+        padding: 0px 0; 
     }
     .nav-center-header ul li a{
         font-size: 11px;
         color: black;
         padding: 8px 30px;
+    }
+    .nav-center-header ul li:hover{
+        background-color: rgba(83, 173, 175, 0.705);
     }
     .info-compra-header{
         box-sizing: border-box;
