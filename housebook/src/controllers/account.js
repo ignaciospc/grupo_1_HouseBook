@@ -96,7 +96,7 @@ let account = {
         req.session.user = usuario.user;
         req.session.email = usuario.email;
         req.session.admin = usuario.admin ? usuario.admin : null;
-        
+        console.log(req.body.remember);
         if(req.body.remember) 
         {
             let emailHash = bcrypt.hashSync(usuario.email, 4)

@@ -161,7 +161,7 @@ module.exports ={
         })
         formato = await db.formato.findOne({
             where: {
-                name : {
+                format : {
                     [Op.like] : infoLibro.formato
                 }
             }
