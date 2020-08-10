@@ -81,14 +81,14 @@ module.exports ={
 
     },
     createBook : async (req, res, next) => {
-     
+
         let portada = "";
         //console.log(req.files)
-    
+        
         let infoLibro = {
             /*Libro*/
             titulo:req.body.titulo,
-            autor:req.body.autores,
+            autores:req.body.autores,
             valoracion:req.body.valoracion,
             descripcion:req.body.descripcion,
             categoria:req.body.categoria,
@@ -109,7 +109,26 @@ module.exports ={
             let errores = error.createBook(validationResult(req))
             //falta imprimir errores de precio, descuento, portada
             //console.log(errores)
-            res.render('products/productAdd', {errores, infoLibro})
+                let idiomas     =   db.idioma.findAll(),
+                formatos    =   db.formato.findAll(),
+                autores     =   db.autor.findAll(),
+                categorias  =   db.categoria.findAll();
+
+                Promise.all([idiomas, formatos, autores, categorias]).then(resultado => {
+                    res.render("products/productAdd", {
+                        idiomas : resultado[0],
+                        formatos: resultado[1],
+                        autores : resultado[2],
+                        categorias : resultado[3],
+                        errores, 
+                        infoLibro,
+                    })
+                    return;
+                }).catch(error => {
+                    console.log(error);
+                    res.send((error))
+                    return
+                })
             return false;
         }
         
@@ -136,7 +155,7 @@ module.exports ={
         autor = await db.autor.findOne({
             where: {
                 name : {
-                    [Op.like] : infoLibro.autor
+                    [Op.like] : infoLibro.autores
                 }
             }
         })
